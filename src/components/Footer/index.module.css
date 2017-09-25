@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  background: #333;
+  color: white;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+.copy {
+  margin-left: auto;
+}

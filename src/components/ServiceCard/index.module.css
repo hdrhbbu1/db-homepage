@@ -1,0 +1,27 @@
+.service {
+  margin-bottom: 40px;
+  border-top: 4px solid rebeccapurple;
+  width: 100%;
+}
+
+.service h2 {
+  font-size: 16px;
+  margin-top: -40px;
+  margin-left: 45px;
+  text-align: left;
+}
+
+.service p {
+  font-size: 14px;
+  margin-left: 45px;
+}
+
+.customCard {
+  padding: 20px;
+}
+
+.customCard p {
+  color: #999;
+  margin: 10px 0;
+}
+

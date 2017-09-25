@@ -1,0 +1,28 @@
+.customCard {
+  padding: 0 20px 20px;
+}
+
+.customCard p {
+  color: #999;
+  margin: 10px 0;
+}
+
+.customCard h2 {
+  font-size: 15px;
+  text-align: left;
+  margin-top: 0;
+}
+
+.item {
+  margin-bottom: 40px;
+}
+
+.item.third {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .item.third {
+    display: block;
+  }
+}
