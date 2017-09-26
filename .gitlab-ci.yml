@@ -14,6 +14,7 @@ build:
   stage: build
   image: arctica/alpine-node:latest
   script:
+    - npm install -g node-gyp
     - yarn
     - yarn run build
   artifacts:
