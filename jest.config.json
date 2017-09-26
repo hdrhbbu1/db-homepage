@@ -1,0 +1,5 @@
+{
+  "testRegex" : "\\.test\\.jsx$",
+  "moduleNameMapper": { "\\.(css)$" : "identity-obj-proxy" },
+  "collectCoverageFrom" : ["src/components/**/*.{js,jsx}"]
+}
