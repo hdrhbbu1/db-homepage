@@ -1,0 +1,59 @@
+# davidbrookes.co.uk
+
+[![build status](https://gitlab.com/dbrookes/db-homepage/badges/master/build.svg)](https://gitlab.com/dbrookes/db-homepage/commits/master)
+[![coverage report](https://gitlab.com/dbrookes/db-homepage/badges/master/coverage.svg)](https://gitlab.com/dbrookes/db-homepage/commits/master)
+[![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
+
+This site is built with Gatsby, a static PWA (Progressive Web App) generator. Gatsby exposes a data source (MarkDown in this case) and allows it to be queried with GraphQL.
+
+Any dynamic areas such as forms are then built with AWS Lambda functions.
+
+## Local development
+
+`yarn install`
+
+`gatsby serve`
+
+The site will be available at: `http://localhost:8000`
+
+Any changes made locally will be hot reloaded to the browser.
+
+## Linting
+
+Both ESlint and Stylelint are available, in order form them to work they need to be installed locally.
+
+To run the linter manually:
+
+`yarn run lint`
+`yarn run lint:js`
+`yarn run lint:css`
+`yarn run lint:fix`
+
+## Testing
+
+Testing is powered by Jest and Air BnB's Enzyme test toolkit.
+
+`yarn run test`
+
+Code coverage can be checked with: 
+
+`yarn run test:coverage`
+
+## Continuous Deployment
+
+Continuous deployment is provided by GitLab running a lightweight Alpine Linux Node.JS Docker container to lint, test, build and deploy the static site to an Amazon S3 bucket.
+
+## Contact form
+
+- Lambda function
+- API gateway
+
+## Deployments
+
+Pushing code on the develop branch will cause the GitLab CI pipeline to run and if successful, code will be deployed on the staging bucket. After deployment, changed Cloudfront files are invalidated so the most recent copy of the site is pushed to each CDN edge location for optimial performance.
+
+`https://staging.davidbrookes.co.uk`
+
+## To Do
+
+- Offline support, enable Service Worker with correct Cloudfront cache configuration

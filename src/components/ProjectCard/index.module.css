@@ -1,0 +1,36 @@
+.customCard {
+  padding: 0 20px 20px;
+}
+
+.customCard p {
+  color: #999;
+  margin: 10px 0;
+}
+
+.customCard h2 {
+  font-size: 15px;
+  text-align: left;
+  margin-top: 0;
+}
+
+.item {
+  margin-bottom: 40px;
+  border-radius: 8px;
+  border: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.item img,
+.item span {
+  border-radius: 8px 8px 0 0;
+}
+
+.item.third {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .item.third {
+    display: block;
+  }
+}

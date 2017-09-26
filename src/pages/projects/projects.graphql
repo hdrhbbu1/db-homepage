@@ -1,0 +1,53 @@
+query ProjectsPage($path: String!) {
+    site {
+        siteMetadata {
+            title
+        }
+    }
+
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+        id
+        html
+        frontmatter {
+            title
+        }
+    }
+
+    allMarkdownRemark (
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 24,
+        filter: {
+            frontmatter: {
+                path: { regex: "/\/projects\/[a-z]/u" },
+                draft: { ne: true }
+            }
+        }
+    )
+
+    {
+        edges {
+            node {
+                id
+                frontmatter {
+                    path
+                    featured
+                    excerpt
+                    title
+                    thumb {
+                        childImageSharp {
+                            responsiveSizes {
+                                base64
+                                aspectRatio
+                                src
+                                srcSet
+                                sizes
+                                originalImg
+                                originalName
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

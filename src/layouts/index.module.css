@@ -1,0 +1,23 @@
+.layout {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding-bottom: 90px;
+}
+
+.content {
+  padding: 75px 30px 40px;
+  margin-top: 64px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background: #f9f9f9;
+  z-index: 2;
+}
+
+.dimmer {
+  opacity: 0.2;
+  filter: blur(5px);
+  min-height: 100%;
+}

@@ -1,0 +1,44 @@
+.testimonial {
+  margin-bottom: 40px;
+  border-radius: 8px;
+  border: 0;
+  border-top: 2px solid rebeccapurple;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial span,
+.testimonial img {
+  border-radius: 50%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.testimonial h3 {
+  font-size: 16px;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  text-align: center;
+}
+
+.testimonial blockquote > span {
+  padding: 1px;
+  border: 2px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+
+.testimonial cite {
+  font-weight: bold;
+  color: #555;
+  font-style: normal;
+}
+
+.testimonial p {
+  font-size: 14px;
+}
+
+.testimonial p::before,
+.testimonial p::after {
+  content: '"';
+}

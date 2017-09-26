@@ -1,0 +1,71 @@
+{
+  "name": "db-homepage",
+  "description": "David Brookes Homepage",
+  "version": "1.0.0",
+  "author": "David Brookes",
+  "bugs": {
+    "url": "https://github.com/dbrookes/db-homepage/issues"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^15.1.0",
+    "gatsby": "^1.9.43",
+    "gatsby-link": "^1.6.8",
+    "gatsby-plugin-antd": "^1.0.6",
+    "gatsby-plugin-catch-links": "^1.0.8",
+    "gatsby-plugin-google-tagmanager": "^1.0.7",
+    "gatsby-plugin-manifest": "^1.0.4",
+    "gatsby-plugin-nprogress": "^1.0.7",
+    "gatsby-plugin-offline": "^1.0.4",
+    "gatsby-plugin-preact": "^1.0.3",
+    "gatsby-plugin-react-helmet": "^1.0.3",
+    "gatsby-plugin-sharp": "^1.6.8",
+    "gatsby-plugin-sitemap": "^1.2.5",
+    "gatsby-remark-copy-linked-files": "^1.5.2",
+    "gatsby-remark-images": "^1.5.4",
+    "gatsby-remark-prismjs": "^1.2.1",
+    "gatsby-remark-responsive-iframe": "^1.4.3",
+    "gatsby-remark-smartypants": "^1.4.3",
+    "gatsby-source-filesystem": "^1.4.3",
+    "gatsby-transformer-json": "^1.0.6",
+    "gatsby-transformer-remark": "^1.7.1",
+    "gatsby-transformer-sharp": "^1.6.6",
+    "lodash": "^4.15.0",
+    "typeface-merriweather": "^0.0.35",
+    "typeface-montserrat": "^0.0.37",
+    "typeface-open-sans": "^0.0.35"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-jest": "^21.0.2",
+    "babel-plugin-inline-import-graphql-ast": "^2.0.0",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.6.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^21.0.2",
+    "jest-enzyme": "^3.8.2",
+    "react-test-renderer": "^15.6.1",
+    "stylelint": "^8.1.1",
+    "stylelint-config-standard": "^17.0.0"
+  },
+  "homepage": "https://github.com/dbrookes/db-homepage",
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbrookes/db-homepage.git"
+  },
+  "scripts": {
+    "lint:js": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:css": "stylelint 'src/**/*.css'",
+    "lint:fixjs": "./node_modules/.bin/eslint --fix --ext .js,.jsx --ignore-pattern public .",
+    "lint:fixcss": "stylelint 'src/**/*.css' --fix",
+    "test": "jest --config ./jest.config.json",
+    "test:coverage": "jest --config ./jest.config.json --coverage",
+    "develop": "gatsby develop",
+    "build": "gatsby build"
+  }
+}
