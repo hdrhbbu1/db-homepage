@@ -16,7 +16,7 @@ describe(`ProjectCard`, () => {
 
   beforeEach(() => {
     props = {
-      post: {
+      project: {
         node: {
           id: `/Users/dbrookes/Sites/db-homepage-test/src/pages/projects/blinknow-foundation/index.md absPath of file >>> MarkdownRemark`,
           frontmatter: {
