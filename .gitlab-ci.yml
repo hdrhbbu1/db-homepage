@@ -4,7 +4,7 @@ stages:
 
 test-unit:
   stage: build
-  image: jorgehortelano/node-sharp:latest
+  image: arctica/alpine-node:latest
   script:
     - yarn
     - yarn run test
@@ -12,7 +12,7 @@ test-unit:
 
 build:
   stage: build
-  image: jorgehortelano/node-sharp:latest
+  image: arctica/alpine-node:latest
   script:
     - yarn
     - yarn run build
