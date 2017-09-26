@@ -6,7 +6,7 @@ test-unit:
   stage: build
   image: arctica/alpine-node:latest
   script:
-    - apk add vips
+    - apk add vips-dev fftw-dev --update-cache --repository https://dl-3.alpinelinux.org/alpine/edge/testing/
     - yarn
     - yarn run test
     - yarn run test:coverage
@@ -15,7 +15,7 @@ build:
   stage: build
   image: arctica/alpine-node:latest
   script:
-    - apk add vips
+    - apk add vips-dev fftw-dev --update-cache --repository https://dl-3.alpinelinux.org/alpine/edge/testing/
     - yarn
     - yarn run build
   artifacts:
