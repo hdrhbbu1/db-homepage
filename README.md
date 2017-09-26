@@ -8,26 +8,29 @@ This site is built with Gatsby, a static PWA (Progressive Web App) generator. Ga
 
 Any dynamic areas such as forms are then built with AWS Lambda functions.
 
-## Local development
+## Local Development
 
 `yarn install`
 
 `gatsby serve`
 
-The site will be available at: `http://localhost:8000`
+The site is available at: `http://localhost:8000`
+
+GraphiQL is available at: `http://localhost:8000/___graphql/`
 
 Any changes made locally will be hot reloaded to the browser.
 
 ## Linting
 
-Both ESlint and Stylelint are available, in order form them to work they need to be installed locally.
+Both ESlint and Stylelint are available, in order form them to work they need to be installed globally on your machine. 
+It's recommended that you use the features of your IDE to lint as you go.
 
 To run the linter manually:
 
-`yarn run lint`
-`yarn run lint:js`
-`yarn run lint:css`
-`yarn run lint:fix`
+`yarn run lint`  
+`yarn run lint:js`  
+`yarn run lint:css`  
+`yarn run lint:fix`  
 
 ## Testing
 
@@ -43,7 +46,9 @@ Code coverage can be checked with:
 
 Continuous deployment is provided by GitLab running a lightweight Alpine Linux Node.JS Docker container to lint, test, build and deploy the static site to an Amazon S3 bucket.
 
-## Contact form
+As a backup, it's also possible to build and deploy the project to S3 from AWS CodePipeline.
+
+## Contact Form
 
 - Lambda function
 - API gateway
