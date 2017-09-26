@@ -14,7 +14,7 @@ build:
   stage: build
   image: arctica/aws-node:latest
   script:
-    - npm
+    - npm install
     - npm run build
   artifacts:
     paths:
