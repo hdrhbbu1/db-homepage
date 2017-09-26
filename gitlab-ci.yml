@@ -1,0 +1,44 @@
+stages:
+  - build
+  - deploy
+
+test-unit:
+  stage: build
+  image: arctica/alpine-node:latest
+  script:
+    - yarn
+    - yarn run test
+    - yarn run test:coverage
+
+build:
+  stage: build
+  image: arctica/alpine-node:latest
+  script:
+    - yarn
+    - yarn run build
+  artifacts:
+    paths:
+    - dist/
+    expire_in: 1 day
+
+deploy-stage:
+  stage: deploy
+  image: arctica/alpine-s3cmd:latest
+  script:
+    - "s3cmd sync public/ s3://staging.davidbrookes.co.uk --add-header='Cache-Control: max-age=604800, public' --acl-public --delete-removed --guess-mime-type --no-mime-magic --no-preserve --cf-invalidate"
+  environment:
+    name: Staging
+    url: https://staging.davidbrookes.co.uk
+  only:
+  - develop
+
+deploy-prod:
+  stage: deploy
+  image: arctica/alpine-s3cmd:latest
+  script:
+    - "s3cmd sync public/ s3://davidbrookes.co.uk --add-header='Cache-Control: max-age=604800, public' --acl-public --delete-removed --guess-mime-type --no-mime-magic --no-preserve --cf-invalidate"
+  environment:
+    name: Production
+    url: https://davidbrookes.co.uk
+  only:
+  - master
