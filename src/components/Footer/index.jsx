@@ -6,18 +6,20 @@ import styles from "./index.module.css"
 
 const { Footer } = Layout
 
-const MainFooter = () => {
-  const currentYear = new Date().getFullYear()
+class MainFooter extends React.Component {
+  render() {
+    const currentYear = new Date().getFullYear()
 
-  return (
-    <Footer className={styles.footer}>
-      <p>Made in London with React, GraphQL and AWS Serverless.</p>
-      <p className={styles.copy}>
-        { `Copyright © 2005 - ${currentYear} ` }
-        <Link to="/">{ `David Brookes` }</Link>
-      </p>
-    </Footer>
-  )
+    return (
+      <Footer className={styles.footer + (this.props.collapsed ? `` : ` ${styles.collapsed}`)}>
+        <p>Made in London with React, GraphQL and AWS Serverless.</p>
+        <p className={styles.copy}>
+          {`Copyright © 2005 - ${currentYear} `}
+          <Link to="/">{`David Brookes`}</Link>
+        </p>
+      </Footer>
+    )
+  }
 }
 
 export default MainFooter

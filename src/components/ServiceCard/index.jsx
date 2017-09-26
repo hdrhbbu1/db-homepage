@@ -9,7 +9,7 @@ class ServiceCard extends React.Component {
 
     return (
       <Card noHovering className={styles.service}>
-        <Icon type={serviceData.frontmatter.icon} style={{ fontSize: `22px` }} />
+        <Icon type={serviceData.frontmatter.icon} />
         <h2>{serviceData.frontmatter.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: serviceData.html }} />
       </Card>

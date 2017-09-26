@@ -1,6 +1,9 @@
 .testimonial {
   margin-bottom: 40px;
-  border-top: 4px solid rebeccapurple;
+  border-radius: 8px;
+  border: 0;
+  border-top: 2px solid rebeccapurple;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .testimonial span,

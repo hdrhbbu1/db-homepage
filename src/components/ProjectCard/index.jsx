@@ -9,7 +9,7 @@ const ProjectCard = (project, index) => {
   const projectData = project.project.node.frontmatter
 
   return (
-    <Card bodyStyle={{ padding: `5px` }} className={index === 2 ? `${styles.item} ${styles.third}` : styles.item}>
+    <Card noHovering bodyStyle={{ padding: `0px` }} className={index === 2 ? `${styles.item} ${styles.third}` : styles.item}>
       <Link to={projectData.path}>
         <ResponsiveImage image={projectData.thumb} maxwidth={`650px`} title={projectData.title} />
       </Link>

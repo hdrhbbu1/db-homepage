@@ -43,47 +43,49 @@ class Homepage extends React.Component {
 
         <Link to="/projects/">More Projects</Link>
 
-        <Row gutter={30}>
-          <Col xs={24}>
-            <SectionHeader
-              headingCopy="Services"
-              type="h2"
-              taglineCopy="Companies hire me to build cutting-edge web experiences for big-name clients."
-            />
-          </Col>
-        </Row>
+        <div>
+          <Row gutter={30}>
+            <Col xs={24}>
+              <SectionHeader
+                headingCopy="Services"
+                type="h2"
+                taglineCopy="Companies hire me to build cutting-edge web experiences for big-name clients."
+              />
+            </Col>
+          </Row>
 
-        <Row gutter={30}>
-          <Col xs={24} sm={12}>
-            <Row gutter={30}>
-              <Col xs={24} sm={12}>
-                <h3>Key Services & Skills</h3>
-                <ul>
-                  {post.frontmatter.servicesPrimary.map((skill, index) => (
-                    <li key={index}>
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </Col>
+          <Row gutter={30}>
+            <Col xs={24} sm={12}>
+              <Row gutter={30}>
+                <Col xs={24} sm={12}>
+                  <h3>Key Services & Skills</h3>
+                  <ul>
+                    {post.frontmatter.servicesPrimary.map((skill, index) => (
+                      <li key={index}>
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </Col>
 
-              <Col xs={24} sm={12}>
-                <ul>
-                  {post.frontmatter.servicesSecondary.map((skill, index) => (
-                    <li key={index}>
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </Col>
-            </Row>
-          </Col>
+                <Col xs={24} sm={12}>
+                  <ul>
+                    {post.frontmatter.servicesSecondary.map((skill, index) => (
+                      <li key={index}>
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </Col>
+              </Row>
+            </Col>
 
-          <Col xs={24} sm={12}>
-            <h3>Web Development</h3>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </Col>
-        </Row>
+            <Col xs={24} sm={12}>
+              <h3>Web Development</h3>
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </Col>
+          </Row>
+        </div>
 
         <Row gutter={30}>
           <Col xs={24}>

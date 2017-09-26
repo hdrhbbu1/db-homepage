@@ -36,11 +36,13 @@ class Template extends React.Component {
         collapsed: !this.state.collapsed,
       }, () => {
         if (!this.state.collapsed) {
-          const closeZone = document.getElementsByClassName(`dimmer`)[0]
+          const closeZone = document.getElementsByClassName(styles.dimmer)[0]
+
           const closeMe = () => {
-            this.setState({ collapsed: true })
-            closeZone.removeEventListener(`touchend`, () => closeMe())
-            closeZone.removeEventListener(`mouseup`, () => closeMe())
+            this.setState({ collapsed: true }, () => {
+              closeZone.removeEventListener(`touchend`, () => closeMe())
+              closeZone.removeEventListener(`mouseup`, () => closeMe())
+            })
           }
 
           closeZone.addEventListener(`touchend`, () => closeMe())
@@ -64,14 +66,14 @@ class Template extends React.Component {
 
         <MainHeader collapsed={this.state.collapsed} navToggle={this.handleSidebar} />
         <Layout>
-          <Content className={`${this.state.collapsed ? `` : `dimmer`} ${styles.content}`}>
+          <Content className={`${this.state.collapsed ? `` : styles.dimmer} ${styles.content}`}>
             <main>
               { children() }
             </main>
           </Content>
           <Sidebar collapsed={this.state.collapsed} navToggle={this.handleSidebar} />
         </Layout>
-        <MainFooter />
+        <MainFooter collapsed={this.state.collapsed} />
       </Layout>
     )
   }

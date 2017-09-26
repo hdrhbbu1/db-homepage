@@ -23,7 +23,7 @@ class ProjectsPage extends React.Component {
 
         <Row gutter={30} type="flex">
           {allProjects.map(project => (
-            <Col key={project.id} xs={24} sm={12} md={8}>
+            <Col key={project.node.id} xs={24} sm={12} md={8}>
               <ProjectCard project={project} />
             </Col>
           ))}
@@ -42,6 +42,7 @@ query ProjectsPage($path: String!) {
     html
     frontmatter {
       title
+      tagline
       path
       metaTitle
       metaDescription
