@@ -4,18 +4,18 @@ stages:
 
 test-unit:
   stage: build
-  image: arctica/alpine-node:latest
+  image: arctica/aws-node:latest
   script:
-    - yarn
-    - yarn run test
-    - yarn run test:coverage
+    - npm install
+    - npm run test
+    - npm run test:coverage
 
 build:
   stage: build
-  image: arctica/alpine-node:latest
+  image: arctica/aws-node:latest
   script:
-    - yarn
-    - yarn run build
+    - npm
+    - npm run build
   artifacts:
     paths:
     - dist/
@@ -23,9 +23,9 @@ build:
 
 deploy-stage:
   stage: deploy
-  image: arctica/alpine-s3cmd:latest
+  image: arctica/aws-node:latest
   script:
-    - "s3cmd sync public/ s3://staging.davidbrookes.co.uk --add-header='Cache-Control: max-age=604800, public' --acl-public --delete-removed --guess-mime-type --no-mime-magic --no-preserve --cf-invalidate"
+    - aws s3 sync --sse AES256 public/ s3://staging.davidbrookes.co.uk/ --cache-control max-age=604800 --delete && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id EIEJGUFROLIRM --paths "/*"
   environment:
     name: Staging
     url: https://staging.davidbrookes.co.uk
@@ -34,9 +34,9 @@ deploy-stage:
 
 deploy-prod:
   stage: deploy
-  image: arctica/alpine-s3cmd:latest
+  image: arctica/aws-node:latest
   script:
-    - "s3cmd sync public/ s3://davidbrookes.co.uk --add-header='Cache-Control: max-age=604800, public' --acl-public --delete-removed --guess-mime-type --no-mime-magic --no-preserve --cf-invalidate"
+    - aws s3 sync --sse AES256 public/ s3://davidbrookes.co.uk/ --cache-control max-age=604800 --delete && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id EIEJGUFROLIRM --paths "/*"
   environment:
     name: Production
     url: https://davidbrookes.co.uk
