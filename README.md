@@ -20,6 +20,12 @@ GraphiQL is available at: `http://localhost:8000/___graphql/`
 
 Any changes made locally will be hot reloaded to the browser.
 
+## User Interface
+
+The UI is based on Alibaba's [Ant Design](https://ant.design/docs/react/introduce) React component library, An enterprise-class UI design language for web applications.
+
+Custom components are styled with [CSS Modules](https://github.com/css-modules/css-modules).
+
 ## Linting
 
 Both ESlint and Stylelint are available, in order form them to work they need to be installed globally on your machine. 
@@ -27,10 +33,13 @@ It's recommended that you use the features of your IDE to lint as you go.
 
 To run the linter manually:
 
-`yarn run lint`  
-`yarn run lint:js`  
-`yarn run lint:css`  
-`yarn run lint:fix`  
+`yarn run lint`
+
+`yarn run lint:js`
+
+`yarn run lint:css`
+
+`yarn run lint:fix`
 
 ## Testing
 

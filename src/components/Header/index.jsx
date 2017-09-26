@@ -10,8 +10,7 @@ const { Header } = Layout
 class MainHeader extends React.Component {
   constructor() {
     super()
-    this.state = { max: 1, distanceY: 0, collapsed: false }
-    this.handleScroll = this.handleScroll.bind(this)
+    this.state = { max: 1, distanceY: 0 }
   }
 
   componentDidMount() {
@@ -22,7 +21,7 @@ class MainHeader extends React.Component {
     window.removeEventListener(`scroll`, this.handleScroll, { passive: true })
   }
 
-  handleScroll() {
+  handleScroll = () => {
     this.setState({
       max: document.documentElement.scrollHeight - document.body.offsetHeight,
       distanceY: window.pageYOffset || 0,
