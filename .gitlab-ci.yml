@@ -30,7 +30,6 @@ deploy-stage:
       --acl-public
       --delete-removed
       --guess-mime-type
-      --no-mime-magic
       --no-preserve
       --cf-invalidate"
   environment:
@@ -48,7 +47,6 @@ deploy-prod:
       --acl-public
       --delete-removed
       --guess-mime-type
-      --no-mime-magic
       --no-preserve
       --cf-invalidate"
   environment:
