@@ -125,20 +125,8 @@ class ContactForm extends React.Component {
             </Col>
           </Row>
 
-          <Row gutter={30} type="flex">
-            <Col xs={24} sm={12} md={{ span: 10, offset: 2 }}>
-              <FormItem label="Company" style={{ width: `100%` }}>
-                {getFieldDecorator(`company`, {
-                  rules: [{ required: false, whitespace: false, message: `Please provide your company.` }],
-                })(
-                  <Input prefix={<Icon type="home" style={{ fontSize: 13 }} />} />
-                )}
-              </FormItem>
-            </Col>
-          </Row>
-
           <Row>
-            <Col xs={24} sm={12} md={{ span: 20, offset: 2 }}>
+            <Col xs={24} md={{ span: 20, offset: 2 }}>
               <FormItem label="Message" style={{ width: `100%` }}>
                 {getFieldDecorator(`message`, {
                   rules: [{ required: true, whitespace: true, message: `Please enter a message.` }],
@@ -150,7 +138,7 @@ class ContactForm extends React.Component {
           </Row>
 
           <Row type="flex">
-            <Col xs={24} sm={12} md={{ span: 20, offset: 2 }}>
+            <Col xs={24} md={{ span: 20, offset: 2 }}>
               <Button
                 style={{ marginLeft: `auto` }}
                 icon={this.state.sending ? `loading` : `rocket`}

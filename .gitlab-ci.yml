@@ -25,7 +25,14 @@ deploy-stage:
   stage: deploy
   image: arctica/aws-node:latest
   script:
-    - aws s3 sync --sse AES256 public/ s3://staging.davidbrookes.co.uk/ --cache-control max-age=604800 --delete && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id EIEJGUFROLIRM --paths "/*"
+    - "s3cmd sync dist/ s3://staging.davidbrookes.co.uk
+      --add-header='Cache-Control: max-age=604800, public'
+      --acl-public
+      --delete-removed
+      --guess-mime-type
+      --no-mime-magic
+      --no-preserve
+      --cf-invalidate"
   environment:
     name: Staging
     url: https://staging.davidbrookes.co.uk
@@ -36,7 +43,14 @@ deploy-prod:
   stage: deploy
   image: arctica/aws-node:latest
   script:
-    - aws s3 sync --sse AES256 public/ s3://davidbrookes.co.uk/ --cache-control max-age=604800 --delete && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id EIEJGUFROLIRM --paths "/*"
+    - "s3cmd sync dist/ s3://davidbrookes.co.uk
+      --add-header='Cache-Control: max-age=604800, public'
+      --acl-public
+      --delete-removed
+      --guess-mime-type
+      --no-mime-magic
+      --no-preserve
+      --cf-invalidate"
   environment:
     name: Production
     url: https://davidbrookes.co.uk
