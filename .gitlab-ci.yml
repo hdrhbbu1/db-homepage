@@ -2,13 +2,12 @@ stages:
   - build
   - deploy
 
-test-unit:
-  stage: build
-  image: arctica/aws-node:latest
-  script:
-    - npm install
-    - npm run test
-    - npm run test:coverage
+# test-unit:
+#  stage: build
+#  image: arctica/aws-node:latest
+#  script:
+#    - npm install
+#    - npm run test:coverage
 
 build:
   stage: build
