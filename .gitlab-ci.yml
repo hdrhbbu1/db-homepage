@@ -26,12 +26,10 @@ deploy-stage:
   image: arctica/aws-node:latest
   script:
     - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
-      --add-header='Cache-Control: max-age=604800, public'
       --acl-public
       --delete-removed
       --guess-mime-type
-      --no-preserve
-      --cf-invalidate"
+      --no-preserve"
   environment:
     name: Staging
     url: https://staging.davidbrookes.co.uk
@@ -43,13 +41,11 @@ deploy-prod:
   image: arctica/aws-node:latest
   script:
     - "s3cmd sync public/ s3://davidbrookes.co.uk
-      --add-header='Cache-Control: max-age=604800, public'
       --acl-public
       --delete-removed
       --guess-mime-type
       --no-mime-magic
-      --no-preserve
-      --cf-invalidate"
+      --no-preserve"
   environment:
     name: Production
     url: https://davidbrookes.co.uk

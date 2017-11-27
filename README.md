@@ -53,7 +53,7 @@ Code coverage can be checked with:
 
 ## Continuous Deployment
 
-Continuous deployment is provided by GitLab running a lightweight Alpine Linux Node.JS Docker container to lint, test, build and deploy the static site to an Amazon S3 bucket.
+Continuous deployment is provided by GitLab running a the AWS Node.JS Docker image to lint, test, build and deploy the static site to an Amazon S3 bucket.
 
 As a backup, it's also possible to build and deploy the project to S3 from AWS CodePipeline.
 

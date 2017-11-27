@@ -71,13 +71,17 @@ query ProjectsPage($path: String!) {
           title
           thumb {
             childImageSharp {
-              responsiveResolution {
+              sizes(maxWidth: 500, maxHeight: 320) {
                 base64
+                tracedSVG
                 aspectRatio
-                width
-                height
                 src
                 srcSet
+                srcWebp
+                srcSetWebp
+                sizes
+                originalImg
+                originalName
               }
             }
           }

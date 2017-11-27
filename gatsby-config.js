@@ -39,13 +39,6 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        color: `blue`,
-        showSpinner: false,
-      },
-    },
-    {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         query: `{
