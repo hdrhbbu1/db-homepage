@@ -28,6 +28,7 @@ deploy-stage:
       --acl-public
       --delete-removed
       --guess-mime-type
+      --no-mime-magic
       --no-preserve"
   environment:
     name: Staging
