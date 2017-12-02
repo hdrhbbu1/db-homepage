@@ -31,7 +31,7 @@ deploy-stage:
       --no-mime-magic
       --no-preserve
       --cf-invalidate"
-    - "s3cmd modify s3://staging.davidbrookes.co.uk/
+    - "s3cmd modify s3://staging.davidbrookes.co.uk
       --recursive
       --add-header='content-type':'image/svg+xml'
       --exclude '' --include '.svg'"
@@ -52,7 +52,7 @@ deploy-prod:
       --no-mime-magic
       --no-preserve
       --cf-invalidate"
-    - "s3cmd modify s3://davidbrookes.co.uk/
+    - "s3cmd modify s3://davidbrookes.co.uk
       --recursive
       --add-header='content-type':'image/svg+xml'
       --exclude '' --include '.svg'"

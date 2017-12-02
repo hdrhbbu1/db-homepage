@@ -6,19 +6,19 @@
 
 This site is built with Gatsby, a static PWA (Progressive Web App) generator. Gatsby exposes a data source (MarkDown in this case) and allows it to be queried with GraphQL.
 
-Any dynamic areas such as forms are then built with AWS Lambda functions.
+Dynamic functionality such as forms are built with AWS Lambda functions exposed though AWS API Gateway - JAM stack.
 
 ## Local Development
 
 `yarn install`
 
-`gatsby serve`
+`yarn run develop`
 
-The site is available at: `http://localhost:8000`
+The site is available at: `http://localhost:8080`
 
-GraphiQL is available at: `http://localhost:8000/___graphql/`
+GraphiQL is available at: `http://localhost:8080/___graphql/`
 
-Any changes made locally will be hot reloaded to the browser.
+Changes made locally to React components and styles are hot reloaded to the browser.
 
 ## User Interface
 
@@ -28,10 +28,9 @@ Custom components are styled with [CSS Modules](https://github.com/css-modules/c
 
 ## Linting
 
-Both ESlint and Stylelint are available, in order form them to work they need to be installed globally on your machine. 
-It's recommended that you use the features of your IDE to lint as you go.
+Both ESlint and Stylelint are available, it's recommended that you use the features of your IDE to lint as you go and follow the `eslint-config-airbnb` rule set.
 
-To run the linter manually:
+To run the linters on the command line:
 
 `yarn run lint`
 
@@ -53,21 +52,16 @@ Code coverage can be checked with:
 
 ## Continuous Deployment
 
-Continuous deployment is provided by GitLab running a the AWS Node.JS Docker image to lint, test, build and deploy the static site to an Amazon S3 bucket.
+Continuous deployment is provided by GitLab running an AWS Node.JS Docker image to lint, test, build and deploy the static site to an Amazon S3 bucket, see `.gitlab-ci.yml'.
 
-As a backup, it's also possible to build and deploy the project to S3 from AWS CodePipeline.
+As a backup, it's also possible to build and deploy the project to S3 from AWS CodePipeline, see `buildspec.yml`.
 
 ## Contact Form
 
-- Lambda function
-- API gateway
+The contact form runs a Node Lambda function which fetches a HTML email template from the s3 bucket, populates it with the post data from AWS API Gateway and sends the email notification via Amazon SES.
 
 ## Deployments
 
-Pushing code on the develop branch will cause the GitLab CI pipeline to run and if successful, code will be deployed on the staging bucket. After deployment, changed Cloudfront files are invalidated so the most recent copy of the site is pushed to each CDN edge location for optimial performance.
+Pushing code on the develop branch will run the GitLab CI pipeline and if successful, code will be deployed to the staging bucket. After deployment, changed Cloudfront files are invalidated and correct headers are set so the most recent copy of the site is pushed to each CDN edge location for optimial performance around the world.
 
 `https://staging.davidbrookes.co.uk`
-
-## To Do
-
-- Offline support, enable Service Worker with correct Cloudfront cache configuration
