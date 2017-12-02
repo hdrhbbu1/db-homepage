@@ -54,14 +54,16 @@ Code coverage can be checked with:
 
 Continuous deployment is provided by GitLab running an AWS Node.JS Docker image to lint, test, build and deploy the static site to an Amazon S3 bucket, see `.gitlab-ci.yml`.
 
-As a backup, it's also possible to build and deploy the project to S3 from AWS CodePipeline, see `buildspec.yml`.
+It's also possible to build and deploy the project to S3 from AWS CodePipeline, see `buildspec.yml`.
+
+Pushing code on the develop branch will run the GitLab CI pipeline and if successful, code will be deployed to the staging bucket. 
+
+After deployment, modified files are invalidated on CloudFront and the correct headers are set. 
+
+The most recent copy of the site is then pushed to each CloudFront edge location for optimal performance around the world.
+
+`https://staging.davidbrookes.co.uk`
 
 ## Contact Form
 
-The contact form runs a Node Lambda function which fetches a HTML email template from the s3 bucket, populates it with the post data from AWS API Gateway and sends the email notification via Amazon SES.
-
-## Deployments
-
-Pushing code on the develop branch will run the GitLab CI pipeline and if successful, code will be deployed to the staging bucket. After deployment, changed Cloudfront files are invalidated and correct headers are set so the most recent copy of the site is pushed to each CDN edge location for optimial performance around the world.
-
-`https://staging.davidbrookes.co.uk`
+The contact form runs a Node Lambda function which fetches a HTML email template from the S3 bucket, populates it with the post data from AWS API Gateway and sends the email notification via Amazon SES.
