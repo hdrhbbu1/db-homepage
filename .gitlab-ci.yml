@@ -29,7 +29,12 @@ deploy-stage:
       --delete-removed
       --guess-mime-type
       --no-mime-magic
-      --no-preserve"
+      --no-preserve
+      --cf-invalidate"
+    - "s3cmd modify s3://staging.davidbrookes.co.uk/
+      --recursive
+      --add-header='content-type':'image/svg+xml'
+      --exclude '' --include '.svg'"
   environment:
     name: Staging
     url: https://staging.davidbrookes.co.uk
@@ -45,7 +50,12 @@ deploy-prod:
       --delete-removed
       --guess-mime-type
       --no-mime-magic
-      --no-preserve"
+      --no-preserve
+      --cf-invalidate"
+    - "s3cmd modify s3://davidbrookes.co.uk/
+      --recursive
+      --add-header='content-type':'image/svg+xml'
+      --exclude '' --include '.svg'"
   environment:
     name: Production
     url: https://davidbrookes.co.uk
