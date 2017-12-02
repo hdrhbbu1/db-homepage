@@ -22,7 +22,7 @@ Changes made locally to React components and styles are hot reloaded to the brow
 
 ## User Interface
 
-The UI is based on Alibaba's [Ant Design](https://ant.design/docs/react/introduce) React component library, An enterprise-class UI design language for web applications.
+The UI is based on Alibaba's [Ant Design](https://ant.design/docs/react/introduce) React component library, an enterprise-class UI design language for web applications.
 
 Custom components are styled with [CSS Modules](https://github.com/css-modules/css-modules).
 
