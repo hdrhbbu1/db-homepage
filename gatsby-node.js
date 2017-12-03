@@ -45,3 +45,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     }))
   })
 }
+
+exports.modifyWebpackConfig = ({ config }) => {
+  config._config.devtool = false // eslint-disable-line
+}
