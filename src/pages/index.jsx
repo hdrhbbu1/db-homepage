@@ -10,13 +10,25 @@ import ProjectCard from '../components/ProjectCard'
 import ClientCard from '../components/ClientCard/index'
 import TestimonialCard from '../components/TestimonialCard'
 
+import CadburyLogo from "../components/svg/clients/cadbury-logo.svg"
+import DeloitteLogo from "../components/svg/clients/deloitte-logo.svg"
+import HMGovernmentLogo from "../components/svg/clients/hm-government-logo.svg"
+import FordLogo from "../components/svg/clients/ford-logo.svg"
+
 class Homepage extends React.Component {
   render() {
     const post = this.props.data.page
 
     const featuredProjects = get(this, `props.data.featuredProjects.edges`)
     const featuredTestimonials = get(this, `props.data.featuredTestimonials.edges`)
-    const featuredClients = get(this, `props.data.featuredClients.edges`)
+
+    const clientsList = post.frontmatter.allClients
+    const clients = [
+      { title: clientsList[0], logo: CadburyLogo },
+      { title: clientsList[2], logo: DeloitteLogo },
+      { title: clientsList[3], logo: HMGovernmentLogo },
+      { title: clientsList[4], logo: FordLogo },
+    ]
 
     return (
       <section>
@@ -116,9 +128,9 @@ class Homepage extends React.Component {
         </Row>
 
         <Row gutter={30} type="flex">
-          {featuredClients.map(client => (
-            <Col key={client.node.id} xs={24} sm={12} md={6}>
-              <ClientCard client={client.node.frontmatter} />
+          {clients.map(client => (
+            <Col key={client.title} xs={24} sm={12} md={6}>
+              <ClientCard client={client} />
             </Col>
           ))}
         </Row>
@@ -144,6 +156,7 @@ export const pageQuery = graphql`
         intro
         servicesPrimary
         servicesSecondary
+        allClients
       }
     }
 
