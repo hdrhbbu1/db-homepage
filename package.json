@@ -52,10 +52,10 @@
     "url": "git+https://github.com/dbrookes/db-homepage.git"
   },
   "scripts": {
-    "lint": "yarn lint:js && yarn lint:css",
+    "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "./node_modules/.bin/eslint --ext .jsx --ignore-pattern public .",
     "lint:css": "stylelint 'src/**/*.css'",
-    "lint:fix": "yarn lint:fix:js && yarn lint:fix:css",
+    "lint:fix": "npm run lint:fix:js && npm run lint:fix:css",
     "lint:fix:js": "./node_modules/.bin/eslint --fix --ext .jsx --ignore-pattern public .",
     "lint:fix:css": "stylelint 'src/**/*.css' --fix",
     "test:js": "jest --config ./jest.config.json",

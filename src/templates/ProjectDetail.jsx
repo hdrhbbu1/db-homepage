@@ -35,8 +35,8 @@ class ProjectDetailTemplate extends React.Component {
             <Card>
               <h3>Technology</h3>
               <ul>
-                { post.frontmatter.technology.map((tech, index) => (
-                  <li key={index}>{tech}</li>
+                { post.frontmatter.technology.map(tech => (
+                  <li key={tech}>{tech}</li>
                 )) }
               </ul>
             </Card>
