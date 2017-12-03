@@ -108,19 +108,17 @@ class ContactForm extends React.Component {
               <FormItem label="Name" style={{ width: `100%` }}>
                 {getFieldDecorator(`name`, {
                   rules: [{ required: true, whitespace: true, message: `Please provide your name` }],
-                })(
-                  <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} />
-                )}
+                })(<Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} />)}
               </FormItem>
             </Col>
             <Col xs={24} sm={12} md={{ span: 10 }}>
               <FormItem label="Email" type="email" style={{ width: `100%` }}>
                 {getFieldDecorator(`email`, {
                   validateTrigger: `onBlur`,
-                  rules: [{ required: true, whitespace: true, type: `email`, message: `Please provide your email address.` }],
-                })(
-                  <Input type="email" prefix={<Icon type="mail" style={{ fontSize: 13 }} />} />
-                )}
+                  rules: [{
+ required: true, whitespace: true, type: `email`, message: `Please provide your email address.`,
+}],
+                })(<Input type="email" prefix={<Icon type="mail" style={{ fontSize: 13 }} />} />)}
               </FormItem>
             </Col>
           </Row>
@@ -130,9 +128,7 @@ class ContactForm extends React.Component {
               <FormItem label="Message" style={{ width: `100%` }}>
                 {getFieldDecorator(`message`, {
                   rules: [{ required: true, whitespace: true, message: `Please enter a message.` }],
-                })(
-                  <TextArea placeholder="Hi David, " autosize={{ minRows: 8 }} />
-                )}
+                })(<TextArea placeholder="Hi David, " autosize={{ minRows: 8 }} />)}
               </FormItem>
             </Col>
           </Row>

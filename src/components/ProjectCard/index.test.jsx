@@ -7,9 +7,7 @@ describe(`ProjectCard`, () => {
   let mountedSectionHeader
   const lockScreen = () => {
     if (!mountedSectionHeader) {
-      mountedSectionHeader = shallow(
-        <ProjectCard {...props} />
-      )
+      mountedSectionHeader = shallow(<ProjectCard {...props} />)
     }
     return mountedSectionHeader
   }

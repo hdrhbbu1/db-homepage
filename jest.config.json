@@ -1,5 +1,8 @@
 {
   "testRegex" : "\\.test\\.jsx$",
   "moduleNameMapper": { "\\.(css)$" : "identity-obj-proxy" },
-  "collectCoverageFrom" : ["src/components/**/*.{js,jsx}"]
+  "collectCoverageFrom" : ["src/components/**/*.{js,jsx}"],
+  "setupFiles": [
+    "./jest-setup.js"
+  ]
 }

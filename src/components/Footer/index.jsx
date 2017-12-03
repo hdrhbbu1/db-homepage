@@ -15,7 +15,7 @@ class MainFooter extends React.Component {
         <p>Made in London with React, GraphQL and AWS Serverless.</p>
         <p className={styles.copy}>
           {`Copyright © 2005 - ${currentYear} `}
-          <Link to="/">{`David Brookes`}</Link>
+          <Link to="/">David Brookes</Link>
         </p>
       </Footer>
     )

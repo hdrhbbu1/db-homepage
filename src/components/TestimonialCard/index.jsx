@@ -11,7 +11,7 @@ class TestimonialCard extends React.Component {
     return (
       <Card noHovering className={styles.testimonial}>
         <blockquote>
-          <ResponsiveImage image={testimonialData.thumb} maxwidth={`90px`} title={testimonialData.title} />
+          <ResponsiveImage image={testimonialData.thumb} maxwidth="90px" title={testimonialData.title} />
           <div dangerouslySetInnerHTML={{ __html: this.props.post.node.html }} />
           <cite>
             <a target="_blank" rel="noreferrer noopener" href={testimonialData.linkedIn}>{testimonialData.title}</a> ~ {testimonialData.jobTitle}

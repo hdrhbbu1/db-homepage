@@ -6,19 +6,23 @@
 
 This site is built with Gatsby, a static PWA (Progressive Web App) generator. Gatsby exposes a data source (MarkDown in this case) and allows it to be queried with GraphQL.
 
-Dynamic functionality such as forms are built with AWS Lambda functions exposed though AWS API Gateway - JAM stack.
+Gatsby pre-renders and builds the site as static HTML files, which are deployed to S3 and distributed via CloudFront.
+
+Dynamic functionality such as forms are built with AWS Lambda functions exposed though AWS API Gateway - JAMstack.
 
 ## Local Development
 
 `yarn install`
 
-`yarn run develop`
+`yarn develop`
 
 The site is available at: `http://localhost:8080`
 
 GraphiQL is available at: `http://localhost:8080/___graphql/`
 
 Changes made locally to React components and styles are hot reloaded to the browser.
+
+To build a static version of the site for production `yarn build`
 
 ## User Interface
 
@@ -32,13 +36,13 @@ Both ESlint and Stylelint are available, it's recommended that you use the featu
 
 To run the linters on the command line:
 
-`yarn run lint`
+`yarn lint`
 
-`yarn run lint:js`
+`yarn lint:js`
 
-`yarn run lint:css`
+`yarn lint:css`
 
-`yarn run lint:fix`
+`yarn lint:fix`
 
 ## Testing
 
@@ -61,8 +65,6 @@ Pushing code on the develop branch will run the GitLab CI pipeline and if succes
 After deployment, modified files are invalidated on CloudFront and the correct headers are set. 
 
 The most recent copy of the site is then pushed to each CloudFront edge location for optimal performance around the world.
-
-`https://staging.davidbrookes.co.uk`
 
 ## Contact Form
 

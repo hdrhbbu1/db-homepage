@@ -7,9 +7,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
   return new Promise((resolve, reject) => {
     const projectDetail = path.resolve(`./src/templates/ProjectDetail.jsx`)
-    resolve(
-      graphql(
-        `
+    resolve(graphql(`
         {
           allMarkdownRemark(
             limit: 100,
@@ -28,24 +26,22 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
         }
-      `
-      ).then((result) => {
-        if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
-        }
+      `).then((result) => {
+      if (result.errors) {
+        console.log(result.errors)
+        reject(result.errors)
+      }
 
-        // Create project pages.
-        _.each(result.data.allMarkdownRemark.edges, (edge) => {
-          createPage({
+      // Create project pages.
+      _.each(result.data.allMarkdownRemark.edges, (edge) => {
+        createPage({
+          path: edge.node.frontmatter.path,
+          component: projectDetail,
+          context: {
             path: edge.node.frontmatter.path,
-            component: projectDetail,
-            context: {
-              path: edge.node.frontmatter.path,
-            },
-          })
+          },
         })
       })
-    )
+    }))
   })
 }

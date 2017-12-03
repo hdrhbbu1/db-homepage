@@ -60,7 +60,7 @@ class Homepage extends React.Component {
                 <Col xs={24} sm={12}>
                   <h3>Key Services & Skills</h3>
                   <ul>
-                    {post.frontmatter.servicesPrimary.map((skill) => (
+                    {post.frontmatter.servicesPrimary.map(skill => (
                       <li key={skill}>
                         {skill}
                       </li>
@@ -70,7 +70,7 @@ class Homepage extends React.Component {
 
                 <Col xs={24} sm={12}>
                   <ul>
-                    {post.frontmatter.servicesSecondary.map((skill) => (
+                    {post.frontmatter.servicesSecondary.map(skill => (
                       <li key={skill}>
                         {skill}
                       </li>

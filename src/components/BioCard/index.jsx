@@ -9,7 +9,7 @@ const BioCard = ({ avatar, col1 }) => (
   <Row gutter={30} type="flex">
     <Col xs={24} sm={4} lg={3} xl={{ span: 2, offset: 2 }}>
       <div className={styles.avatar}>
-        <ResponsiveImage image={avatar} maxwidth={`90px`} title="David Brookes" />
+        <ResponsiveImage image={avatar} maxwidth="90px" title="David Brookes" />
       </div>
     </Col>
     <Col xs={24} sm={20} lg={10} xl={8}>
@@ -18,11 +18,11 @@ const BioCard = ({ avatar, col1 }) => (
     <Col xs={24} sm={{ span: 20, offset: 4 }} lg={{ span: 10, offset: 0 }} xl={8}>
       <div style={{ textAlign: `justify` }}>
         <p>{ `If you’re starting a new web venture or you're an online business with an existing project then `}
-          <Link to={`/contact/`}>get in touch</Link>
+          <Link to="/contact/">get in touch</Link>
           { ` to discuss your requirements and timelines.` }
         </p>
         <p>{ `Agency in need of an extra pair of hands? Looking for a technical co founder? ` }
-          <Link to={`/contact/`}>Contact me</Link>
+          <Link to="/contact/">Contact me</Link>
           { ` and let me know what you're up to and I'll see how I can help. `}
         </p>
         <p>{ `This website is built with React, GraphQL and AWS Serverless, it is open source and `}

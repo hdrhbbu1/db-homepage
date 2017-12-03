@@ -7,9 +7,7 @@ describe(`SectionHeader`, () => {
   let mountedSectionHeader
   const lockScreen = () => {
     if (!mountedSectionHeader) {
-      mountedSectionHeader = shallow(
-        <SectionHeader {...props} />
-      )
+      mountedSectionHeader = shallow(<SectionHeader {...props} />)
     }
     return mountedSectionHeader
   }

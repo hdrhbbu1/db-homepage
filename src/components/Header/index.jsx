@@ -37,7 +37,7 @@ class MainHeader extends React.Component {
               <img
                 src={logo}
                 className={styles.logo}
-                alt={`David Brookes - Freelance Web Developer London`}
+                alt="David Brookes - Freelance Web Developer London"
               />
             </Link>
 

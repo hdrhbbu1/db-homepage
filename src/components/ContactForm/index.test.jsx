@@ -7,9 +7,7 @@ describe(`ContactForm`, () => {
   let mountedSectionHeader
   const lockScreen = () => {
     if (!mountedSectionHeader) {
-      mountedSectionHeader = shallow(
-        <ContactForm {...props} />
-      )
+      mountedSectionHeader = shallow(<ContactForm {...props} />)
     }
     return mountedSectionHeader
   }

@@ -26,7 +26,7 @@ class ProjectDetailTemplate extends React.Component {
         <Row gutter={30}>
           <Col xs={24} md={17}>
             <Card bodyStyle={{ padding: `5px` }}>
-              <ResponsiveImage image={post.frontmatter.full} maxwidth={`1200px`} title={post.frontmatter.title} />
+              <ResponsiveImage image={post.frontmatter.full} maxwidth="1200px" title={post.frontmatter.title} />
             </Card>
           </Col>
           <Col xs={24} md={7}>

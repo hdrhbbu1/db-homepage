@@ -31,12 +31,16 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.3",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-15": "^1.0.5",
     "eslint": "^4.12.1",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
     "identity-obj-proxy": "^3.0.0",
+    "jest": "^21.2.1",
+    "react-test-renderer": "15",
     "stylelint": "^8.3.1",
     "stylelint-config-standard": "^18.0.0"
   },
@@ -48,12 +52,14 @@
     "url": "git+https://github.com/dbrookes/db-homepage.git"
   },
   "scripts": {
-    "lint:js": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "yarn lint:js && yarn lint:css",
+    "lint:js": "./node_modules/.bin/eslint --ext .jsx --ignore-pattern public .",
     "lint:css": "stylelint 'src/**/*.css'",
-    "lint:fixjs": "./node_modules/.bin/eslint --fix --ext .js,.jsx --ignore-pattern public .",
-    "lint:fixcss": "stylelint 'src/**/*.css' --fix",
-    "test": "jest --config ./jest.config.json",
-    "test:coverage": "jest --config ./jest.config.json --coverage",
+    "lint:fix": "yarn lint:fix:js && yarn lint:fix:css",
+    "lint:fix:js": "./node_modules/.bin/eslint --fix --ext .jsx --ignore-pattern public .",
+    "lint:fix:css": "stylelint 'src/**/*.css' --fix",
+    "test:js": "jest --config ./jest.config.json",
+    "test:js:coverage": "jest --config ./jest.config.json --coverage",
     "develop": "gatsby develop -p 8080",
     "build": "gatsby build"
   }
