@@ -28,13 +28,11 @@
   "rules": {
     "no-console": "off",
     "valid-jsdoc": "off",
-    "global-require": "off",
     "react/prefer-stateless-function": "off",
     "react/no-danger": "off",
     "require-jsdoc": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "import/extensions": "off",
-    "import/no-dynamic-require": "off",
     "quotes": [
       "error",
       "backtick"

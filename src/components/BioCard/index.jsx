@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'antd'
 import Link from 'gatsby-link'
-import ResponsiveImage from "../../components/ResponsiveImage"
+import Img from 'gatsby-image'
 
 import styles from './index.module.css'
 
@@ -9,7 +9,7 @@ const BioCard = ({ avatar, col1 }) => (
   <Row gutter={30} type="flex">
     <Col xs={24} sm={4} lg={3} xl={{ span: 2, offset: 2 }}>
       <div className={styles.avatar}>
-        <ResponsiveImage image={avatar} maxwidth="90px" title="David Brookes" />
+        <Img resolutions={avatar} alt="David Brookes" />
       </div>
     </Col>
     <Col xs={24} sm={20} lg={10} xl={8}>

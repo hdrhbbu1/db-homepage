@@ -187,13 +187,8 @@ export const pageQuery = graphql`
             jobTitle
             thumb {
               childImageSharp {
-                responsiveResolution {
-                  base64
-                  aspectRatio
-                  width
-                  height
-                  src
-                  srcSet
+                resolutions(width: 90, height: 90) {
+                  ...GatsbyImageSharpResolutions_withWebp_tracedSVG
                 }
               }
             }

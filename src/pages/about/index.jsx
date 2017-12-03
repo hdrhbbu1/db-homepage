@@ -8,11 +8,31 @@ import Testimonial from "../../components/TestimonialCard"
 import ClientCard from "../../components/ClientCard/index"
 import BioCard from "../../components/BioCard/index"
 
+import CadburyLogo from "../../components/svg/clients/cadbury-logo.svg"
+import CarneGieHallLogo from "../../components/svg/clients/carnegie-hall-logo.svg"
+import DeloitteLogo from "../../components/svg/clients/deloitte-logo.svg"
+import HMGovernmentLogo from "../../components/svg/clients/hm-government-logo.svg"
+import FordLogo from "../../components/svg/clients/ford-logo.svg"
+import QueenElizabethLogo from "../../components/svg/clients/qedjt-logo.svg"
+import ScottishGovernmentLogo from "../../components/svg/clients/scottish-government-logo.svg"
+import LabourLogo from "../../components/svg/clients/labour-logo.svg"
+
 class About extends React.Component {
   render() {
     const post = this.props.data.page
     const allTestimonials = get(this, `props.data.allTestimonials.edges`)
-    const allClients = get(this, `props.data.allClients.edges`)
+
+    const clientsList = post.frontmatter.allClients
+    const clients = [
+      { title: clientsList[0], logo: CadburyLogo },
+      { title: clientsList[1], logo: CarneGieHallLogo },
+      { title: clientsList[2], logo: DeloitteLogo },
+      { title: clientsList[3], logo: HMGovernmentLogo },
+      { title: clientsList[4], logo: FordLogo },
+      { title: clientsList[5], logo: QueenElizabethLogo },
+      { title: clientsList[6], logo: ScottishGovernmentLogo },
+      { title: clientsList[7], logo: LabourLogo },
+    ]
 
     return (
       <section>
@@ -20,10 +40,10 @@ class About extends React.Component {
         <SectionHeader
           headingCopy="About"
           type="h1"
-          taglineCopy="A little more about me."
+          taglineCopy={post.frontmatter.tagline}
         />
 
-        <BioCard avatar={post.frontmatter.avatar} col1={post.html} />
+        <BioCard avatar={post.frontmatter.avatar.childImageSharp.resolutions} col1={post.html} />
 
         <SectionHeader
           headingCopy="Testimonails"
@@ -46,9 +66,9 @@ class About extends React.Component {
         />
 
         <Row gutter={30} type="flex">
-          {allClients.map(client => (
-            <Col key={client.node.id} xs={24} sm={12} md={6}>
-              <ClientCard client={client.node.frontmatter} />
+          {clients.map(client => (
+            <Col key={client.title} xs={24} sm={12} md={6}>
+              <ClientCard client={client} />
             </Col>
           ))}
         </Row>
@@ -70,15 +90,12 @@ export const pageQuery = graphql`
         title
         path
         metaTitle
+        tagline
+        allClients
         avatar {
           childImageSharp {
-            responsiveResolution {
-              base64
-              aspectRatio
-              width
-              height
-              src
-              srcSet
+            resolutions(width: 100, height: 100) {
+              ...GatsbyImageSharpResolutions_withWebp_tracedSVG
             }
           }
         }
@@ -95,13 +112,8 @@ export const pageQuery = graphql`
             jobTitle
             thumb {
               childImageSharp {
-                responsiveResolution {
-                  base64
-                  aspectRatio
-                  width
-                  height
-                  src
-                  srcSet
+                resolutions(width: 90, height: 90) {
+                  ...GatsbyImageSharpResolutions_withWebp_tracedSVG
                 }
               }
             }
