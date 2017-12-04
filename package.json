@@ -23,7 +23,6 @@
     "gatsby-transformer-remark": "^1.7.23",
     "gatsby-transformer-sharp": "^1.6.15",
     "lodash": "^4.17.4",
-    "sharp": "^0.17.1",
     "typeface-merriweather": "^0.0.45",
     "typeface-montserrat": "^0.0.45",
     "typeface-open-sans": "^0.0.45"
