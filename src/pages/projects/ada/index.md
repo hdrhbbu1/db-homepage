@@ -1,7 +1,7 @@
 ---
 title: Ada College
 metaTitle: Ada College Project
-path: "/projects/ada-college/"
+path: /projects/ada-college/
 date: 2017-03-01
 
 featured: true
@@ -13,8 +13,8 @@ client: Ada
 
 link: https://ada.ac.uk
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
  - Craft CMS
@@ -30,6 +30,4 @@ Ada, the National College of Digital Skills is a specialist college which inspir
 
 ## Features
 
-_To do_
-
-
+Course and apprenticeships applications, blog, search

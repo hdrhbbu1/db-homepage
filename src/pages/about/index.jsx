@@ -1,13 +1,12 @@
 import React from "react"
 import get from "lodash/get"
+import { Row, Col } from "antd"
 
-import { Row, Col } from 'antd'
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"
 import Testimonial from "../../components/TestimonialCard"
 import ClientCard from "../../components/ClientCard/index"
 import BioCard from "../../components/BioCard/index"
-
 import CadburyLogo from "../../components/svg/clients/cadbury-logo.svg"
 import CarneGieHallLogo from "../../components/svg/clients/carnegie-hall-logo.svg"
 import DeloitteLogo from "../../components/svg/clients/deloitte-logo.svg"

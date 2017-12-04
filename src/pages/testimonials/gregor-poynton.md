@@ -1,14 +1,14 @@
 ---
-title: "Gregor Poynton"
+title: Gregor Poynton
 type: testimonial
 
 featured: true
 draft: false
 
-jobTitle: "Partner, Portland Communications"
-thumb: "gregor-poynton.jpg"
-linkedIn: "https://www.linkedin.com/in/gregorpoynton"
-twitter: "https://twitter.com/gregorpoynton"
+jobTitle: Partner, Portland Communications
+thumb: gregor-poynton.jpg
+linkedIn: https://www.linkedin.com/in/gregorpoynton
+twitter: https://twitter.com/gregorpoynton
 
 ---
 

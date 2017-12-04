@@ -3,7 +3,7 @@ title: lebua Hotels and Resorts
 metaTitle: lebua Hotels and Resorts Project
 metaDescription: Known as the hotel from The Hangover Part II movie, lebua is a growing international luxury brand operating hotels, fine restaurants and bars.
 
-path: "/projects/lebua-hotels-and-resorts/"
+path: /projects/lebua-hotels-and-resorts/
 date: 2012-01-02
 
 featured: false
@@ -16,8 +16,8 @@ client: Lebua
 
 link: http://www.lebua.com
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS
@@ -38,4 +38,3 @@ Best known as the hotel that features in The Hangover Part II movie, lebua is a 
 * Mandarin Chinese bilingual pages
 * Instagram integration
 * Infinite scroll
-

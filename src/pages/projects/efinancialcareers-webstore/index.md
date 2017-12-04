@@ -2,7 +2,7 @@
 title: eFinancialCareers Webstore
 metaTitle: eFinancialCareers Webstore Project
 metaDescription: eFinancialCareers, the world's leading financial services careers website, the webstore allows recruiters to quickly purchase job listing credits.
-path: "/projects/efinancialcareers-webstore/"
+path: /projects/efinancialcareers-webstore/
 date: 2016-03-01
 
 featured: true
@@ -15,8 +15,8 @@ agency:
 
 link: https://webstore.efinancialcareers.com
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - HTML5

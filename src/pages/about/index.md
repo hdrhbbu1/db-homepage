@@ -1,13 +1,12 @@
 ---
-title: "About"
-metaTitle: "About David Brookes"
-metaDescription: "David Brookes is a freelance web developer based in London specialising in building high performance business websites."
+title: About
+metaTitle: About David Brookes
+metaDescription: David Brookes is a freelance web developer based in London specialising in building high performance business websites.
 
-path: "/about/"
-date: "2015-05-28T22:40:32.169Z"
+path: /about/
 
-tagline: "A little more about me"
-avatar: "avatar.jpg"
+tagline: A little more about me
+avatar: avatar.jpg
 
 allClients:
 - Cadbury

@@ -1,8 +1,8 @@
-import React from 'react'
-import { Card } from 'antd'
-import Img from 'gatsby-image'
+import React from "react"
+import { Card } from "antd"
+import Img from "gatsby-image"
 
-import styles from './index.module.css'
+import styles from "./index.module.css"
 
 class TestimonialCard extends React.Component {
   render() {

@@ -4,11 +4,11 @@ import get from "lodash/get"
 import { Row, Col } from 'antd'
 
 import PageMeta from "../components/PageMeta"
-import Intro from '../components/Intro'
-import SectionHeader from '../components/SectionHeader'
-import ProjectCard from '../components/ProjectCard'
-import ClientCard from '../components/ClientCard/index'
-import TestimonialCard from '../components/TestimonialCard'
+import Intro from "../components/Intro"
+import SectionHeader from "../components/SectionHeader"
+import ProjectCard from "../components/ProjectCard"
+import ClientCard from "../components/ClientCard/index"
+import TestimonialCard from "../components/TestimonialCard"
 
 import CadburyLogo from "../components/svg/clients/cadbury-logo.svg"
 import DeloitteLogo from "../components/svg/clients/deloitte-logo.svg"
@@ -25,9 +25,9 @@ class Homepage extends React.Component {
     const clientsList = post.frontmatter.allClients
     const clients = [
       { title: clientsList[0], logo: CadburyLogo },
-      { title: clientsList[2], logo: DeloitteLogo },
-      { title: clientsList[3], logo: HMGovernmentLogo },
-      { title: clientsList[4], logo: FordLogo },
+      { title: clientsList[1], logo: DeloitteLogo },
+      { title: clientsList[2], logo: HMGovernmentLogo },
+      { title: clientsList[3], logo: FordLogo },
     ]
 
     return (
@@ -172,16 +172,7 @@ export const pageQuery = graphql`
             thumb {
               childImageSharp {
                 sizes(maxWidth: 500, maxHeight: 320) {
-                  base64
-                  tracedSVG
-                  aspectRatio
-                  src
-                  srcSet
-                  srcWebp
-                  srcSetWebp
-                  sizes
-                  originalImg
-                  originalName
+                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
               }
             }

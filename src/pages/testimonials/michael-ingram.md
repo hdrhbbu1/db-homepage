@@ -1,13 +1,13 @@
 ---
-title: "Michael Ingram"
+title: Michael Ingram
 type: testimonial
 
 featured: false
 draft: false
 
-jobTitle: "Digital Manager, The Royal College of Nursing"
-thumb: "michael-ingram.jpg"
-linkedIn: "https://uk.linkedin.com/in/mingram"
+jobTitle: Digital Manager, The Royal College of Nursing
+thumb: michael-ingram.jpg
+linkedIn: https://uk.linkedin.com/in/mingram
 twitter:
 
 ---

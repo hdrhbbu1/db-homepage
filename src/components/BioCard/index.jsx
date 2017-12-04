@@ -1,9 +1,9 @@
-import React from 'react'
-import { Row, Col } from 'antd'
-import Link from 'gatsby-link'
-import Img from 'gatsby-image'
+import React from "react"
+import { Row, Col } from "antd"
+import Link from "gatsby-link"
+import Img from "gatsby-image"
 
-import styles from './index.module.css'
+import styles from "./index.module.css"
 
 const BioCard = ({ avatar, col1 }) => (
   <Row gutter={30} type="flex">

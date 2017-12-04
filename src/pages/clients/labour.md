@@ -1,10 +1,10 @@
 ---
-title: "Labour Party"
+title: Labour Party
 type: clients
 
 featured: false
 draft: false
 
-logo: "labour-logo"
+logo: labour-logo
 
 ---

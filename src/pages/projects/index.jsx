@@ -1,10 +1,10 @@
 import React from "react"
 import get from "lodash/get"
-import { Row, Col } from 'antd'
+import { Row, Col } from "antd"
 
 import PageMeta from "../../components/PageMeta"
-import SectionHeader from '../../components/SectionHeader'
-import ProjectCard from '../../components/ProjectCard'
+import SectionHeader from "../../components/SectionHeader"
+import ProjectCard from "../../components/ProjectCard"
 
 class ProjectsPage extends React.Component {
   render() {
@@ -72,16 +72,7 @@ query ProjectsPage($path: String!) {
           thumb {
             childImageSharp {
               sizes(maxWidth: 500, maxHeight: 320) {
-                base64
-                tracedSVG
-                aspectRatio
-                src
-                srcSet
-                srcWebp
-                srcSetWebp
-                sizes
-                originalImg
-                originalName
+                ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
             }
           }

@@ -3,7 +3,7 @@ title: Live Art UK
 metaTitle: Live Art UK Project
 metaDescription: Live Art UK is bringing together key promoters and facilitators to support and develop Live Art for the benefit of artists and audiences.
 
-path: "/projects/live-art-uk/"
+path: /projects/live-art-uk/
 date: 2013-11-01
 
 featured: false
@@ -16,8 +16,8 @@ client: LADA
 
 link: http://www.liveartuk.org/
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS

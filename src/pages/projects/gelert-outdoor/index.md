@@ -3,7 +3,7 @@ title: Gelert Outdoor
 metaTitle: Gelert Outdoor Project
 metaDescription: A British camping and outdoor clothing brand named after the dog Gelert of Prince Llywelyn the Great, Prince of Gwynedd in North Wales.
 
-path: "/projects/gelert-outdoor/"
+path: /projects/gelert-outdoor/
 date: 2010-01-01
 
 featured: false
@@ -16,8 +16,8 @@ client: Gelert
 
 link: http://www.gelert.com
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS

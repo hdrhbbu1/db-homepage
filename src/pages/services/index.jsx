@@ -1,6 +1,6 @@
 import React from "react"
 import get from "lodash/get"
-import { Row, Col } from 'antd'
+import { Row, Col } from "antd"
 
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"

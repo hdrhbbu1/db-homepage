@@ -3,7 +3,7 @@ title: Pero Petfood
 metaTitle: Pero Petfood Project
 metaDescription: Pero Petfood was founded in 1985 and produces a range of high quality, wholesome, natural and tasty dog and other pet foods.
 
-path: "/projects/pero-petfood/"
+path: /projects/pero-petfood/
 date: 2011-01-01
 
 featured: false
@@ -16,8 +16,8 @@ client: Pero
 
 link:
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS

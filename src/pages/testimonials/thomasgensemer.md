@@ -1,14 +1,14 @@
 ---
-title: "Thomas Gensemer"
+title: Thomas Gensemer
 type: testimonial
 
 featured: true
 draft: false
 
-jobTitle: "Chief Strategy Officer, Burson-Marsteller"
-thumb: "thomas-gensemer.jpg"
-linkedIn: "https://www.linkedin.com/in/thomasgensemer"
-twitter: "https://twitter.com/thomasgensemer"
+jobTitle: Chief Strategy Officer, Burson-Marsteller
+thumb: thomas-gensemer.jpg
+linkedIn: https://www.linkedin.com/in/thomasgensemer
+twitter: https://twitter.com/thomasgensemer
 
 ---
 

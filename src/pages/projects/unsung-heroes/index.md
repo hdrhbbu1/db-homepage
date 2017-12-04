@@ -3,7 +3,7 @@ title: Unsung Heroes
 metaTitle: Unsung Heroes Project
 metaDescription: An award designed to celebrate the hard-working individuals behind the scenes to make the careers of our favourite music stars possible.
 
-path: "/projects/unsung-heroes/"
+path: /projects/unsung-heroes/
 date: 2011-01-02
 
 featured: false
@@ -16,8 +16,8 @@ client: BPI
 
 link: http://www.whymusicmatters.org
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS

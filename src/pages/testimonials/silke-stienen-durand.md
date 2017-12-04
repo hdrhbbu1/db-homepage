@@ -1,13 +1,13 @@
 ---
-title: "Silke Stienen-Durand"
+title: Silke Stienen-Durand
 type: testimonial
 
 featured: true
 draft: false
 
-jobTitle: "Senior UX Architect"
-thumb: "silke-stienen-durand.jpg"
-linkedIn: "https://www.linkedin.com/in/silke-stienen-durand-b494b25b/"
+jobTitle: Senior UX Architect
+thumb: silke-stienen-durand.jpg
+linkedIn: https://www.linkedin.com/in/silke-stienen-durand-b494b25b/
 twitter:
 
 ---

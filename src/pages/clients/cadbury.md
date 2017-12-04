@@ -1,10 +1,10 @@
 ---
-title: "Cadbury"
+title: Cadbury
 type: clients
 
 featured: true
 draft: false
 
-logo: "cadbury-logo"
+logo: cadbury-logo
 
 ---
