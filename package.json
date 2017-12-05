@@ -21,7 +21,7 @@
     "gatsby-source-filesystem": "^1.5.9",
     "gatsby-transformer-json": "^1.0.13",
     "gatsby-transformer-remark": "^1.7.23",
-    "gatsby-transformer-sharp": "^1.6.15",
+    "gatsby-transformer-sharp": "^1.6.13",
     "lodash": "^4.17.4",
     "typeface-merriweather": "^0.0.45",
     "typeface-montserrat": "^0.0.45",
