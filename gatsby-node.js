@@ -28,7 +28,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       `).then((result) => {
       if (result.errors) {
-        console.log(result.errors)
+        console.log(result.errors) // eslint-disable-line no-console
         reject(result.errors)
       }
 
@@ -46,6 +46,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   })
 }
 
-exports.modifyWebpackConfig = ({ config }) => {
-  config._config.devtool = false // eslint-disable-line
+exports.modifyWebpackConfig = (config) => {
+  config.devtool = false // eslint-disable-line
 }

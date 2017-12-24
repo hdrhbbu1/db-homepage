@@ -27,7 +27,7 @@ const BioCard = ({ avatar, col1 }) => (
         </p>
         <p>{ `This website is built with React, GraphQL and AWS Serverless, it is open source and `}
           <a target="_blank" rel="noreferrer noopener" href="https://github.com/dbrookes/db-homepage">
-          available on GitGub
+          available on GitHub
           </a>.
         </p>
       </div>

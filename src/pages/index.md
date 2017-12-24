@@ -5,11 +5,11 @@ metaDescription: Specialising in crafting stylish, high performance business web
 
 path: /
 
-intro: specialising in crafting stylish, high performance business websites and web applications that get results, using the latest cutting edge web development technologies.
+intro: specialising in crafting stylish, high performance web applications and experiences that get results, using the latest cutting edge web development technologies.
 
 servicesPrimary:
 - HTML5, CSS3
-- Sass, Compass, CSS Modules
+- Sass, CSS Modules
 - JavaScript (ES6)
 - jQuery, AngularJS, ReactJS
 - Craft CMS / WordPress

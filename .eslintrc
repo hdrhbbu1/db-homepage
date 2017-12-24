@@ -26,7 +26,6 @@
     "import/core-modules": ["react", "antd", "react-helmet"]
   },
   "rules": {
-    "no-console": "off",
     "valid-jsdoc": "off",
     "react/prefer-stateless-function": "off",
     "react/no-danger": "off",

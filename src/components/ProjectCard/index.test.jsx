@@ -50,4 +50,3 @@ describe(`ProjectCard`, () => {
     expect(lockScreen().find(`span`).length)
   })
 })
-
