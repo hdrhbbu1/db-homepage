@@ -116,8 +116,8 @@ class ContactForm extends React.Component {
                 {getFieldDecorator(`email`, {
                   validateTrigger: `onBlur`,
                   rules: [{
- required: true, whitespace: true, type: `email`, message: `Please provide your email address.`,
-}],
+                    required: true, whitespace: true, type: `email`, message: `Please provide your email address.`,
+                  }],
                 })(<Input type="email" prefix={<Icon type="mail" style={{ fontSize: 13 }} />} />)}
               </FormItem>
             </Col>
