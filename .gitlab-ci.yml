@@ -14,7 +14,7 @@ build:
   image: arctica/aws-node:latest
   script:
     - npm install
-    - npm run lint
+#    - npm run lint
     - npm run build
   artifacts:
     paths:
