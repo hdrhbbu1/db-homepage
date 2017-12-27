@@ -26,7 +26,11 @@ const ProjectCard = ({ project, index }) => {
 
 ProjectCard.propTypes = {
   project: PropTypes.object.isRequired,
-  index: PropTypes.number.isRequired,
+  index: PropTypes.number,
+}
+
+ProjectCard.defaultProps = {
+  index: 0,
 }
 
 export default ProjectCard

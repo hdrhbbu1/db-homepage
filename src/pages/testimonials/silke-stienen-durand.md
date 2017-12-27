@@ -5,7 +5,7 @@ type: testimonial
 featured: true
 draft: false
 
-jobTitle: Senior UX Architect
+jobTitle: Senior UX Architect, DHI Group
 thumb: silke-stienen-durand.jpg
 linkedIn: https://www.linkedin.com/in/silke-stienen-durand-b494b25b/
 twitter:

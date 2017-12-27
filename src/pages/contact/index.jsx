@@ -55,7 +55,7 @@ const Contact = ({ data }) => {
 export default Contact
 
 Contact.propTypes = {
-  data: PropTypes.objectOf(PropTypes.string).isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export const pageQuery = graphql`

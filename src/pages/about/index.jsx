@@ -79,7 +79,7 @@ const About = ({ data }) => {
 export default About
 
 About.propTypes = {
-  data: PropTypes.objectOf(PropTypes.string).isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export const pageQuery = graphql`

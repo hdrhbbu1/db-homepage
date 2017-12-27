@@ -9,7 +9,7 @@ const ClientCard = ({ client }) => (
   </div>)
 
 ClientCard.propTypes = {
-  client: PropTypes.node.isRequired,
+  client: PropTypes.object.isRequired,
 }
 
 export default ClientCard

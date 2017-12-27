@@ -140,7 +140,7 @@ const Homepage = ({ data }) => {
 export default Homepage
 
 Homepage.propTypes = {
-  data: PropTypes.objectOf(PropTypes.string).isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export const pageQuery = graphql`

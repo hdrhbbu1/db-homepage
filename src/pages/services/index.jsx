@@ -35,7 +35,7 @@ const Services = ({ data }) => {
 export default Services
 
 Services.propTypes = {
-  data: PropTypes.objectOf(PropTypes.string).isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export const pageQuery = graphql`

@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Img from "gatsby-image"
 import { Row, Col, Card } from "antd"
 
 import PageMeta from "../components/PageMeta"
@@ -25,7 +26,7 @@ const ProjectDetailTemplate = ({ data }) => {
       <Row gutter={30}>
         <Col xs={24} md={17}>
           <Card bodyStyle={{ padding: `5px` }}>
-            projet image
+            <Img sizes={post.frontmatter.full.childImageSharp.sizes} />
           </Card>
         </Col>
         <Col xs={24} md={7}>
@@ -42,8 +43,12 @@ const ProjectDetailTemplate = ({ data }) => {
 
           <Card style={{ marginTop: `30px` }}>
             <ul>
-              { post.frontmatter.agency && <li>Agency: {post.frontmatter.agency}</li> }
-              { post.frontmatter.client && <li>Client: {post.frontmatter.client}</li> }
+              {post.frontmatter.agency &&
+                <li><strong>Agency:</strong> {post.frontmatter.agency}</li>
+              }
+              {post.frontmatter.client &&
+                <li><strong>Client:</strong> {post.frontmatter.client}</li>
+              }
               { post.frontmatter.link &&
                 <li>
                   <strong>Link: </strong>
@@ -63,7 +68,7 @@ const ProjectDetailTemplate = ({ data }) => {
 }
 
 ProjectDetailTemplate.propTypes = {
-  data: PropTypes.objectOf(PropTypes.string).isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 }
 
 export default ProjectDetailTemplate
@@ -85,13 +90,8 @@ export const pageQuery = graphql`
         link
         full {
           childImageSharp {
-            responsiveResolution {
-              base64
-              aspectRatio
-              width
-              height
-              src
-              srcSet
+            sizes(maxWidth: 900) {
+              ...GatsbyImageSharpSizes_withWebp_tracedSVG
             }
           }
         }

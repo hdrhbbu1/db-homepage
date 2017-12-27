@@ -2,19 +2,13 @@ stages:
   - build
   - deploy
 
-# test-unit:
-#  stage: build
-#  image: arctica/aws-node:latest
-#  script:
-#    - npm install
-#    - npm run test:coverage
-
 build:
   stage: build
   image: arctica/aws-node:latest
   script:
     - npm install
-    - npm run lint
+#    - npm run lint
+    - npm run test:coverage
     - npm run build
   artifacts:
     paths:

@@ -37,7 +37,7 @@ const BioCard = ({ avatar, col1 }) => (
 )
 
 BioCard.propTypes = {
-  avatar: PropTypes.node.isRequired,
+  avatar: PropTypes.object.isRequired,
   col1: PropTypes.string.isRequired,
 }
 

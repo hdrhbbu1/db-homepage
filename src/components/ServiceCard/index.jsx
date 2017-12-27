@@ -17,7 +17,7 @@ const ServiceCard = ({ post }) => {
 }
 
 ServiceCard.propTypes = {
-  post: PropTypes.node.isRequired,
+  post: PropTypes.object.isRequired,
 }
 
 export default ServiceCard
