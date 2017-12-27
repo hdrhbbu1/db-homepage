@@ -1,5 +1,5 @@
 import React from "react"
-import get from "lodash/get"
+import PropTypes from "prop-types"
 import { Row, Col } from "antd"
 
 import PageMeta from "../../components/PageMeta"
@@ -7,6 +7,7 @@ import SectionHeader from "../../components/SectionHeader"
 import Testimonial from "../../components/TestimonialCard"
 import ClientCard from "../../components/ClientCard/index"
 import BioCard from "../../components/BioCard/index"
+
 import CadburyLogo from "../../components/svg/clients/cadbury-logo.svg"
 import CarneGieHallLogo from "../../components/svg/clients/carnegie-hall-logo.svg"
 import DeloitteLogo from "../../components/svg/clients/deloitte-logo.svg"
@@ -16,68 +17,70 @@ import QueenElizabethLogo from "../../components/svg/clients/qedjt-logo.svg"
 import ScottishGovernmentLogo from "../../components/svg/clients/scottish-government-logo.svg"
 import LabourLogo from "../../components/svg/clients/labour-logo.svg"
 
-class About extends React.Component {
-  render() {
-    const post = this.props.data.page
-    const allTestimonials = get(this, `props.data.allTestimonials.edges`)
+const About = ({ data }) => {
+  const post = data.page
+  const allTestimonials = data.allTestimonials.edges
 
-    const clientsList = post.frontmatter.allClients
-    const clients = [
-      { title: clientsList[0], logo: CadburyLogo },
-      { title: clientsList[1], logo: CarneGieHallLogo },
-      { title: clientsList[2], logo: DeloitteLogo },
-      { title: clientsList[3], logo: HMGovernmentLogo },
-      { title: clientsList[4], logo: FordLogo },
-      { title: clientsList[5], logo: QueenElizabethLogo },
-      { title: clientsList[6], logo: ScottishGovernmentLogo },
-      { title: clientsList[7], logo: LabourLogo },
-    ]
+  const clientsList = post.frontmatter.allClients
+  const clients = [
+    { title: clientsList[0], logo: CadburyLogo },
+    { title: clientsList[1], logo: CarneGieHallLogo },
+    { title: clientsList[2], logo: DeloitteLogo },
+    { title: clientsList[3], logo: HMGovernmentLogo },
+    { title: clientsList[4], logo: FordLogo },
+    { title: clientsList[5], logo: QueenElizabethLogo },
+    { title: clientsList[6], logo: ScottishGovernmentLogo },
+    { title: clientsList[7], logo: LabourLogo },
+  ]
 
-    return (
-      <section>
-        <PageMeta page={post.frontmatter} />
-        <SectionHeader
-          headingCopy="About"
-          type="h1"
-          taglineCopy={post.frontmatter.tagline}
-        />
+  return (
+    <section>
+      <PageMeta page={post.frontmatter} />
+      <SectionHeader
+        headingCopy="About"
+        type="h1"
+        taglineCopy={post.frontmatter.tagline}
+      />
 
-        <BioCard avatar={post.frontmatter.avatar.childImageSharp.resolutions} col1={post.html} />
+      <BioCard avatar={post.frontmatter.avatar.childImageSharp.resolutions} col1={post.html} />
 
-        <SectionHeader
-          headingCopy="Testimonails"
-          type="h2"
-          taglineCopy="What clients say."
-        />
+      <SectionHeader
+        headingCopy="Testimonails"
+        type="h2"
+        taglineCopy="What clients say."
+      />
 
-        <Row gutter={30} type="flex">
-          {allTestimonials.map(testimonial => (
-            <Col key={testimonial.node.id} xs={24} sm={12} md={8}>
-              <Testimonial post={testimonial} />
-            </Col>
-          ))}
-        </Row>
+      <Row gutter={30} type="flex">
+        {allTestimonials.map(testimonial => (
+          <Col key={testimonial.node.id} xs={24} sm={12} md={8}>
+            <Testimonial post={testimonial} />
+          </Col>
+        ))}
+      </Row>
 
-        <SectionHeader
-          headingCopy="Clients"
-          type="h2"
-          taglineCopy="Brands and organisations I've produced work for."
-        />
+      <SectionHeader
+        headingCopy="Clients"
+        type="h2"
+        taglineCopy="Brands and organisations I've produced work for."
+      />
 
-        <Row gutter={30} type="flex">
-          {clients.map(client => (
-            <Col key={client.title} xs={24} sm={12} md={6}>
-              <ClientCard client={client} />
-            </Col>
-          ))}
-        </Row>
+      <Row gutter={30} type="flex">
+        {clients.map(client => (
+          <Col key={client.title} xs={24} sm={12} md={6}>
+            <ClientCard client={client} />
+          </Col>
+        ))}
+      </Row>
 
-      </section>
-    )
-  }
+    </section>
+  )
 }
 
 export default About
+
+About.propTypes = {
+  data: PropTypes.objectOf(PropTypes.string).isRequired,
+}
 
 export const pageQuery = graphql`
   query AboutPage($path: String!) {

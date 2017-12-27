@@ -1,12 +1,13 @@
-import React from 'react'
-import { Card } from 'antd'
-import Img from 'gatsby-image'
+import React from "react"
+import PropTypes from "prop-types"
+import { Card } from "antd"
+import Img from "gatsby-image"
 import Link from "gatsby-link"
 
-import styles from './index.module.css'
+import styles from "./index.module.css"
 
-const ProjectCard = (project, index) => {
-  const projectData = project.project.node.frontmatter
+const ProjectCard = ({ project, index }) => {
+  const projectData = project.node.frontmatter
 
   return (
     <Card noHovering bodyStyle={{ padding: `0px` }} className={index === 2 ? `${styles.item} ${styles.third}` : styles.item}>
@@ -21,6 +22,11 @@ const ProjectCard = (project, index) => {
       </div>
     </Card>
   )
+}
+
+ProjectCard.propTypes = {
+  project: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
 }
 
 export default ProjectCard

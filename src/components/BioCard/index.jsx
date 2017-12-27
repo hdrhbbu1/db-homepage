@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Row, Col } from "antd"
 import Link from "gatsby-link"
 import Img from "gatsby-image"
@@ -34,5 +35,10 @@ const BioCard = ({ avatar, col1 }) => (
     </Col>
   </Row>
 )
+
+BioCard.propTypes = {
+  avatar: PropTypes.node.isRequired,
+  col1: PropTypes.string.isRequired,
+}
 
 export default BioCard

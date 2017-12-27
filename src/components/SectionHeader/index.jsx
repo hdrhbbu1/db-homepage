@@ -1,20 +1,32 @@
-import React from 'react'
+import React from "react"
+import PropTypes from "prop-types"
 
-import styles from './index.module.css'
+import styles from "./index.module.css"
 
-class SectionHeader extends React.Component {
-  render() {
-    return (
-      <div>
-        { this.props.type === `h1` && <h1>{ this.props.headingCopy }</h1> }
-        { this.props.type === `h2` && <h2 className={this.props.smallHeader ? styles.smallHeader : null}>{ this.props.headingCopy }</h2> }
-        <hr className={styles.divider} />
-        <p className={this.props.smallLead ? styles.smallLead : styles.lead}>
-          { this.props.taglineCopy }
-        </p>
-      </div>
-    )
-  }
+const SectionHeader = ({
+  type, headingCopy, taglineCopy, smallHeader, smallLead,
+}) => (
+  <div>
+    { type === `h1` && <h1>{ headingCopy }</h1> }
+    { type === `h2` && <h2 className={smallHeader ? styles.smallHeader : null}>{ headingCopy }</h2> }
+    <hr className={styles.divider} />
+    <p className={smallLead ? styles.smallLead : styles.lead}>
+      { taglineCopy }
+    </p>
+  </div>
+)
+
+SectionHeader.propTypes = {
+  type: PropTypes.node.isRequired,
+  headingCopy: PropTypes.string.isRequired,
+  taglineCopy: PropTypes.string.isRequired,
+  smallHeader: PropTypes.bool,
+  smallLead: PropTypes.bool,
+}
+
+SectionHeader.defaultProps = {
+  smallHeader: false,
+  smallLead: false,
 }
 
 export default SectionHeader

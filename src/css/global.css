@@ -26,7 +26,7 @@ h3 {
   font-family: 'Montserrat', sans-serif;
   color: #2b2b2d;
   margin-bottom: 0.625rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h1,
@@ -78,7 +78,6 @@ abbr[title]:hover {
 }
 
 /* Grid */
-
 .ant-row-flex div[class^='ant-col-'] {
   display: flex;
 }

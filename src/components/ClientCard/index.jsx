@@ -1,10 +1,15 @@
-import React from 'react'
+import React from "react"
+import PropTypes from "prop-types"
+
 import styles from "./index.module.css"
 
-const ClientCard = clientData => (
+const ClientCard = ({ client }) => (
   <div className={styles.client}>
-    <img src={clientData.client.logo} alt={clientData.client.title} />
-  </div>
-)
+    <img src={client.logo} alt={client.title} />
+  </div>)
+
+ClientCard.propTypes = {
+  client: PropTypes.node.isRequired,
+}
 
 export default ClientCard

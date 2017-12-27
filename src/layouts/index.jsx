@@ -1,16 +1,17 @@
-import React from 'react'
-import { Layout } from 'antd'
+import React from "react"
+import PropTypes from "prop-types"
+import { Layout } from "antd"
 
-import 'typeface-open-sans'
-import 'typeface-montserrat'
-import 'typeface-merriweather'
+import "typeface-open-sans"
+import "typeface-montserrat"
+import "typeface-merriweather"
 
-import MainHeader from '../components/Header'
-import MainFooter from '../components/Footer'
-import Sidebar from '../components/Sidebar'
+import MainHeader from "../components/Header"
+import MainFooter from "../components/Footer"
+import Sidebar from "../components/Sidebar"
 
-import '../css/global.css'
-import styles from './index.module.css'
+import "../css/global.css"
+import styles from "./index.module.css"
 
 const { Content } = Layout
 
@@ -77,6 +78,10 @@ class Template extends React.Component {
       </Layout>
     )
   }
+}
+
+Template.propTypes = {
+  children: PropTypes.func.isRequired,
 }
 
 export default Template

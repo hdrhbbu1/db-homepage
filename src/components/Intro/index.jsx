@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react"
+import PropTypes from "prop-types"
 
-import styles from './index.module.css'
+import styles from "./index.module.css"
 
-class Intro extends React.Component {
-  render() {
-    return (
-      <div className={styles.intro}>
-        <h1>{ this.props.title }</h1>
-        <p>{ ` - ${this.props.intro}` }</p>
-      </div>
-    )
-  }
+const Intro = ({ title, intro }) => (
+  <div className={styles.intro}>
+    <h1>{ title }</h1>
+    <p>{ ` - ${intro}` }</p>
+  </div>
+)
+
+Intro.propTypes = {
+  title: PropTypes.string.isRequired,
+  intro: PropTypes.string.isRequired,
 }
 
 export default Intro

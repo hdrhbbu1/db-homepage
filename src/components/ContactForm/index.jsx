@@ -1,5 +1,6 @@
 import React from "react"
-import { Row, Col, Form, Card, Icon, Input, Button, Alert } from 'antd'
+import PropTypes from "prop-types"
+import { Row, Col, Form, Card, Icon, Input, Button, Alert } from "antd"
 import SectionHeader from "../SectionHeader"
 
 const FormItem = Form.Item
@@ -150,6 +151,10 @@ class ContactForm extends React.Component {
       </Card>
     )
   }
+}
+
+ContactForm.propTypes = {
+  form: PropTypes.object.isRequired,
 }
 
 export default Form.create()(ContactForm)

@@ -1,43 +1,45 @@
 import React from "react"
-import get from "lodash/get"
+import PropTypes from "prop-types"
 import { Row, Col } from "antd"
 
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"
 import ProjectCard from "../../components/ProjectCard"
 
-class ProjectsPage extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const allProjects = get(this, `props.data.allMarkdownRemark.edges`)
+const ProjectsPage = ({ data }) => {
+  const post = data.page
+  const allProjects = data.allProjects.edges
 
-    return (
-      <section>
-        <PageMeta page={post.frontmatter} />
+  return (
+    <section>
+      <PageMeta page={post.frontmatter} />
 
-        <SectionHeader
-          headingCopy={post.frontmatter.title}
-          type="h1"
-          taglineCopy={post.frontmatter.tagline}
-        />
+      <SectionHeader
+        headingCopy={post.frontmatter.title}
+        type="h1"
+        taglineCopy={post.frontmatter.tagline}
+      />
 
-        <Row gutter={30} type="flex">
-          {allProjects.map(project => (
-            <Col key={project.node.id} xs={24} sm={12} md={8}>
-              <ProjectCard project={project} />
-            </Col>
-          ))}
-        </Row>
-      </section>
-    )
-  }
+      <Row gutter={30} type="flex">
+        {allProjects.map(project => (
+          <Col key={project.node.id} xs={24} sm={12} md={8}>
+            <ProjectCard project={project} />
+          </Col>
+        ))}
+      </Row>
+    </section>
+  )
 }
 
 export default ProjectsPage
 
+ProjectsPage.propTypes = {
+  data: PropTypes.objectOf(PropTypes.string).isRequired,
+}
+
 export const pageQuery = graphql`
 query ProjectsPage($path: String!) {
-  markdownRemark(frontmatter: { path: { eq: $path } }) {
+  page: markdownRemark(frontmatter: { path: { eq: $path } }) {
     id
     html
     frontmatter {
@@ -49,7 +51,7 @@ query ProjectsPage($path: String!) {
     }
   }
 
-  allMarkdownRemark (
+  allProjects: allMarkdownRemark (
     sort: { fields: [frontmatter___date], order: DESC }
     limit: 24,
     filter: {
