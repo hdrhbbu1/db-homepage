@@ -1,9 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Row, Col, Form, Card, Icon, Input, Button, Alert } from "antd"
+import { Row, Col, Form, Card, Icon, Input, Select, Button, Alert } from "antd"
 import SectionHeader from "../SectionHeader"
 
 const FormItem = Form.Item
+const { Option } = Select
 const { TextArea } = Input
 
 class ContactForm extends React.Component {
@@ -47,7 +48,7 @@ class ContactForm extends React.Component {
               success: true,
               sending: false,
             })
-            this.handleTrack()
+            // this.handleTrack()
           } else {
             this.setState({
               success: false,
@@ -57,7 +58,7 @@ class ContactForm extends React.Component {
         }
       }
 
-      xmlhttp.open(`POST`, process.env.API_URL, true)
+      xmlhttp.open(`POST`, `${process.env.API_URL}/contact`, true)
       xmlhttp.setRequestHeader(`Content-Type`, `application/x-www-form-urlencoded`)
       xmlhttp.send(JSON.stringify(values))
     })
@@ -108,7 +109,7 @@ class ContactForm extends React.Component {
             <Col xs={24} sm={12} md={{ span: 10, offset: 2 }}>
               <FormItem label="Name" style={{ width: `100%` }}>
                 {getFieldDecorator(`name`, {
-                  rules: [{ required: true, whitespace: true, message: `Please provide your name` }],
+                  rules: [{ required: true, whitespace: true, message: `Please provide your name.` }],
                 })(<Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} />)}
               </FormItem>
             </Col>
@@ -120,6 +121,26 @@ class ContactForm extends React.Component {
                     required: true, whitespace: true, type: `email`, message: `Please provide your email address.`,
                   }],
                 })(<Input type="email" prefix={<Icon type="mail" style={{ fontSize: 13 }} />} />)}
+              </FormItem>
+            </Col>
+          </Row>
+
+          <Row gutter={30} type="flex">
+            <Col xs={24} sm={12} md={{ span: 10, offset: 2 }}>
+              <FormItem label="Subject" type="text" style={{ width: `100%` }}>
+                {getFieldDecorator(`subject`, {
+                    rules: [{ required: true, whitespace: true, message: `Please provide a subject.` }],
+                  })(<Input prefix={<Icon type="book" style={{ fontSize: 13 }} />} />)}
+              </FormItem>
+            </Col>
+            <Col xs={24} sm={12} md={{ span: 10 }}>
+              <FormItem label="Type" type="select" style={{ width: `100%` }}>
+                {getFieldDecorator(`type`, {
+                  initialValue: [`freelance`], required: true, message: `Please provide an enquiry type.`,
+                })(<Select>
+                  <Option value="freelance">Freelance Enquiry</Option>
+                  <Option value="contract">Contract Opportunity</Option><Option value="other">Other</Option>
+                   </Select>)}
               </FormItem>
             </Col>
           </Row>
