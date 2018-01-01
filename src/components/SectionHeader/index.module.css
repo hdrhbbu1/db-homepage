@@ -24,6 +24,10 @@ h3 {
   font-size: 1.1875rem;
 }
 
+h2 {
+  margin-top: 100px;
+}
+
 @media (min-width: 48.75rem) {
   h1,
   h2 {

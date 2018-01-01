@@ -3,25 +3,15 @@
   display: none;
 }
 
-.spacer {
-  display: block;
-  z-index: 5;
-  width: inherit;
-  max-width: inherit;
-  position: fixed;
-  border-top: 10px solid #ececec;
-}
-
 .wrap {
   background: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 100%;
-  line-height: 100%;
+  z-index: 5;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .header {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
   width: 100%;
   height: 85px;
   position: relative;
@@ -52,23 +42,19 @@
 }
 
 @media screen and (min-width: 760px) {
-  .spacer {
-    border-top: 20px solid #ececec;
-  }
-
-  .wrap {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   .toggle {
     display: none;
+  }
+
+  .header {
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .menu {
     display: block;
     float: right;
-    margin-top: 37px;
+    margin-top: 18px;
     margin-right: 30px;
   }
 
@@ -102,14 +88,18 @@
     margin-right: 10px;
     content: '{';
     transform: translateX(20px);
-    color: rebeccapurple;
+    color: black;
   }
 
   .menu a::after {
-    color: rebeccapurple;
+    color: black;
     margin-left: 10px;
     content: '}';
     transform: translateX(-20px);
+  }
+
+  .menu a[aria-current^="true"] {
+    color: #1eaedb;
   }
 
   .menu a:hover::before,
@@ -130,7 +120,8 @@
     appearance: none;
     border: none;
     background-color: transparent;
-    color: #1eaedb;
+    color: rebeccapurple;
+    opacity: 0.5;
   }
 
   .progress::-webkit-progress-bar {
@@ -138,10 +129,10 @@
   }
 
   .progress::-webkit-progress-value {
-    background-color: #1eaedb;
+    background-color: black;
   }
 
   .progress::-moz-progress-bar {
-    background-color: #1eaedb;
+    background-color: black;
   }
 }

@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Card } from "antd"
 import Img from "gatsby-image"
 import Link from "gatsby-link"
 
@@ -10,7 +9,7 @@ const ProjectCard = ({ project, index }) => {
   const projectData = project.node.frontmatter
 
   return (
-    <Card noHovering bodyStyle={{ padding: `0px` }} className={index === 2 ? `${styles.item} ${styles.third}` : styles.item}>
+    <div className={index === 2 ? `${styles.item} ${styles.third}` : styles.item}>
       <Link to={projectData.path}>
         <Img sizes={projectData.thumb.childImageSharp.sizes} />
       </Link>
@@ -20,7 +19,7 @@ const ProjectCard = ({ project, index }) => {
         <hr />
         <Link to={projectData.path} style={{ float: `right`, marginBottom: `20px`, textTransform: `uppercase` }}>Project Details</Link>
       </div>
-    </Card>
+    </div>
   )
 }
 

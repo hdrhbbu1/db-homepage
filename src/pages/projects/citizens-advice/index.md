@@ -1,14 +1,14 @@
 ---
 title: Citizens Advice Casebook
 metaTitle: Citizens Advice Casebook Project
-metaDescription: Casebook is a CRM web application to allow advisers across 260 local bureaus to provide and track advice given to the public.
+metaDescription: Casebook is a CRM web application to allow advisers across 260 local offices to provide and track advice given to the public.
 path: /projects/citizens-advice-casebook/
 date: 2016-03-01
 
 featured: true
 draft: false
 
-excerpt: Casebook is a CRM web application to allow advisers across 260 local bureaus to provide and track advice given to the public.
+excerpt: Casebook is a CRM web application to allow advisers across 260 local offices to provide and track advice given to the public.
 
 client: Citizens Advice
 agency:

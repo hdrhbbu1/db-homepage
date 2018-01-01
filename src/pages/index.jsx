@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Link from "gatsby-link"
-import { Row, Col } from 'antd'
+import Grid from "react-css-grid"
+import Icon from "@fortawesome/react-fontawesome"
 
 import PageMeta from "../components/PageMeta"
 import Intro from "../components/Intro"
@@ -9,7 +10,6 @@ import SectionHeader from "../components/SectionHeader"
 import ProjectCard from "../components/ProjectCard"
 import ClientCard from "../components/ClientCard/index"
 import TestimonialCard from "../components/TestimonialCard"
-
 import CadburyLogo from "../components/svg/clients/cadbury-logo.svg"
 import DeloitteLogo from "../components/svg/clients/deloitte-logo.svg"
 import HMGovernmentLogo from "../components/svg/clients/hm-government-logo.svg"
@@ -33,105 +33,87 @@ const Homepage = ({ data }) => {
       <PageMeta page={post.frontmatter} />
       <Intro title={post.frontmatter.title} intro={post.frontmatter.intro} />
 
-      <Row gutter={30}>
-        <Col xs={24}>
-          <SectionHeader
-            headingCopy="Featured Projects"
-            type="h2"
-            taglineCopy="Selected website and application builds."
-          />
-        </Col>
-      </Row>
+      <SectionHeader
+        headingCopy="Featured Projects"
+        type="h2"
+        taglineCopy="Selected website and application builds."
+      />
 
-      <Row gutter={30} type="flex">
+      <Grid width={240} gap={30}>
         {featuredProjects.map((project, index) => (
-          <Col key={project.node.id} xs={24} sm={12} md={8} lg={8} xl={8}>
+          <div key={project.node.id} style={{ display: `flex` }}>
             <ProjectCard project={project} index={index} />
-          </Col>
+          </div>
           ))}
-      </Row>
+      </Grid>
 
       <Link to="/projects/">More Projects</Link>
 
-      <div>
-        <Row gutter={30}>
-          <Col xs={24}>
-            <SectionHeader
-              headingCopy="Services"
-              type="h2"
-              taglineCopy="Companies hire me to build cutting-edge web experiences for big-name clients."
-            />
-          </Col>
-        </Row>
+      <SectionHeader
+        headingCopy="Services"
+        type="h2"
+        taglineCopy="Companies hire me to build cutting-edge web experiences for big-name clients."
+      />
 
-        <Row gutter={30}>
-          <Col xs={24} sm={12}>
-            <Row gutter={30}>
-              <Col xs={24} sm={12}>
-                <h3>Key Services & Skills</h3>
-                <ul>
-                  {post.frontmatter.servicesPrimary.map(skill => (
-                    <li key={skill}>
-                      {skill}
-                    </li>
+      <Grid width={480} gap={30}>
+        <div>
+          <Grid width={280} gap={30}>
+            <div>
+              <h3>Key Services & Skills</h3>
+              <ul>
+                {post.frontmatter.servicesPrimary.map(skill => (
+                  <li key={skill}>
+                    <Icon icon="check-square" />  {skill}
+                  </li>
                   ))}
-                </ul>
-              </Col>
+              </ul>
+            </div>
 
-              <Col xs={24} sm={12}>
-                <ul>
-                  {post.frontmatter.servicesSecondary.map(skill => (
-                    <li key={skill}>
-                      {skill}
-                    </li>
+            <div>
+              <ul>
+                {post.frontmatter.servicesSecondary.map(skill => (
+                  <li key={skill}>
+                    <Icon icon="check-square" /> {skill}
+                  </li>
                   ))}
-                </ul>
-              </Col>
-            </Row>
-          </Col>
+              </ul>
+            </div>
+          </Grid>
+        </div>
 
-          <Col xs={24} sm={12}>
-            <h3>Web Development</h3>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </Col>
-        </Row>
-      </div>
+        <div>
+          <h3>Web Development</h3>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div>
+      </Grid>
 
-      <Row gutter={30}>
-        <Col xs={24}>
-          <SectionHeader
-            headingCopy="Testimonials"
-            type="h2"
-            taglineCopy="What clients say."
-          />
-        </Col>
-      </Row>
+      <SectionHeader
+        headingCopy="Testimonials"
+        type="h2"
+        taglineCopy="What clients say."
+      />
 
-      <Row gutter={30} type="flex">
+      <Grid width={240} gap={0}>
         {featuredTestimonials.map((testimonial, index) => (
-          <Col key={testimonial.node.id} xs={24} sm={12} md={8}>
+          <div key={testimonial.node.id} style={{ display: `flex` }}>
             <TestimonialCard post={testimonial} index={index} />
-          </Col>
+          </div>
           ))}
-      </Row>
+      </Grid>
 
-      <Row gutter={30}>
-        <Col xs={24}>
-          <SectionHeader
-            headingCopy="Clients"
-            type="h2"
-            taglineCopy="Brands and organisations I've produced work for."
-          />
-        </Col>
-      </Row>
+      <SectionHeader
+        headingCopy="Clients"
+        type="h2"
+        taglineCopy="Brands and organisations I've produced work for."
+      />
 
-      <Row gutter={30} type="flex">
+      <Grid width={240} gap={30}>
         {clients.map(client => (
-          <Col key={client.title} xs={24} sm={12} md={6}>
+          <div key={client.title} style={{ display: `flex` }}>
             <ClientCard client={client} />
-          </Col>
+          </div>
           ))}
-      </Row>
+      </Grid>
 
     </section>
   )
@@ -172,7 +154,7 @@ export const pageQuery = graphql`
             excerpt
             thumb {
               childImageSharp {
-                sizes(maxWidth: 500, maxHeight: 320) {
+                sizes(maxWidth: 500, maxHeight: 360) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
               }

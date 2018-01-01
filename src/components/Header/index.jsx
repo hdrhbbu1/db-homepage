@@ -1,14 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Link from "gatsby-link"
-import { Layout, Button } from "antd"
+import Icon from "@fortawesome/react-fontawesome"
+
+import Button from "../Button"
 
 import styles from "./index.module.css"
 import logo from "./logo.svg"
 
-const { Header } = Layout
-
-class MainHeader extends React.Component {
+class Header extends React.Component {
   constructor() {
     super()
     this.state = { max: 1, distanceY: 0 }
@@ -31,56 +31,50 @@ class MainHeader extends React.Component {
 
   render() {
     return (
-      <div className={styles.spacer}>
-        <Header className={styles.wrap}>
-          <div className={styles.header}>
-            <Link to="/" onClick={() => this.props.navToggle(`close`)}>
-              <img
-                src={logo}
-                className={styles.logo}
-                alt="David Brookes - Freelance Web Developer London"
-              />
-            </Link>
-
-            <nav className={styles.menu}>
-              <ul>
-                <li><Link activeClassName="active" to="/about/">About</Link></li>
-                <li><Link activeClassName="active" to="/projects/">Projects</Link></li>
-                <li><Link activeClassName="active" to="/services/">Services</Link></li>
-                <li><Link activeClassName="active" to="/contact/">Contact</Link></li>
-              </ul>
-            </nav>
-
-            <Button
-              className={styles.toggle}
-              icon={this.props.collapsed ? `menu-unfold` : `menu-fold`}
-              shape="circle"
-              size="large"
-              onClick={this.props.navToggle}
-            >
-              Open Nav
-            </Button>
-
-            <progress
-              value={this.state.distanceY}
-              max={this.state.max}
-              className={styles.progress}
+      <div className={styles.wrap}>
+        <header className={styles.header}>
+          <Link to="/" onClick={() => this.props.navToggle(`close`)}>
+            <img
+              src={logo}
+              className={styles.logo}
+              alt="David Brookes - Freelance Web Developer London"
             />
-          </div>
-        </Header>
+          </Link>
+
+          <nav className={styles.menu}>
+            <ul>
+              <li><Link activeClassName="active" to="/about/">About</Link></li>
+              <li><Link activeClassName="active" to="/projects/">Projects</Link></li>
+              <li><Link activeClassName="active" to="/services/">Services</Link></li>
+              <li><Link activeClassName="active" to="/contact/">Contact</Link></li>
+            </ul>
+          </nav>
+
+          <Button
+            className={styles.toggle}
+            onClick={this.props.navToggle}
+          >
+            <Icon icon="check-square" />
+          </Button>
+
+          <progress
+            value={this.state.distanceY}
+            max={this.state.max}
+            className={styles.progress}
+          />
+        </header>
       </div>
     )
   }
 }
 
-MainHeader.propTypes = {
-  collapsed: PropTypes.bool,
+Header.propTypes = {
+  isOpen: PropTypes.bool,
   navToggle: PropTypes.func.isRequired,
 }
 
-MainHeader.defaultProps = {
-  collapsed: false,
+Header.defaultProps = {
+  isOpen: false,
 }
 
-
-export default MainHeader
+export default Header

@@ -1,24 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Layout } from "antd"
 
 import "typeface-open-sans"
 import "typeface-montserrat"
 import "typeface-merriweather"
+import FontAwesome from "@fortawesome/fontawesome"
+import Icons from '@fortawesome/fontawesome-free-solid'
+import Brands from '@fortawesome/fontawesome-free-brands'
 
-import MainHeader from "../components/Header"
-import MainFooter from "../components/Footer"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 import Sidebar from "../components/Sidebar"
 
 import "../css/global.css"
 import styles from "./index.module.css"
 
-const { Content } = Layout
+FontAwesome.library.add(Icons, Brands)
 
 class Template extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { collapsed: true }
+    this.state = { isOpen: false }
     this.handleSidebar = this.handleSidebar.bind(this)
     this.handleViewportChange = this.handleViewportChange.bind(this)
   }
@@ -30,17 +32,17 @@ class Template extends React.Component {
   handleSidebar(direction = `toggle`) {
     if (direction === `close`) {
       this.setState({
-        collapsed: true,
+        isOpen: false,
       })
     } else {
       this.setState({
-        collapsed: !this.state.collapsed,
+        isOpen: !this.state.isOpen,
       }, () => {
-        if (!this.state.collapsed) {
+        if (this.state.isOpen) {
           const closeZone = document.getElementsByClassName(styles.dimmer)[0]
 
           const closeMe = () => {
-            this.setState({ collapsed: true }, () => {
+            this.setState({ isOpen: false }, () => {
               closeZone.removeEventListener(`touchend`, () => closeMe())
               closeZone.removeEventListener(`mouseup`, () => closeMe())
             })
@@ -55,27 +57,24 @@ class Template extends React.Component {
 
   handleViewportChange() {
     this.setState({
-      collapsed: true,
+      isOpen: false,
     })
   }
 
   render() {
-    const { children } = this.props
-
     return (
-      <Layout className={styles.layout}>
-
-        <MainHeader collapsed={this.state.collapsed} navToggle={this.handleSidebar} />
-        <Layout>
-          <Content className={`${this.state.collapsed ? `` : styles.dimmer} ${styles.content}`}>
+      <div className={styles.layout}>
+        <Header isOpen={this.state.isOpen} navToggle={this.handleSidebar} />
+        <div>
+          <div id="content" className={`${this.state.isOpen ? styles.dimmer : ``} ${styles.content}`}>
             <main>
-              { children() }
+              { this.props.children() }
             </main>
-          </Content>
-          <Sidebar collapsed={this.state.collapsed} navToggle={this.handleSidebar} />
-        </Layout>
-        <MainFooter collapsed={this.state.collapsed} />
-      </Layout>
+          </div>
+          <Sidebar isOpen={this.state.isOpen} navToggle={this.handleSidebar} />
+        </div>
+        <Footer />
+      </div>
     )
   }
 }

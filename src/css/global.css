@@ -5,11 +5,10 @@
 
 html {
   font-size: 16px;
-  height: 100%;
 }
 
 body {
-  background: #ececec;
+  background: #fff;
   font-size: 0.9rem;
   line-height: 1.6;
   font-weight: 400;
@@ -29,17 +28,4 @@ a {
 
 a:active {
   top: 0.0625rem;
-}
-
-abbr[title] {
-  text-decoration: none;
-  border-bottom: 0.0625rem dotted;
-}
-
-abbr[title]:hover {
-  cursor: help;
-}
-
-.ant-row-flex div[class^='ant-col-'] {
-  display: flex;
 }

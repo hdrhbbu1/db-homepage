@@ -1,7 +1,7 @@
 ---
 title: "UX & Accessibility"
 type: service
-icon: "solution"
+icon: "universal-access"
 
 order: 10
 draft: false

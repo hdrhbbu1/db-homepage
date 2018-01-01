@@ -1,22 +1,19 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import { Layout } from 'antd'
+import React from "react"
+import Link from "gatsby-link"
 
 import styles from "./index.module.css"
 
-const { Footer } = Layout
-
-const MainFooter = (collapsed) => {
+const Footer = () => {
   const currentYear = new Date().getFullYear()
   return (
-    <Footer className={styles.footer + (collapsed ? `` : ` ${styles.collapsed}`)}>
+    <footer className={styles.footer}>
       <p>Made in London with React, GraphQL and AWS Serverless.</p>
       <p className={styles.copy}>
         {`Copyright © 2005 - ${currentYear} `}
         <Link to="/">David Brookes</Link>
       </p>
-    </Footer>
+    </footer>
   )
 }
 
-export default MainFooter
+export default Footer

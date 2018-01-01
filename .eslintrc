@@ -23,7 +23,7 @@
     "graphql": false
   },
   "settings": {
-    "import/core-modules": ["react", "antd", "react-helmet"]
+    "import/core-modules": ["react", "react-helmet"]
   },
   "rules": {
     "react/no-danger": "off",

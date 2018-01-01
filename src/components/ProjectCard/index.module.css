@@ -15,9 +15,12 @@
 
 .item {
   margin-bottom: 40px;
-  border: 0;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   padding: 5px;
+}
+
+.item img {
+  padding: 5px;
+  border: 1px solid black;
 }
 
 .item.third {

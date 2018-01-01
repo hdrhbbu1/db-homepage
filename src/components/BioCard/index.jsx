@@ -1,44 +1,42 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Row, Col } from "antd"
-import Link from "gatsby-link"
+import Grid from "react-css-grid"
 import Img from "gatsby-image"
+import Icon from "@fortawesome/react-fontawesome"
 
 import styles from "./index.module.css"
 
-const BioCard = ({ avatar, col1 }) => (
-  <Row gutter={30} type="flex">
-    <Col xs={24} sm={4} lg={3} xl={{ span: 2, offset: 2 }}>
-      <div className={styles.avatar}>
-        <Img resolutions={avatar} alt="David Brookes" />
-      </div>
-    </Col>
-    <Col xs={24} sm={20} lg={10} xl={8}>
+const BioCard = ({ avatar, col1, col2 }) => (
+  <div style={{ width: `80%`, margin: `0 auto` }}>
+    <div className={styles.avatar}>
+      <Img resolutions={avatar} alt="David Brookes" />
+      <p>
+        <a style={{ color: `#2b2b2d` }} href="https://github.com/dbrookes" target="_blank" rel="noopener noreferrer">
+          <Icon icon={[`fab`, `github`]} size="lg" fixedWidth />
+        </a>
+        <a style={{ color: `#2b2b2d` }} href="https://linkedin.com/in/dbrookes" target="_blank" rel="noopener noreferrer">
+          <Icon icon={[`fab`, `linkedin`]} size="lg" fixedWidth />
+        </a>
+        <a style={{ color: `#2b2b2d` }} href="https://angel.co/dbrookes" target="_blank" rel="noopener noreferrer">
+          <Icon icon={[`fab`, `angellist`]} size="lg" fixedWidth />
+        </a>
+        <a style={{ color: `#2b2b2d` }} href="https://twitter.com/_dbrookes" target="_blank" rel="noopener noreferrer">
+          <Icon icon={[`fab`, `twitter`]} size="lg" fixedWidth />
+        </a>
+      </p>
+    </div>
+    <Grid width={420} gap={30}>
       <div style={{ textAlign: `justify` }} dangerouslySetInnerHTML={{ __html: col1 }} />
-    </Col>
-    <Col xs={24} sm={{ span: 20, offset: 4 }} lg={{ span: 10, offset: 0 }} xl={8}>
-      <div style={{ textAlign: `justify` }}>
-        <p>{ `If you’re starting a new web venture or you're an online business with an existing project then `}
-          <Link to="/contact/">get in touch</Link>
-          { ` to discuss your requirements and timelines.` }
-        </p>
-        <p>{ `Agency in need of an extra pair of hands? Looking for a technical co founder? ` }
-          <Link to="/contact/">Contact me</Link>
-          { ` and let me know what you're up to and I'll see how I can help. `}
-        </p>
-        <p>{ `This website is built with React, GraphQL and AWS Serverless, it is open source and `}
-          <a target="_blank" rel="noreferrer noopener" href="https://github.com/dbrookes/db-homepage">
-          available on GitHub
-          </a>.
-        </p>
-      </div>
-    </Col>
-  </Row>
+      <div style={{ textAlign: `justify` }} dangerouslySetInnerHTML={{ __html: col2 }} />
+      <div />
+    </Grid>
+  </div>
 )
 
 BioCard.propTypes = {
   avatar: PropTypes.object.isRequired,
   col1: PropTypes.string.isRequired,
+  col2: PropTypes.string.isRequired,
 }
 
 export default BioCard

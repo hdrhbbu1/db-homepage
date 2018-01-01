@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Row, Col } from "antd"
+import Grid from "react-css-grid"
 
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"
@@ -8,6 +8,7 @@ import Testimonial from "../../components/TestimonialCard"
 import ClientCard from "../../components/ClientCard/index"
 import BioCard from "../../components/BioCard/index"
 
+// TODO: Replace with dynamic import, or use SVG asset support via GraphQL
 import CadburyLogo from "../../components/svg/clients/cadbury-logo.svg"
 import CarneGieHallLogo from "../../components/svg/clients/carnegie-hall-logo.svg"
 import DeloitteLogo from "../../components/svg/clients/deloitte-logo.svg"
@@ -42,7 +43,7 @@ const About = ({ data }) => {
         taglineCopy={post.frontmatter.tagline}
       />
 
-      <BioCard avatar={post.frontmatter.avatar.childImageSharp.resolutions} col1={post.html} />
+      <BioCard avatar={post.frontmatter.avatar.childImageSharp.resolutions} col1={post.html} col2={post.frontmatter.col2} />
 
       <SectionHeader
         headingCopy="Testimonails"
@@ -50,13 +51,13 @@ const About = ({ data }) => {
         taglineCopy="What clients say."
       />
 
-      <Row gutter={30} type="flex">
+      <Grid width={420} gap={30}>
         {allTestimonials.map(testimonial => (
-          <Col key={testimonial.node.id} xs={24} sm={12} md={8}>
+          <div key={testimonial.node.id} style={{ display: `flex` }}>
             <Testimonial post={testimonial} />
-          </Col>
+          </div>
         ))}
-      </Row>
+      </Grid>
 
       <SectionHeader
         headingCopy="Clients"
@@ -64,13 +65,13 @@ const About = ({ data }) => {
         taglineCopy="Brands and organisations I've produced work for."
       />
 
-      <Row gutter={30} type="flex">
+      <Grid width={320} gap={30}>
         {clients.map(client => (
-          <Col key={client.title} xs={24} sm={12} md={6}>
+          <div key={client.title} style={{ display: `flex` }}>
             <ClientCard client={client} />
-          </Col>
+          </div>
         ))}
-      </Row>
+      </Grid>
 
     </section>
   )
@@ -94,6 +95,7 @@ export const pageQuery = graphql`
         metaTitle
         tagline
         allClients
+        col2
         avatar {
           childImageSharp {
             resolutions(width: 100, height: 100) {

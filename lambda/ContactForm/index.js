@@ -24,12 +24,11 @@ exports.handler = function (event, context) {
   if (event.type === undefined) {
     event.type = "Freelance";
   }
+  
+  if (event.company === undefined) {
+    event.company = "n/a";
+  }
 
-  // Make sure we have a subject.
-  // If the event didn't include it, then
-  // pull it from the configuration.
-  // If we still don't have a subject, then
-  // just make one up.
   if (event.subject === undefined) {
     event.subject = config.defaultSubject;
 
@@ -63,16 +62,9 @@ exports.handler = function (event, context) {
 
       // Perform the substitutions
       var subject = mark.up(event.subject, event);
-      console.log("Final subject: " + subject);
-
       var company = mark.up(event.company, event);
-      console.log("Final company: " + company);
-
       var type = mark.up(event.type, event);
-      console.log("Final type: " + type);
-
       var message = mark.up(templateBody, event);
-      console.log("Final message: " + message);
 
       var params = {
         Destination: {

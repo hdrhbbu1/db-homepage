@@ -1,7 +1,7 @@
 ---
 title: "User Interface Development"
 type: service
-icon: "layout"
+icon: "object-group"
 
 order: 02
 draft: false

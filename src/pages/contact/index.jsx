@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { Row, Col } from "antd"
+import Grid from "react-css-grid"
+import Icon from "@fortawesome/react-fontawesome"
 
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"
@@ -16,11 +17,7 @@ const Contact = ({ data }) => {
 
       <SectionHeader headingCopy={post.frontmatter.title} type="h1" taglineCopy={post.frontmatter.tagline} />
 
-      <Row gutter={30} type="flex">
-        <Col xs={24} md={{ span: 14, offset: 5 }}>
-          <ContactForm />
-        </Col>
-      </Row>
+      <ContactForm />
 
       <SectionHeader
         smallHeader
@@ -29,6 +26,21 @@ const Contact = ({ data }) => {
         type="h2"
         taglineCopy="Other places to find me."
       />
+
+      <p style={{ textAlign: `center` }}>
+        <a style={{ color: `#2b2b2d` }} href="https://github.com/dbrookes" target="_blank" rel="noopener noreferrer">
+          <Icon icon={[`fab`, `github`]} size="3x" fixedWidth />
+        </a>
+        <a style={{ color: `#2b2b2d` }} href="https://linkedin.com/in/dbrookes" target="_blank" rel="noopener noreferrer">
+          <Icon icon={[`fab`, `linkedin`]} size="3x" fixedWidth />
+        </a>
+        <a style={{ color: `#2b2b2d` }} href="https://angel.co/dbrookes" target="_blank" rel="noopener noreferrer">
+          <Icon icon={[`fab`, `angellist`]} size="3x" fixedWidth />
+        </a>
+        <a style={{ color: `#2b2b2d` }} href="https://twitter.com/_dbrookes" target="_blank" rel="noopener noreferrer">
+          <Icon icon={[`fab`, `twitter`]} size="3x" fixedWidth />
+        </a>
+      </p>
 
       <Helmet
         script={[{

@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Row, Col } from "antd"
+import Grid from "react-css-grid"
 
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"
@@ -20,13 +20,13 @@ const Services = ({ data }) => {
         taglineCopy={post.frontmatter.tagline}
       />
 
-      <Row gutter={30} type="flex">
+      <Grid width={420} gap={30}>
         {allServices.map(service => (
-          <Col key={service.node.id} xs={24} md={12} lg={8}>
+          <div key={service.node.id} style={{ display: `flex` }}>
             <ServiceCard post={service} />
-          </Col>
+          </div>
         ))}
-      </Row>
+      </Grid>
 
     </section>
   )

@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Row, Col } from "antd"
+import Grid from "react-css-grid"
 
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"
@@ -20,13 +20,13 @@ const ProjectsPage = ({ data }) => {
         taglineCopy={post.frontmatter.tagline}
       />
 
-      <Row gutter={30} type="flex">
+      <Grid width={420} gap={30}>
         {allProjects.map(project => (
-          <Col key={project.node.id} xs={24} sm={12} md={8}>
+          <div key={project.node.id} style={{ display: `flex` }}>
             <ProjectCard project={project} />
-          </Col>
+          </div>
         ))}
-      </Row>
+      </Grid>
     </section>
   )
 }
@@ -73,7 +73,7 @@ query ProjectsPage($path: String!) {
           title
           thumb {
             childImageSharp {
-              sizes(maxWidth: 500, maxHeight: 320) {
+              sizes(maxWidth: 500, maxHeight: 360) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
             }
