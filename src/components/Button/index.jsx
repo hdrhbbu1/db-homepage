@@ -11,6 +11,10 @@ const Button = props => (
 
 Button.propTypes = {
   type: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 }
 
 Button.defaultProps = {

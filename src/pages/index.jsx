@@ -46,7 +46,7 @@ const Homepage = ({ data }) => {
           </div>
           ))}
       </Grid>
-      
+
       <div style={{ display: `flex` }}>
         <ButtonTo to="/projects/" style={{ margin: `auto` }}>More Projects</ButtonTo>
       </div>

@@ -9,8 +9,7 @@ class Select extends React.Component {
   }
 
   render() {
-    const className = `form-group${this.props.className || ` `
-    }${this.props.showRequired() ? `required` : this.props.showError() ? `error` : ``}`
+    const className = `form-group ${this.props.showError() ? `error` : ``}`
     const errorMessage = this.props.getErrorMessage()
 
     const options = this.props.options.map(option => (
@@ -22,7 +21,12 @@ class Select extends React.Component {
     return (
       <div className={className}>
         <label htmlFor={this.props.name}>{this.props.title} { this.props.required && <span className="required">*</span> }
-          <select className={styles.select} name={this.props.name} onChange={this.changeValue} value={this.props.getValue()}>
+          <select
+            className={styles.select}
+            name={this.props.name}
+            onChange={this.changeValue}
+            value={this.props.getValue()}
+          >
             {options}
           </select>
         </label>

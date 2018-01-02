@@ -43,7 +43,11 @@ const About = ({ data }) => {
         taglineCopy={post.frontmatter.tagline}
       />
 
-      <BioCard avatar={post.frontmatter.avatar.childImageSharp.resolutions} col1={post.html} col2={post.frontmatter.col2} />
+      <BioCard
+        avatar={post.frontmatter.avatar.childImageSharp.resolutions}
+        col1={post.html}
+        col2={post.frontmatter.col2}
+      />
 
       <SectionHeader
         headingCopy="Testimonails"

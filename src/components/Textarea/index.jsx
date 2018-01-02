@@ -26,13 +26,14 @@ class Textarea extends React.Component {
   }
 
   render() {
+    const className = `form-group ${this.props.showError() ? `error` : ``}`
     const errorMessage = this.state.blurred ? this.props.getErrorMessage() : ``
 
     return (
-      <div className={this.props.className}>
+      <div className={className}>
         <label htmlFor={this.props.name}>{this.props.title}
           <textarea
-            className={styles.textarea}  
+            className={styles.textarea}
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
             onChange={e => this.props.setValue(e.target.value)}

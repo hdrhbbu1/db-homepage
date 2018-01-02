@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import Grid from "react-css-grid"
 import Icon from "@fortawesome/react-fontawesome"
 
 import PageMeta from "../../components/PageMeta"

@@ -86,7 +86,12 @@ class ContactForm extends React.Component {
           }
 
         {!this.state.success &&
-          <Formsy onValidSubmit={this.handleSubmit} onInvalidSubmit={this.handleInvalid} onValid={this.enableButton} className={styles.form}>
+          <Formsy
+            onValidSubmit={this.handleSubmit}
+            onInvalidSubmit={this.handleInvalid}
+            onValid={this.enableButton}
+            className={styles.form}
+          >
 
             <Grid width={240} gap={30}>
               <div>
