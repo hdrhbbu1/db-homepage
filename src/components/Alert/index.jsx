@@ -6,9 +6,9 @@ import styles from "./index.module.css"
 
 const Alert = ({ message, description, type }) => (
   <div className={`${styles.alert} ${styles[type]}`} role="alert">
+    <Icon icon={type === `error` ? `exclamation-circle` : `check-circle`} size="2x" fixedWidth />
     <h3>{message}</h3>
     <p>{description}</p>
-    <Icon icon="check-square" />
   </div>
 )
 

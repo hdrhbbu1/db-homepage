@@ -4,11 +4,10 @@
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 .content {
-  padding: 75px 75px 75px;
+  padding: 50px 30px 30px;
   margin-top: 64px;
   margin-left: 20px;
   margin-right: 20px;
@@ -20,4 +19,10 @@
   opacity: 0.2;
   filter: blur(5px);
   min-height: 100%;
+}
+
+@media screen and (min-width: 875px) {
+  .content {
+    padding: 75px 75px 75px;
+  }
 }

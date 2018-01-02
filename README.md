@@ -22,13 +22,13 @@ GraphiQL is available at: `http://localhost:8080/___graphql/`
 
 Changes made locally to React components and styles are hot reloaded to the browser.
 
-To build a static version of the site for production `yarn build`
+To build a static optimised version of the site for production `yarn build`.
 
 ## User Interface
 
-The UI is based on Alibaba's [Ant Design](https://ant.design/docs/react/introduce) React component library, an enterprise-class UI design language for web applications.
+The UI makes use of CSS Grid and Flexbox for layout. Custom components are styled with [CSS Modules](https://github.com/css-modules/css-modules).
 
-Custom components are styled with [CSS Modules](https://github.com/css-modules/css-modules).
+React Burger Menu provides offcanvas support for small device navigation and Formsy React for handling complex form validations.
 
 ## Linting
 

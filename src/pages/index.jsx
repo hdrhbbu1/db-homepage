@@ -157,7 +157,7 @@ export const pageQuery = graphql`
             excerpt
             thumb {
               childImageSharp {
-                sizes(maxWidth: 500, maxHeight: 360) {
+                sizes(maxWidth: 500, maxHeight: 360, quality: 80) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
               }
@@ -177,7 +177,7 @@ export const pageQuery = graphql`
             jobTitle
             thumb {
               childImageSharp {
-                resolutions(width: 90, height: 90) {
+                resolutions(width: 90, height: 90, quality: 80) {
                   ...GatsbyImageSharpResolutions_withWebp_tracedSVG
                 }
               }

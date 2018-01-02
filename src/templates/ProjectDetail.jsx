@@ -84,7 +84,7 @@ export const pageQuery = graphql`
         link
         full {
           childImageSharp {
-            sizes(maxWidth: 900) {
+            sizes(maxWidth: 1000, quality: 80) {
               ...GatsbyImageSharpSizes_withWebp_tracedSVG
             }
           }

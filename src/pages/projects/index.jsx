@@ -73,7 +73,7 @@ query ProjectsPage($path: String!) {
           title
           thumb {
             childImageSharp {
-              sizes(maxWidth: 500, maxHeight: 360) {
+              sizes(maxWidth: 500, maxHeight: 360, quality: 80) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
             }

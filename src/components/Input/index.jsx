@@ -30,7 +30,7 @@ class Input extends React.Component {
 
     return (
       <div className={className}>
-        <label htmlFor={this.props.name}>{this.props.title} { this.props.required && <span className="required">*</span> }
+        <label htmlFor={this.props.name}>{this.props.title} { !this.props.required && <span className="optional">(optional)</span> }
           <input
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}

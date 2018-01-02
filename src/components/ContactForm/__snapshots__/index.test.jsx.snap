@@ -1,0 +1,1293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm renders a ContactForm 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ContactForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <SectionHeader
+          headingCopy="Project Enquiry"
+          smallHeader={true}
+          smallLead={true}
+          taglineCopy="Please ensure to include as much information about the project as possible as well as any budgets and timelines."
+          type="h2"
+        />,
+        undefined,
+        false,
+        <Formsy
+          className="form"
+          disabled={false}
+          getErrorMessage={[Function]}
+          getErrorMessages={[Function]}
+          getValue={[Function]}
+          hasValue={[Function]}
+          isFormDisabled={[Function]}
+          isFormSubmitted={[Function]}
+          isPristine={[Function]}
+          isRequired={[Function]}
+          isValid={[Function]}
+          isValidValue={[Function]}
+          mapping={null}
+          onChange={[Function]}
+          onError={[Function]}
+          onInvalid={[Function]}
+          onInvalidSubmit={[Function]}
+          onReset={[Function]}
+          onSubmit={[Function]}
+          onValid={[Function]}
+          onValidSubmit={[Function]}
+          preventExternalInvalidation={false}
+          resetValue={[Function]}
+          setValidations={[Function]}
+          setValue={[Function]}
+          showError={[Function]}
+          showRequired={[Function]}
+          validationErrors={null}
+        >
+          <styled.div
+            gap={30}
+            width={240}
+          >
+            <div>
+              <Formsy(Input)
+                innerRef={[Function]}
+                name="name"
+                required={true}
+                title="Your Name"
+                validationError="Please provide your name."
+                validationErrors={Object {}}
+                validations="minLength:2"
+                value={undefined}
+              />
+              <Formsy(Input)
+                innerRef={[Function]}
+                name="email"
+                required={true}
+                title="Your Email"
+                validationError="Please provide a valid email address."
+                validationErrors={Object {}}
+                validations="isEmail"
+                value={undefined}
+              />
+            </div>
+            <div>
+              <Formsy(Input)
+                innerRef={[Function]}
+                name="company"
+                required={false}
+                title="Company (Optional)"
+                validationError=""
+                validationErrors={Object {}}
+                validations={null}
+                value={undefined}
+              />
+              <Formsy(Select)
+                innerRef={[Function]}
+                name="type"
+                options={
+                  Array [
+                    Object {
+                      "title": "Freelance",
+                      "value": "freelance",
+                    },
+                    Object {
+                      "title": "Contact Opportunity",
+                      "value": "contract",
+                    },
+                    Object {
+                      "title": "Other",
+                      "value": "other",
+                    },
+                  ]
+                }
+                required={false}
+                title="Enquiry Type"
+                validationError="Please select an enquiry type."
+                validationErrors={Object {}}
+                validations={null}
+                value="freelance"
+              />
+            </div>
+          </styled.div>
+          <Formsy(Textarea)
+            innerRef={[Function]}
+            name="message"
+            required={true}
+            rows={10}
+            title="Message"
+            validationError="Please enter a message of at least 10 characters."
+            validationErrors={Object {}}
+            validations="minLength: 10"
+            value={undefined}
+          />
+          <Button
+            disabled={false}
+            type="submit"
+          >
+            <FontAwesomeIcon$1
+              border={false}
+              className=""
+              fixedWidth={false}
+              flip={null}
+              icon="rocket"
+              listItem={false}
+              mask={null}
+              name=""
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              transform={null}
+            />
+             Submit
+          </Button>
+        </Formsy>,
+      ],
+      "style": Object {
+        "margin": "0 auto",
+        "width": "60%",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "headingCopy": "Project Enquiry",
+          "smallHeader": true,
+          "smallLead": true,
+          "taglineCopy": "Please ensure to include as much information about the project as possible as well as any budgets and timelines.",
+          "type": "h2",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      undefined,
+      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <styled.div
+              gap={30}
+              width={240}
+            >
+              <div>
+                <Formsy(Input)
+                  innerRef={[Function]}
+                  name="name"
+                  required={true}
+                  title="Your Name"
+                  validationError="Please provide your name."
+                  validationErrors={Object {}}
+                  validations="minLength:2"
+                  value={undefined}
+                />
+                <Formsy(Input)
+                  innerRef={[Function]}
+                  name="email"
+                  required={true}
+                  title="Your Email"
+                  validationError="Please provide a valid email address."
+                  validationErrors={Object {}}
+                  validations="isEmail"
+                  value={undefined}
+                />
+              </div>
+              <div>
+                <Formsy(Input)
+                  innerRef={[Function]}
+                  name="company"
+                  required={false}
+                  title="Company (Optional)"
+                  validationError=""
+                  validationErrors={Object {}}
+                  validations={null}
+                  value={undefined}
+                />
+                <Formsy(Select)
+                  innerRef={[Function]}
+                  name="type"
+                  options={
+                    Array [
+                      Object {
+                        "title": "Freelance",
+                        "value": "freelance",
+                      },
+                      Object {
+                        "title": "Contact Opportunity",
+                        "value": "contract",
+                      },
+                      Object {
+                        "title": "Other",
+                        "value": "other",
+                      },
+                    ]
+                  }
+                  required={false}
+                  title="Enquiry Type"
+                  validationError="Please select an enquiry type."
+                  validationErrors={Object {}}
+                  validations={null}
+                  value="freelance"
+                />
+              </div>
+            </styled.div>,
+            <Formsy(Textarea)
+              innerRef={[Function]}
+              name="message"
+              required={true}
+              rows={10}
+              title="Message"
+              validationError="Please enter a message of at least 10 characters."
+              validationErrors={Object {}}
+              validations="minLength: 10"
+              value={undefined}
+            />,
+            <Button
+              disabled={false}
+              type="submit"
+            >
+              <FontAwesomeIcon$1
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon="rocket"
+                listItem={false}
+                mask={null}
+                name=""
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                transform={null}
+              />
+               Submit
+            </Button>,
+          ],
+          "className": "form",
+          "disabled": false,
+          "getErrorMessage": [Function],
+          "getErrorMessages": [Function],
+          "getValue": [Function],
+          "hasValue": [Function],
+          "isFormDisabled": [Function],
+          "isFormSubmitted": [Function],
+          "isPristine": [Function],
+          "isRequired": [Function],
+          "isValid": [Function],
+          "isValidValue": [Function],
+          "mapping": null,
+          "onChange": [Function],
+          "onError": [Function],
+          "onInvalid": [Function],
+          "onInvalidSubmit": [Function],
+          "onReset": [Function],
+          "onSubmit": [Function],
+          "onValid": [Function],
+          "onValidSubmit": [Function],
+          "preventExternalInvalidation": false,
+          "resetValue": [Function],
+          "setValidations": [Function],
+          "setValue": [Function],
+          "showError": [Function],
+          "showRequired": [Function],
+          "validationErrors": null,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <div>
+                  <Formsy(Input)
+                    innerRef={[Function]}
+                    name="name"
+                    required={true}
+                    title="Your Name"
+                    validationError="Please provide your name."
+                    validationErrors={Object {}}
+                    validations="minLength:2"
+                    value={undefined}
+                  />
+                  <Formsy(Input)
+                    innerRef={[Function]}
+                    name="email"
+                    required={true}
+                    title="Your Email"
+                    validationError="Please provide a valid email address."
+                    validationErrors={Object {}}
+                    validations="isEmail"
+                    value={undefined}
+                  />
+                </div>,
+                <div>
+                  <Formsy(Input)
+                    innerRef={[Function]}
+                    name="company"
+                    required={false}
+                    title="Company (Optional)"
+                    validationError=""
+                    validationErrors={Object {}}
+                    validations={null}
+                    value={undefined}
+                  />
+                  <Formsy(Select)
+                    innerRef={[Function]}
+                    name="type"
+                    options={
+                      Array [
+                        Object {
+                          "title": "Freelance",
+                          "value": "freelance",
+                        },
+                        Object {
+                          "title": "Contact Opportunity",
+                          "value": "contract",
+                        },
+                        Object {
+                          "title": "Other",
+                          "value": "other",
+                        },
+                      ]
+                    }
+                    required={false}
+                    title="Enquiry Type"
+                    validationError="Please select an enquiry type."
+                    validationErrors={Object {}}
+                    validations={null}
+                    value="freelance"
+                  />
+                </div>,
+              ],
+              "gap": 30,
+              "width": 240,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <Formsy(Input)
+                      innerRef={[Function]}
+                      name="name"
+                      required={true}
+                      title="Your Name"
+                      validationError="Please provide your name."
+                      validationErrors={Object {}}
+                      validations="minLength:2"
+                      value={undefined}
+                    />,
+                    <Formsy(Input)
+                      innerRef={[Function]}
+                      name="email"
+                      required={true}
+                      title="Your Email"
+                      validationError="Please provide a valid email address."
+                      validationErrors={Object {}}
+                      validations="isEmail"
+                      value={undefined}
+                    />,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "innerRef": [Function],
+                      "name": "name",
+                      "required": true,
+                      "title": "Your Name",
+                      "validationError": "Please provide your name.",
+                      "validationErrors": Object {},
+                      "validations": "minLength:2",
+                      "value": undefined,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "innerRef": [Function],
+                      "name": "email",
+                      "required": true,
+                      "title": "Your Email",
+                      "validationError": "Please provide a valid email address.",
+                      "validationErrors": Object {},
+                      "validations": "isEmail",
+                      "value": undefined,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <Formsy(Input)
+                      innerRef={[Function]}
+                      name="company"
+                      required={false}
+                      title="Company (Optional)"
+                      validationError=""
+                      validationErrors={Object {}}
+                      validations={null}
+                      value={undefined}
+                    />,
+                    <Formsy(Select)
+                      innerRef={[Function]}
+                      name="type"
+                      options={
+                        Array [
+                          Object {
+                            "title": "Freelance",
+                            "value": "freelance",
+                          },
+                          Object {
+                            "title": "Contact Opportunity",
+                            "value": "contract",
+                          },
+                          Object {
+                            "title": "Other",
+                            "value": "other",
+                          },
+                        ]
+                      }
+                      required={false}
+                      title="Enquiry Type"
+                      validationError="Please select an enquiry type."
+                      validationErrors={Object {}}
+                      validations={null}
+                      value="freelance"
+                    />,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "innerRef": [Function],
+                      "name": "company",
+                      "required": false,
+                      "title": "Company (Optional)",
+                      "validationError": "",
+                      "validationErrors": Object {},
+                      "validations": null,
+                      "value": undefined,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "innerRef": [Function],
+                      "name": "type",
+                      "options": Array [
+                        Object {
+                          "title": "Freelance",
+                          "value": "freelance",
+                        },
+                        Object {
+                          "title": "Contact Opportunity",
+                          "value": "contract",
+                        },
+                        Object {
+                          "title": "Other",
+                          "value": "other",
+                        },
+                      ],
+                      "required": false,
+                      "title": "Enquiry Type",
+                      "validationError": "Please select an enquiry type.",
+                      "validationErrors": Object {},
+                      "validations": null,
+                      "value": "freelance",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "innerRef": [Function],
+              "name": "message",
+              "required": true,
+              "rows": 10,
+              "title": "Message",
+              "validationError": "Please enter a message of at least 10 characters.",
+              "validationErrors": Object {},
+              "validations": "minLength: 10",
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <FontAwesomeIcon$1
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="rocket"
+                  listItem={false}
+                  mask={null}
+                  name=""
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  transform={null}
+                />,
+                " Submit",
+              ],
+              "disabled": false,
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "border": false,
+                  "className": "",
+                  "fixedWidth": false,
+                  "flip": null,
+                  "icon": "rocket",
+                  "listItem": false,
+                  "mask": null,
+                  "name": "",
+                  "pull": null,
+                  "pulse": false,
+                  "rotation": null,
+                  "size": null,
+                  "spin": false,
+                  "symbol": false,
+                  "transform": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              " Submit",
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <SectionHeader
+            headingCopy="Project Enquiry"
+            smallHeader={true}
+            smallLead={true}
+            taglineCopy="Please ensure to include as much information about the project as possible as well as any budgets and timelines."
+            type="h2"
+          />,
+          undefined,
+          false,
+          <Formsy
+            className="form"
+            disabled={false}
+            getErrorMessage={[Function]}
+            getErrorMessages={[Function]}
+            getValue={[Function]}
+            hasValue={[Function]}
+            isFormDisabled={[Function]}
+            isFormSubmitted={[Function]}
+            isPristine={[Function]}
+            isRequired={[Function]}
+            isValid={[Function]}
+            isValidValue={[Function]}
+            mapping={null}
+            onChange={[Function]}
+            onError={[Function]}
+            onInvalid={[Function]}
+            onInvalidSubmit={[Function]}
+            onReset={[Function]}
+            onSubmit={[Function]}
+            onValid={[Function]}
+            onValidSubmit={[Function]}
+            preventExternalInvalidation={false}
+            resetValue={[Function]}
+            setValidations={[Function]}
+            setValue={[Function]}
+            showError={[Function]}
+            showRequired={[Function]}
+            validationErrors={null}
+          >
+            <styled.div
+              gap={30}
+              width={240}
+            >
+              <div>
+                <Formsy(Input)
+                  innerRef={[Function]}
+                  name="name"
+                  required={true}
+                  title="Your Name"
+                  validationError="Please provide your name."
+                  validationErrors={Object {}}
+                  validations="minLength:2"
+                  value={undefined}
+                />
+                <Formsy(Input)
+                  innerRef={[Function]}
+                  name="email"
+                  required={true}
+                  title="Your Email"
+                  validationError="Please provide a valid email address."
+                  validationErrors={Object {}}
+                  validations="isEmail"
+                  value={undefined}
+                />
+              </div>
+              <div>
+                <Formsy(Input)
+                  innerRef={[Function]}
+                  name="company"
+                  required={false}
+                  title="Company (Optional)"
+                  validationError=""
+                  validationErrors={Object {}}
+                  validations={null}
+                  value={undefined}
+                />
+                <Formsy(Select)
+                  innerRef={[Function]}
+                  name="type"
+                  options={
+                    Array [
+                      Object {
+                        "title": "Freelance",
+                        "value": "freelance",
+                      },
+                      Object {
+                        "title": "Contact Opportunity",
+                        "value": "contract",
+                      },
+                      Object {
+                        "title": "Other",
+                        "value": "other",
+                      },
+                    ]
+                  }
+                  required={false}
+                  title="Enquiry Type"
+                  validationError="Please select an enquiry type."
+                  validationErrors={Object {}}
+                  validations={null}
+                  value="freelance"
+                />
+              </div>
+            </styled.div>
+            <Formsy(Textarea)
+              innerRef={[Function]}
+              name="message"
+              required={true}
+              rows={10}
+              title="Message"
+              validationError="Please enter a message of at least 10 characters."
+              validationErrors={Object {}}
+              validations="minLength: 10"
+              value={undefined}
+            />
+            <Button
+              disabled={false}
+              type="submit"
+            >
+              <FontAwesomeIcon$1
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon="rocket"
+                listItem={false}
+                mask={null}
+                name=""
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                transform={null}
+              />
+               Submit
+            </Button>
+          </Formsy>,
+        ],
+        "style": Object {
+          "margin": "0 auto",
+          "width": "60%",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "headingCopy": "Project Enquiry",
+            "smallHeader": true,
+            "smallLead": true,
+            "taglineCopy": "Please ensure to include as much information about the project as possible as well as any budgets and timelines.",
+            "type": "h2",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        undefined,
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <styled.div
+                gap={30}
+                width={240}
+              >
+                <div>
+                  <Formsy(Input)
+                    innerRef={[Function]}
+                    name="name"
+                    required={true}
+                    title="Your Name"
+                    validationError="Please provide your name."
+                    validationErrors={Object {}}
+                    validations="minLength:2"
+                    value={undefined}
+                  />
+                  <Formsy(Input)
+                    innerRef={[Function]}
+                    name="email"
+                    required={true}
+                    title="Your Email"
+                    validationError="Please provide a valid email address."
+                    validationErrors={Object {}}
+                    validations="isEmail"
+                    value={undefined}
+                  />
+                </div>
+                <div>
+                  <Formsy(Input)
+                    innerRef={[Function]}
+                    name="company"
+                    required={false}
+                    title="Company (Optional)"
+                    validationError=""
+                    validationErrors={Object {}}
+                    validations={null}
+                    value={undefined}
+                  />
+                  <Formsy(Select)
+                    innerRef={[Function]}
+                    name="type"
+                    options={
+                      Array [
+                        Object {
+                          "title": "Freelance",
+                          "value": "freelance",
+                        },
+                        Object {
+                          "title": "Contact Opportunity",
+                          "value": "contract",
+                        },
+                        Object {
+                          "title": "Other",
+                          "value": "other",
+                        },
+                      ]
+                    }
+                    required={false}
+                    title="Enquiry Type"
+                    validationError="Please select an enquiry type."
+                    validationErrors={Object {}}
+                    validations={null}
+                    value="freelance"
+                  />
+                </div>
+              </styled.div>,
+              <Formsy(Textarea)
+                innerRef={[Function]}
+                name="message"
+                required={true}
+                rows={10}
+                title="Message"
+                validationError="Please enter a message of at least 10 characters."
+                validationErrors={Object {}}
+                validations="minLength: 10"
+                value={undefined}
+              />,
+              <Button
+                disabled={false}
+                type="submit"
+              >
+                <FontAwesomeIcon$1
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="rocket"
+                  listItem={false}
+                  mask={null}
+                  name=""
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  transform={null}
+                />
+                 Submit
+              </Button>,
+            ],
+            "className": "form",
+            "disabled": false,
+            "getErrorMessage": [Function],
+            "getErrorMessages": [Function],
+            "getValue": [Function],
+            "hasValue": [Function],
+            "isFormDisabled": [Function],
+            "isFormSubmitted": [Function],
+            "isPristine": [Function],
+            "isRequired": [Function],
+            "isValid": [Function],
+            "isValidValue": [Function],
+            "mapping": null,
+            "onChange": [Function],
+            "onError": [Function],
+            "onInvalid": [Function],
+            "onInvalidSubmit": [Function],
+            "onReset": [Function],
+            "onSubmit": [Function],
+            "onValid": [Function],
+            "onValidSubmit": [Function],
+            "preventExternalInvalidation": false,
+            "resetValue": [Function],
+            "setValidations": [Function],
+            "setValue": [Function],
+            "showError": [Function],
+            "showRequired": [Function],
+            "validationErrors": null,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <div>
+                    <Formsy(Input)
+                      innerRef={[Function]}
+                      name="name"
+                      required={true}
+                      title="Your Name"
+                      validationError="Please provide your name."
+                      validationErrors={Object {}}
+                      validations="minLength:2"
+                      value={undefined}
+                    />
+                    <Formsy(Input)
+                      innerRef={[Function]}
+                      name="email"
+                      required={true}
+                      title="Your Email"
+                      validationError="Please provide a valid email address."
+                      validationErrors={Object {}}
+                      validations="isEmail"
+                      value={undefined}
+                    />
+                  </div>,
+                  <div>
+                    <Formsy(Input)
+                      innerRef={[Function]}
+                      name="company"
+                      required={false}
+                      title="Company (Optional)"
+                      validationError=""
+                      validationErrors={Object {}}
+                      validations={null}
+                      value={undefined}
+                    />
+                    <Formsy(Select)
+                      innerRef={[Function]}
+                      name="type"
+                      options={
+                        Array [
+                          Object {
+                            "title": "Freelance",
+                            "value": "freelance",
+                          },
+                          Object {
+                            "title": "Contact Opportunity",
+                            "value": "contract",
+                          },
+                          Object {
+                            "title": "Other",
+                            "value": "other",
+                          },
+                        ]
+                      }
+                      required={false}
+                      title="Enquiry Type"
+                      validationError="Please select an enquiry type."
+                      validationErrors={Object {}}
+                      validations={null}
+                      value="freelance"
+                    />
+                  </div>,
+                ],
+                "gap": 30,
+                "width": 240,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <Formsy(Input)
+                        innerRef={[Function]}
+                        name="name"
+                        required={true}
+                        title="Your Name"
+                        validationError="Please provide your name."
+                        validationErrors={Object {}}
+                        validations="minLength:2"
+                        value={undefined}
+                      />,
+                      <Formsy(Input)
+                        innerRef={[Function]}
+                        name="email"
+                        required={true}
+                        title="Your Email"
+                        validationError="Please provide a valid email address."
+                        validationErrors={Object {}}
+                        validations="isEmail"
+                        value={undefined}
+                      />,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "innerRef": [Function],
+                        "name": "name",
+                        "required": true,
+                        "title": "Your Name",
+                        "validationError": "Please provide your name.",
+                        "validationErrors": Object {},
+                        "validations": "minLength:2",
+                        "value": undefined,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "innerRef": [Function],
+                        "name": "email",
+                        "required": true,
+                        "title": "Your Email",
+                        "validationError": "Please provide a valid email address.",
+                        "validationErrors": Object {},
+                        "validations": "isEmail",
+                        "value": undefined,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <Formsy(Input)
+                        innerRef={[Function]}
+                        name="company"
+                        required={false}
+                        title="Company (Optional)"
+                        validationError=""
+                        validationErrors={Object {}}
+                        validations={null}
+                        value={undefined}
+                      />,
+                      <Formsy(Select)
+                        innerRef={[Function]}
+                        name="type"
+                        options={
+                          Array [
+                            Object {
+                              "title": "Freelance",
+                              "value": "freelance",
+                            },
+                            Object {
+                              "title": "Contact Opportunity",
+                              "value": "contract",
+                            },
+                            Object {
+                              "title": "Other",
+                              "value": "other",
+                            },
+                          ]
+                        }
+                        required={false}
+                        title="Enquiry Type"
+                        validationError="Please select an enquiry type."
+                        validationErrors={Object {}}
+                        validations={null}
+                        value="freelance"
+                      />,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "innerRef": [Function],
+                        "name": "company",
+                        "required": false,
+                        "title": "Company (Optional)",
+                        "validationError": "",
+                        "validationErrors": Object {},
+                        "validations": null,
+                        "value": undefined,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "innerRef": [Function],
+                        "name": "type",
+                        "options": Array [
+                          Object {
+                            "title": "Freelance",
+                            "value": "freelance",
+                          },
+                          Object {
+                            "title": "Contact Opportunity",
+                            "value": "contract",
+                          },
+                          Object {
+                            "title": "Other",
+                            "value": "other",
+                          },
+                        ],
+                        "required": false,
+                        "title": "Enquiry Type",
+                        "validationError": "Please select an enquiry type.",
+                        "validationErrors": Object {},
+                        "validations": null,
+                        "value": "freelance",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "innerRef": [Function],
+                "name": "message",
+                "required": true,
+                "rows": 10,
+                "title": "Message",
+                "validationError": "Please enter a message of at least 10 characters.",
+                "validationErrors": Object {},
+                "validations": "minLength: 10",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <FontAwesomeIcon$1
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="rocket"
+                    listItem={false}
+                    mask={null}
+                    name=""
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    transform={null}
+                  />,
+                  " Submit",
+                ],
+                "disabled": false,
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "border": false,
+                    "className": "",
+                    "fixedWidth": false,
+                    "flip": null,
+                    "icon": "rocket",
+                    "listItem": false,
+                    "mask": null,
+                    "name": "",
+                    "pull": null,
+                    "pulse": false,
+                    "rotation": null,
+                    "size": null,
+                    "spin": false,
+                    "symbol": false,
+                    "transform": null,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                " Submit",
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

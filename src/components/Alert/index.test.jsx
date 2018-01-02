@@ -1,23 +1,27 @@
 import React from "react"
 import { shallow } from "enzyme"
-import ContactForm from "./"
+import Alert from "./"
 
-describe(`ContactForm`, () => {
+describe(`Alert`, () => {
   let props
   let mountedComponent
   const wrapper = () => {
     if (!mountedComponent) {
-      mountedComponent = shallow(<ContactForm {...props} />)
+      mountedComponent = shallow(<Alert {...props} />)
     }
     return mountedComponent
   }
 
   beforeEach(() => {
-    props = {}
+    props = {
+      type: `error`,
+      message: `Alert error title`,
+      description: `This is the alert body text`,
+    }
     mountedComponent = undefined
   })
 
-  it(`renders a ContactForm`, () => {
+  it(`renders an Alert correctly`, () => {
     expect(wrapper()).toMatchSnapshot()
   })
 })
