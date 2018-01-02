@@ -9,7 +9,7 @@ const ServiceCard = ({ post }) => {
 
   return (
     <div className={styles.service}>
-      <Icon icon={serviceData.frontmatter.icon} />
+      <Icon icon={serviceData.frontmatter.icon} fixedWidth />
       <h2>{serviceData.frontmatter.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: serviceData.html }} />
     </div>

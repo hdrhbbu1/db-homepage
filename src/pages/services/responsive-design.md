@@ -1,7 +1,7 @@
 ---
 title: "Responsive Design"
 type: service
-icon: "list-alt"
+icon: "desktop"
 
 order: 07
 draft: false

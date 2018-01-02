@@ -10,7 +10,7 @@ const Footer = () => {
       <p>Made in London with React, GraphQL and AWS Serverless.</p>
       <p className={styles.copy}>
         {`Copyright © 2005 - ${currentYear} `}
-        <Link to="/">David Brookes</Link>
+        <Link to="/"><strong>David Brookes</strong></Link>
       </p>
     </footer>
   )

@@ -5,7 +5,11 @@
   margin-bottom: 60px;
 }
 
-.avatar div {
+.avatar span,
+.avatar img {
   border-radius: 50%;
-  border: 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 3px;
+  border: 2px solid #f8f8f8;
 }

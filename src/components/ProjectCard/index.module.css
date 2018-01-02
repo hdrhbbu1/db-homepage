@@ -1,9 +1,15 @@
 .customCard {
-  padding: 0 20px 20px;
+  padding: 5px 10px;
 }
 
 .customCard p {
   color: #999;
+  margin: 0 0 10px;
+  text-align: justify;
+}
+
+.customCard a {
+  color: #000;
   margin: 10px 0;
 }
 
@@ -15,12 +21,11 @@
 
 .item {
   margin-bottom: 40px;
-  padding: 5px;
 }
 
 .item img {
   padding: 5px;
-  border: 1px solid black;
+  border: 2px solid #f8f8f8;
 }
 
 .item.third {

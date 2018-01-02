@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import Link from "gatsby-link"
 
+import ButtonTo from "../ButtonTo"
+
 import styles from "./index.module.css"
 
 const ProjectCard = ({ project, index }) => {
@@ -16,8 +18,7 @@ const ProjectCard = ({ project, index }) => {
       <div className={styles.customCard}>
         <h2><Link to={projectData.path}>{projectData.title}</Link></h2>
         <p>{projectData.excerpt}</p>
-        <hr />
-        <Link to={projectData.path} style={{ float: `right`, marginBottom: `20px`, textTransform: `uppercase` }}>Project Details</Link>
+        <ButtonTo to={projectData.path} style={{ float: `right`, marginBottom: `20px`, textTransform: `uppercase` }}>Project Details</ButtonTo>
       </div>
     </div>
   )

@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Link from "gatsby-link"
 import Grid from "react-css-grid"
 import Icon from "@fortawesome/react-fontawesome"
 
@@ -8,6 +7,7 @@ import PageMeta from "../components/PageMeta"
 import Intro from "../components/Intro"
 import SectionHeader from "../components/SectionHeader"
 import ProjectCard from "../components/ProjectCard"
+import ButtonTo from "../components/ButtonTo"
 import ClientCard from "../components/ClientCard/index"
 import TestimonialCard from "../components/TestimonialCard"
 import CadburyLogo from "../components/svg/clients/cadbury-logo.svg"
@@ -46,8 +46,10 @@ const Homepage = ({ data }) => {
           </div>
           ))}
       </Grid>
-
-      <Link to="/projects/">More Projects</Link>
+      
+      <div style={{ display: `flex` }}>
+        <ButtonTo to="/projects/" style={{ margin: `auto` }}>More Projects</ButtonTo>
+      </div>
 
       <SectionHeader
         headingCopy="Services"
@@ -63,7 +65,7 @@ const Homepage = ({ data }) => {
               <ul>
                 {post.frontmatter.servicesPrimary.map(skill => (
                   <li key={skill}>
-                    <Icon icon="check-square" />  {skill}
+                    <Icon icon="check-square" /> {skill}
                   </li>
                   ))}
               </ul>
@@ -84,6 +86,7 @@ const Homepage = ({ data }) => {
         <div>
           <h3>Web Development</h3>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <ButtonTo to="/services/">More service details</ButtonTo> <ButtonTo to="/contact/">Get in touch</ButtonTo>
         </div>
       </Grid>
 
@@ -181,6 +184,7 @@ export const pageQuery = graphql`
             }
             linkedIn
             twitter
+            angellist
           }
         }
       }

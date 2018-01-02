@@ -9,6 +9,7 @@ jobTitle: Snr Product Manager, eFinancial Careers
 thumb: safa-boga.jpg
 linkedIn: https://uk.linkedin.com/in/safaboga
 twitter:
+angellist: https://angel.co/safaboga
 
 ---
 

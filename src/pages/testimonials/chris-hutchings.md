@@ -8,7 +8,7 @@ draft: false
 jobTitle: Head of SEO, Compare the Market
 thumb: chris-hutchings.jpg
 linkedIn: https://uk.linkedin.com/in/chrisjhutchings/
-twitter:
+twitter: https://twitter.com/chrisjhutchings
 
 ---
 

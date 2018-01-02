@@ -1,7 +1,7 @@
 ---
 title: "Responsive Email"
 type: service
-icon: "mobile"
+icon: "mobile-alt"
 
 order: 04
 draft: false

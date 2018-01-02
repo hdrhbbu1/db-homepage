@@ -15,11 +15,11 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener(`scroll`, this.handleScroll, { passive: true })
+    window.addEventListener(`scroll`, this.handleScroll)
   }
 
   componentWillUnmount() {
-    window.removeEventListener(`scroll`, this.handleScroll, { passive: true })
+    window.removeEventListener(`scroll`, this.handleScroll)
   }
 
   handleScroll = () => {
@@ -33,6 +33,11 @@ class Header extends React.Component {
     return (
       <div className={styles.wrap}>
         <header className={styles.header}>
+          <progress
+            value={this.state.distanceY}
+            max={this.state.max}
+            className={styles.progress}
+          />
           <Link to="/" onClick={() => this.props.navToggle(`close`)}>
             <img
               src={logo}
@@ -54,14 +59,8 @@ class Header extends React.Component {
             className={styles.toggle}
             onClick={this.props.navToggle}
           >
-            <Icon icon="check-square" />
+            <Icon icon={this.props.isOpen ? `times` : `bars`} size="2x" fixedWidth />
           </Button>
-
-          <progress
-            value={this.state.distanceY}
-            max={this.state.max}
-            className={styles.progress}
-          />
         </header>
       </div>
     )

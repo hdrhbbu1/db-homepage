@@ -65,14 +65,10 @@ class Template extends React.Component {
     return (
       <div className={styles.layout}>
         <Header isOpen={this.state.isOpen} navToggle={this.handleSidebar} />
-        <div>
-          <div id="content" className={`${this.state.isOpen ? styles.dimmer : ``} ${styles.content}`}>
-            <main>
-              { this.props.children() }
-            </main>
-          </div>
-          <Sidebar isOpen={this.state.isOpen} navToggle={this.handleSidebar} />
-        </div>
+        <main id="content" className={`${this.state.isOpen ? styles.dimmer : ``} ${styles.content}`}>
+          { this.props.children() }
+        </main>
+        <Sidebar isOpen={this.state.isOpen} navToggle={this.handleSidebar} />
         <Footer />
       </div>
     )

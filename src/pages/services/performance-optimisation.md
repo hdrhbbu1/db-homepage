@@ -1,7 +1,7 @@
 ---
 title: "Performance Optimisation"
 type: service
-icon: "gear"
+icon: "cog"
 
 order: 11
 draft: false

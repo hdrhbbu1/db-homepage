@@ -18,9 +18,8 @@ const ProjectDetailTemplate = ({ data }) => {
         taglineCopy="Web development project."
       />
 
-
       <div style={{ width: `70%`, float: `left` }}>
-        <div>
+        <div style={{ padding: `5px`, border: `2px solid #f8f8f8` }}>
           <Img sizes={post.frontmatter.full.childImageSharp.sizes} />
         </div>
       </div>

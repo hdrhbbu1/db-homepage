@@ -1,6 +1,8 @@
 import React from "react"
 import { withFormsy, propTypes } from "formsy-react"
 
+import styles from "./index.module.css"
+
 class Textarea extends React.Component {
   constructor(props) {
     super(props)
@@ -30,6 +32,7 @@ class Textarea extends React.Component {
       <div className={this.props.className}>
         <label htmlFor={this.props.name}>{this.props.title}
           <textarea
+            className={styles.textarea}  
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
             onChange={e => this.props.setValue(e.target.value)}
@@ -37,7 +40,6 @@ class Textarea extends React.Component {
             type={this.props.type || `text`}
             value={this.props.getValue() || ``}
             rows={this.props.rows}
-            cols={this.props.cols}
           />
         </label>
         <span className="validation-error">{errorMessage}</span>

@@ -1,12 +1,12 @@
 .footer {
   display: flex;
-  background: #333;
-  color: white;
   clear: both;
+  padding: 20px 80px 20px 80px;
 }
 
 .footer p {
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 .copy {
