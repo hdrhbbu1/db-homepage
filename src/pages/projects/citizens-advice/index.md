@@ -10,6 +10,7 @@ draft: false
 
 excerpt: Casebook is a CRM web application to allow advisers across 260 local offices to provide and track advice given to the public.
 
+type: Web application (React).
 client: Citizens Advice
 agency:
 

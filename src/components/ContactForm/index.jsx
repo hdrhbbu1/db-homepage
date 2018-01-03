@@ -1,5 +1,5 @@
 import React from "react"
-import Grid from "react-css-grid"
+import { Grid, Row, Col } from "react-flexbox-grid"
 import Formsy from "formsy-react"
 import Icon from "@fortawesome/react-fontawesome"
 
@@ -58,7 +58,7 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div style={{ width: `60%`, margin: `0 auto` }}>
+      <Grid fluid>
         <SectionHeader
           smallHeader
           smallLead
@@ -67,83 +67,91 @@ class ContactForm extends React.Component {
           taglineCopy="Please ensure to include as much information about the project as possible as well as any budgets and timelines."
         />
 
-        {this.state.invalid &&
-        <Alert
-          message="Oops"
-          description="Please ensure all required fields below are completed and try again."
-          type="error"
-          style={{ width: `100%` }}
-        />
-          }
+        <Row>
+          <Col xs={12} md={12} lg={6} lgOffset={3}>
+            {this.state.invalid &&
+              <Alert
+                message="Oops"
+                description="Please ensure all required fields below are completed and try again."
+                type="error"
+                style={{ width: `100%` }}
+              />
+            }
 
-        {this.state.success &&
-        <Alert
-          message="Success"
-          description="Your message was successfully sent, I'll get back to you as soon as possible."
-          type="success"
-          style={{ width: `100%` }}
-        />
-          }
+            {this.state.success &&
+              <Alert
+                message="Success"
+                description="Your message was successfully sent, I'll get back to you as soon as possible."
+                type="success"
+                style={{ width: `100%` }}
+              />
+            }
+          </Col>
+        </Row>
 
         {!this.state.success &&
-          <Formsy
-            onValidSubmit={this.handleSubmit}
-            onInvalidSubmit={this.handleInvalid}
-            onValid={this.enableButton}
-            className={styles.form}
-          >
+          <Row>
+            <Col xs={12} md={12} lg={6} lgOffset={3}>
+              <Formsy
+                onValidSubmit={this.handleSubmit}
+                onInvalidSubmit={this.handleInvalid}
+                onValid={this.enableButton}
+                className={styles.form}
+              >
 
-            <Grid width={240} gap={30}>
-              <div>
-                <Input
-                  name="name"
-                  title="Your Name"
-                  validations="minLength:2"
-                  validationError="Please provide your name."
+                <Row>
+                  <Col xs={12} md={6}>
+                    <Input
+                      name="name"
+                      title="Your Name"
+                      validations="minLength:2"
+                      validationError="Please provide your name."
+                      required
+                    />
+                    <Input
+                      name="email"
+                      title="Your Email"
+                      validations="isEmail"
+                      validationError="Please provide a valid email address."
+                      required
+                    />
+                  </Col>
+                  <Col xs={12} md={6}>
+                    <Input
+                      name="company"
+                      title="Company"
+                    />
+                    <Select
+                      name="type"
+                      title="Enquiry Type"
+                      validationError="Please select an enquiry type."
+                      options={[
+                        { title: `Freelance`, value: `freelance` },
+                        { title: `Contact Opportunity`, value: `contract` },
+                        { title: `Other`, value: `other` },
+                      ]}
+                      value="freelance"
+                    />
+                  </Col>
+                </Row>
+                <Textarea
+                  name="message"
+                  title="Message"
+                  rows={10}
+                  validations="minLength: 10"
+                  validationError="Please enter a message of at least 10 characters."
                   required
                 />
-                <Input
-                  name="email"
-                  title="Your Email"
-                  validations="isEmail"
-                  validationError="Please provide a valid email address."
-                  required
-                />
-              </div>
-              <div>
-                <Input
-                  name="company"
-                  title="Company"
-                />
-                <Select
-                  name="type"
-                  title="Enquiry Type"
-                  validationError="Please select an enquiry type."
-                  options={[
-                    { title: `Freelance`, value: `freelance` },
-                    { title: `Contact Opportunity`, value: `contract` },
-                    { title: `Other`, value: `other` },
-                  ]}
-                  value="freelance"
-                />
-              </div>
-            </Grid>
-            <Textarea
-              name="message"
-              title="Message"
-              rows={10}
-              validations="minLength: 10"
-              validationError="Please enter a message of at least 10 characters."
-              required
-            />
 
-            <Button type="submit" disabled={!this.state.canSubmit}>
-              <Icon icon="rocket" /> Submit
-            </Button>
-          </Formsy>
+                <Button type="submit" disabled={!this.state.canSubmit}>
+                  <Icon icon="rocket" /> Submit
+                </Button>
+              </Formsy>
+            </Col>
+          </Row>
         }
 
-      </div>
+      </Grid>
     )
   }
 }

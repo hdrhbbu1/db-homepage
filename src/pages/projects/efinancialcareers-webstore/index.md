@@ -10,6 +10,7 @@ draft: false
 
 excerpt: eFinancialCareers, the world's leading financial services careers website, the webstore allows recruiters to quickly purchase job listing credits.
 
+type: Web application (Angular).
 client: DHI Group
 agency:
 

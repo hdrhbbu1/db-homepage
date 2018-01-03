@@ -26,9 +26,9 @@ To build a static optimised version of the site for production `yarn build`.
 
 ## User Interface
 
-The UI makes use of CSS Grid and Flexbox for layout. Custom components are styled with [CSS Modules](https://github.com/css-modules/css-modules).
+The UI makes use Flexbox for layout and custom components are styled with [CSS Modules](https://github.com/css-modules/css-modules).
 
-React Burger Menu provides offcanvas support for small device navigation and Formsy React for handling complex form validations.
+React Burger Menu provides offcanvas support for small device navigation and Formsy React handles complex form validation patterns.
 
 ## Linting
 

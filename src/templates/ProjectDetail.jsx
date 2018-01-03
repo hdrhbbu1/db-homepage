@@ -15,7 +15,7 @@ const ProjectDetailTemplate = ({ data }) => {
       <SectionHeader
         headingCopy={post.frontmatter.title}
         type="h1"
-        taglineCopy="Web development project."
+        taglineCopy={post.frontmatter.type || `Web development project.`}
       />
 
       <div style={{ width: `70%`, float: `left` }}>
@@ -55,8 +55,6 @@ const ProjectDetailTemplate = ({ data }) => {
         </div>
 
       </div>
-
-
     </section>
   )
 }
@@ -79,6 +77,7 @@ export const pageQuery = graphql`
         metaDescription
         excerpt
         technology
+        type
         agency
         client
         link

@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Grid from "react-css-grid"
+import { Grid, Row, Col } from "react-flexbox-grid"
 import Icon from "@fortawesome/react-fontawesome"
 
 import PageMeta from "../components/PageMeta"
@@ -29,7 +29,7 @@ const Homepage = ({ data }) => {
   ]
 
   return (
-    <section>
+    <Grid fluid>
       <PageMeta page={post.frontmatter} />
       <Intro title={post.frontmatter.title} intro={post.frontmatter.intro} />
 
@@ -39,17 +39,17 @@ const Homepage = ({ data }) => {
         taglineCopy="Selected website and application builds."
       />
 
-      <Grid width={240} gap={30}>
+      <Row>
         {featuredProjects.map((project, index) => (
-          <div key={project.node.id} style={{ display: `flex` }}>
-            <ProjectCard project={project} index={index} />
-          </div>
+          <ProjectCard project={project} index={index} key={project.title} />
           ))}
-      </Grid>
+      </Row>
 
-      <div style={{ display: `flex` }}>
-        <ButtonTo to="/projects/" style={{ margin: `auto` }}>More Projects</ButtonTo>
-      </div>
+      <Row center="xs" end="md">
+        <Col xs={12}>
+          <ButtonTo style={{ display: `inline-flex`, alignItems: `end` }} to="/projects/">More Projects</ButtonTo>
+        </Col>
+      </Row>
 
       <SectionHeader
         headingCopy="Services"
@@ -57,38 +57,37 @@ const Homepage = ({ data }) => {
         taglineCopy="Companies hire me to build cutting-edge web experiences for big-name clients."
       />
 
-      <Grid width={480} gap={30}>
-        <div>
-          <Grid width={280} gap={30}>
-            <div>
+      <Row>
+        <Col xs={12} md={6}>
+          <Row>
+            <Col xs={12} md={6}>
               <h3>Key Services & Skills</h3>
               <ul>
                 {post.frontmatter.servicesPrimary.map(skill => (
                   <li key={skill}>
                     <Icon icon="check-square" /> {skill}
                   </li>
-                  ))}
+                ))}
               </ul>
-            </div>
-
-            <div>
+            </Col>
+            <Col xs={12} md={6}>
               <ul>
                 {post.frontmatter.servicesSecondary.map(skill => (
                   <li key={skill}>
                     <Icon icon="check-square" /> {skill}
                   </li>
-                  ))}
+                ))}
               </ul>
-            </div>
-          </Grid>
-        </div>
+            </Col>
+          </Row>
+        </Col>
 
-        <div>
+        <Col xs={12} md={6}>
           <h3>Web Development</h3>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <ButtonTo to="/services/">More service details</ButtonTo> <ButtonTo to="/contact/">Get in touch</ButtonTo>
-        </div>
-      </Grid>
+        </Col>
+      </Row>
 
       <SectionHeader
         headingCopy="Testimonials"
@@ -96,13 +95,13 @@ const Homepage = ({ data }) => {
         taglineCopy="What clients say."
       />
 
-      <Grid width={240} gap={0}>
+      <Row>
         {featuredTestimonials.map((testimonial, index) => (
-          <div key={testimonial.node.id} style={{ display: `flex` }}>
+          <Col xs={12} md={6} lg={4} key={testimonial.node.id}>
             <TestimonialCard post={testimonial} index={index} />
-          </div>
-          ))}
-      </Grid>
+          </Col>
+        ))}
+      </Row>
 
       <SectionHeader
         headingCopy="Clients"
@@ -110,15 +109,15 @@ const Homepage = ({ data }) => {
         taglineCopy="Brands and organisations I've produced work for."
       />
 
-      <Grid width={240} gap={30}>
+      <Row>
         {clients.map(client => (
-          <div key={client.title} style={{ display: `flex` }}>
+          <Col xs={12} md={6} lg={3} key={client.title}>
             <ClientCard client={client} />
-          </div>
-          ))}
-      </Grid>
+          </Col>
+        ))}
+      </Row>
 
-    </section>
+    </Grid>
   )
 }
 

@@ -13,7 +13,7 @@ servicesPrimary:
 - JavaScript (ES6, Node.js)
 - React, Angular, jQuery
 - Jest, Enzyme
-- Craft CMS / WordPress
+- Gatsby / Craft CMS / WordPress
 - Git Version Control (GitHub, GitLab)
 
 servicesSecondary:

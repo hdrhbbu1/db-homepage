@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Grid from "react-css-grid"
+import { Grid, Row } from "react-flexbox-grid"
 
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"
@@ -11,7 +11,7 @@ const ProjectsPage = ({ data }) => {
   const allProjects = data.allProjects.edges
 
   return (
-    <section>
+    <Grid fluid>
       <PageMeta page={post.frontmatter} />
 
       <SectionHeader
@@ -20,14 +20,12 @@ const ProjectsPage = ({ data }) => {
         taglineCopy={post.frontmatter.tagline}
       />
 
-      <Grid width={420} gap={30}>
-        {allProjects.map(project => (
-          <div key={project.node.id} style={{ display: `flex` }}>
-            <ProjectCard project={project} />
-          </div>
+      <Row>
+        {allProjects.map((project, index) => (
+          <ProjectCard project={project} index={index} key={project.title} />
         ))}
-      </Grid>
-    </section>
+      </Row>
+    </Grid>
   )
 }
 

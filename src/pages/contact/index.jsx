@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
+import { Grid } from "react-flexbox-grid"
 import Icon from "@fortawesome/react-fontawesome"
 
 import PageMeta from "../../components/PageMeta"
@@ -11,7 +11,7 @@ const Contact = ({ data }) => {
   const post = data.page
 
   return (
-    <section>
+    <Grid fluid>
       <PageMeta page={post.frontmatter} />
 
       <SectionHeader headingCopy={post.frontmatter.title} type="h1" taglineCopy={post.frontmatter.tagline} />
@@ -41,25 +41,7 @@ const Contact = ({ data }) => {
         </a>
       </p>
 
-      <Helmet
-        script={[{
-          type: `application/ld+json`,
-          innerHTML: `{
-            "@context": "http://schema.org",
-            "@type": "Person",
-            "name": "David Brookes",
-            "url": "https://davidbrookes.co.uk",
-            "sameAs" : [
-              "https://www.linkedin.com/in/dbrookes",
-              "https://github.com/dbrookes",
-              "https://twitter.com/_dbrookes",
-              "http://dribbble.com/dbrookes"
-            ]
-          }`,
-        }]}
-      />
-
-    </section>
+    </Grid>
   )
 }
 

@@ -29,7 +29,7 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react-burger-menu": "^2.2.3",
-    "react-css-grid": "^2.0.0-0",
+    "react-flexbox-grid": "^2.0.0",
     "typeface-merriweather": "^0.0.45",
     "typeface-montserrat": "^0.0.45",
     "typeface-open-sans": "^0.0.45"

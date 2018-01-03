@@ -9,8 +9,8 @@ draft: false
 
 excerpt: Ada, the National College of Digital Skills is a specialist college which inspires the students of today to become the digital pioneers of tomorrow.
 
+type: Website (Craft CMS).
 client: Ada
-
 link: https://ada.ac.uk
 
 thumb: thumb.jpg

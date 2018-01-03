@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Grid from "react-css-grid"
+import { Grid, Row, Col } from "react-flexbox-grid"
 
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"
@@ -11,7 +11,7 @@ const Services = ({ data }) => {
   const allServices = data.allServices.edges
 
   return (
-    <section>
+    <Grid fluid>
       <PageMeta page={post.frontmatter} />
 
       <SectionHeader
@@ -20,15 +20,15 @@ const Services = ({ data }) => {
         taglineCopy={post.frontmatter.tagline}
       />
 
-      <Grid width={420} gap={30}>
+      <Row>
         {allServices.map(service => (
-          <div key={service.node.id} style={{ display: `flex` }}>
+          <Col xs={12} md={6} lg={6} xl={4} key={service.node.id}>
             <ServiceCard post={service} />
-          </div>
+          </Col>
         ))}
-      </Grid>
+      </Row>
 
-    </section>
+    </Grid>
   )
 }
 

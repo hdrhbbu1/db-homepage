@@ -42,6 +42,21 @@ const PageMeta = ({ page }) => {
           "url" : "${siteUrl}",
         }`,
     },
+    {
+      type: `application/ld+json`,
+      innerHTML: `{
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "David Brookes",
+      "url": "https://davidbrookes.co.uk",
+      "sameAs" : [
+        "https://www.linkedin.com/in/dbrookes",
+        "https://github.com/dbrookes",
+        "https://twitter.com/_dbrookes",
+        "http://dribbble.com/dbrookes"
+      ]
+    }`,
+    },
   ]
 
   return (

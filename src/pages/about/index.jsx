@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Grid from "react-css-grid"
+import { Grid, Row, Col } from "react-flexbox-grid"
 
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"
-import Testimonial from "../../components/TestimonialCard"
+import TestimonialCard from "../../components/TestimonialCard"
 import ClientCard from "../../components/ClientCard/index"
 import BioCard from "../../components/BioCard/index"
 
@@ -35,7 +35,7 @@ const About = ({ data }) => {
   ]
 
   return (
-    <section>
+    <Grid fluid>
       <PageMeta page={post.frontmatter} />
       <SectionHeader
         headingCopy="About"
@@ -55,13 +55,13 @@ const About = ({ data }) => {
         taglineCopy="What clients say."
       />
 
-      <Grid width={420} gap={30}>
-        {allTestimonials.map(testimonial => (
-          <div key={testimonial.node.id} style={{ display: `flex` }}>
-            <Testimonial post={testimonial} />
-          </div>
+      <Row>
+        {allTestimonials.map((testimonial, index) => (
+          <Col xs={12} md={6} lg={4} key={testimonial.node.id}>
+            <TestimonialCard post={testimonial} index={index} />
+          </Col>
         ))}
-      </Grid>
+      </Row>
 
       <SectionHeader
         headingCopy="Clients"
@@ -69,15 +69,15 @@ const About = ({ data }) => {
         taglineCopy="Brands and organisations I've produced work for."
       />
 
-      <Grid width={320} gap={30}>
+      <Row between="xs">
         {clients.map(client => (
-          <div key={client.title} style={{ display: `flex` }}>
+          <Col xs={12} md={6} lg={3} key={client.title}>
             <ClientCard client={client} />
-          </div>
+          </Col>
         ))}
-      </Grid>
+      </Row>
 
-    </section>
+    </Grid>
   )
 }
 
