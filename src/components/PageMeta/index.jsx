@@ -26,10 +26,18 @@ const PageMeta = ({ page }) => {
     { rel: `author`, href: process.env.GPLUS },
   ]
 
-  const script = [
-    {
-      type: `application/ld+json`,
-      innerHTML: `{
+  const script = [{
+    innerHTML: `
+        var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+        if (isIE11) {
+          var script = document.createElement('script');
+          script.src = 'https://cdn.polyfill.io/v2/polyfill.min.js?features=es6&flags=gated';
+          document.write(script.outerHTML);
+        }`,
+  },
+  {
+    type: `application/ld+json`,
+    innerHTML: `{
           "@context": "http://schema.org",
           "@type": "Organization",
           "url": "${siteUrl}",
@@ -41,10 +49,10 @@ const PageMeta = ({ page }) => {
           "name" : "${process.env.SITE_TITLE}",
           "url" : "${siteUrl}",
         }`,
-    },
-    {
-      type: `application/ld+json`,
-      innerHTML: `{
+  },
+  {
+    type: `application/ld+json`,
+    innerHTML: `{
       "@context": "http://schema.org",
       "@type": "Person",
       "name": "David Brookes",
@@ -56,7 +64,7 @@ const PageMeta = ({ page }) => {
         "http://dribbble.com/dbrookes"
       ]
     }`,
-    },
+  },
   ]
 
   return (
