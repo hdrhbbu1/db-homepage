@@ -81,6 +81,7 @@ ShallowWrapper {
               <FontAwesomeIcon$1
                 border={false}
                 className=""
+                compose={null}
                 fixedWidth={true}
                 flip={null}
                 icon={
@@ -90,7 +91,6 @@ ShallowWrapper {
                   ]
                 }
                 listItem={false}
-                mask={null}
                 name=""
                 pull={null}
                 pulse={false}
@@ -114,6 +114,7 @@ ShallowWrapper {
               <FontAwesomeIcon$1
                 border={false}
                 className=""
+                compose={null}
                 fixedWidth={true}
                 flip={null}
                 icon={
@@ -123,7 +124,6 @@ ShallowWrapper {
                   ]
                 }
                 listItem={false}
-                mask={null}
                 name=""
                 pull={null}
                 pulse={false}
@@ -147,6 +147,7 @@ ShallowWrapper {
               <FontAwesomeIcon$1
                 border={false}
                 className=""
+                compose={null}
                 fixedWidth={true}
                 flip={null}
                 icon={
@@ -156,7 +157,6 @@ ShallowWrapper {
                   ]
                 }
                 listItem={false}
-                mask={null}
                 name=""
                 pull={null}
                 pulse={false}
@@ -180,6 +180,7 @@ ShallowWrapper {
               <FontAwesomeIcon$1
                 border={false}
                 className=""
+                compose={null}
                 fixedWidth={true}
                 flip={null}
                 icon={
@@ -189,7 +190,6 @@ ShallowWrapper {
                   ]
                 }
                 listItem={false}
-                mask={null}
                 name=""
                 pull={null}
                 pulse={false}
@@ -293,6 +293,7 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={true}
                   flip={null}
                   icon={
@@ -302,7 +303,6 @@ ShallowWrapper {
                     ]
                   }
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -326,6 +326,7 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={true}
                   flip={null}
                   icon={
@@ -335,7 +336,6 @@ ShallowWrapper {
                     ]
                   }
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -359,6 +359,7 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={true}
                   flip={null}
                   icon={
@@ -368,7 +369,6 @@ ShallowWrapper {
                     ]
                   }
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -392,6 +392,7 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={true}
                   flip={null}
                   icon={
@@ -401,7 +402,6 @@ ShallowWrapper {
                     ]
                   }
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -499,6 +499,7 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={true}
                     flip={null}
                     icon={
@@ -508,7 +509,6 @@ ShallowWrapper {
                       ]
                     }
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -532,6 +532,7 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={true}
                     flip={null}
                     icon={
@@ -541,7 +542,6 @@ ShallowWrapper {
                       ]
                     }
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -565,6 +565,7 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={true}
                     flip={null}
                     icon={
@@ -574,7 +575,6 @@ ShallowWrapper {
                       ]
                     }
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -598,6 +598,7 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={true}
                     flip={null}
                     icon={
@@ -607,7 +608,6 @@ ShallowWrapper {
                       ]
                     }
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -700,6 +700,7 @@ ShallowWrapper {
                     <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -709,7 +710,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -733,6 +733,7 @@ ShallowWrapper {
                     <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -742,7 +743,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -766,6 +766,7 @@ ShallowWrapper {
                     <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -775,7 +776,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -799,6 +799,7 @@ ShallowWrapper {
                     <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -808,7 +809,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -832,6 +832,7 @@ ShallowWrapper {
                     "children": <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -841,7 +842,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -866,6 +866,7 @@ ShallowWrapper {
                     "props": Object {
                       "border": false,
                       "className": "",
+                      "compose": null,
                       "fixedWidth": true,
                       "flip": null,
                       "icon": Array [
@@ -873,7 +874,6 @@ ShallowWrapper {
                         "github",
                       ],
                       "listItem": false,
-                      "mask": null,
                       "name": "",
                       "pull": null,
                       "pulse": false,
@@ -897,6 +897,7 @@ ShallowWrapper {
                     "children": <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -906,7 +907,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -931,6 +931,7 @@ ShallowWrapper {
                     "props": Object {
                       "border": false,
                       "className": "",
+                      "compose": null,
                       "fixedWidth": true,
                       "flip": null,
                       "icon": Array [
@@ -938,7 +939,6 @@ ShallowWrapper {
                         "linkedin",
                       ],
                       "listItem": false,
-                      "mask": null,
                       "name": "",
                       "pull": null,
                       "pulse": false,
@@ -962,6 +962,7 @@ ShallowWrapper {
                     "children": <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -971,7 +972,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -996,6 +996,7 @@ ShallowWrapper {
                     "props": Object {
                       "border": false,
                       "className": "",
+                      "compose": null,
                       "fixedWidth": true,
                       "flip": null,
                       "icon": Array [
@@ -1003,7 +1004,6 @@ ShallowWrapper {
                         "angellist",
                       ],
                       "listItem": false,
-                      "mask": null,
                       "name": "",
                       "pull": null,
                       "pulse": false,
@@ -1027,6 +1027,7 @@ ShallowWrapper {
                     "children": <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -1036,7 +1037,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -1061,6 +1061,7 @@ ShallowWrapper {
                     "props": Object {
                       "border": false,
                       "className": "",
+                      "compose": null,
                       "fixedWidth": true,
                       "flip": null,
                       "icon": Array [
@@ -1068,7 +1069,6 @@ ShallowWrapper {
                         "twitter",
                       ],
                       "listItem": false,
-                      "mask": null,
                       "name": "",
                       "pull": null,
                       "pulse": false,
@@ -1227,6 +1227,7 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={true}
                   flip={null}
                   icon={
@@ -1236,7 +1237,6 @@ ShallowWrapper {
                     ]
                   }
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -1260,6 +1260,7 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={true}
                   flip={null}
                   icon={
@@ -1269,7 +1270,6 @@ ShallowWrapper {
                     ]
                   }
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -1293,6 +1293,7 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={true}
                   flip={null}
                   icon={
@@ -1302,7 +1303,6 @@ ShallowWrapper {
                     ]
                   }
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -1326,6 +1326,7 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={true}
                   flip={null}
                   icon={
@@ -1335,7 +1336,6 @@ ShallowWrapper {
                     ]
                   }
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -1439,6 +1439,7 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={true}
                     flip={null}
                     icon={
@@ -1448,7 +1449,6 @@ ShallowWrapper {
                       ]
                     }
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -1472,6 +1472,7 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={true}
                     flip={null}
                     icon={
@@ -1481,7 +1482,6 @@ ShallowWrapper {
                       ]
                     }
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -1505,6 +1505,7 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={true}
                     flip={null}
                     icon={
@@ -1514,7 +1515,6 @@ ShallowWrapper {
                       ]
                     }
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -1538,6 +1538,7 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={true}
                     flip={null}
                     icon={
@@ -1547,7 +1548,6 @@ ShallowWrapper {
                       ]
                     }
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -1645,6 +1645,7 @@ ShallowWrapper {
                     <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -1654,7 +1655,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -1678,6 +1678,7 @@ ShallowWrapper {
                     <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -1687,7 +1688,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -1711,6 +1711,7 @@ ShallowWrapper {
                     <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -1720,7 +1721,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -1744,6 +1744,7 @@ ShallowWrapper {
                     <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={true}
                       flip={null}
                       icon={
@@ -1753,7 +1754,6 @@ ShallowWrapper {
                         ]
                       }
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -1846,6 +1846,7 @@ ShallowWrapper {
                       <FontAwesomeIcon$1
                         border={false}
                         className=""
+                        compose={null}
                         fixedWidth={true}
                         flip={null}
                         icon={
@@ -1855,7 +1856,6 @@ ShallowWrapper {
                           ]
                         }
                         listItem={false}
-                        mask={null}
                         name=""
                         pull={null}
                         pulse={false}
@@ -1879,6 +1879,7 @@ ShallowWrapper {
                       <FontAwesomeIcon$1
                         border={false}
                         className=""
+                        compose={null}
                         fixedWidth={true}
                         flip={null}
                         icon={
@@ -1888,7 +1889,6 @@ ShallowWrapper {
                           ]
                         }
                         listItem={false}
-                        mask={null}
                         name=""
                         pull={null}
                         pulse={false}
@@ -1912,6 +1912,7 @@ ShallowWrapper {
                       <FontAwesomeIcon$1
                         border={false}
                         className=""
+                        compose={null}
                         fixedWidth={true}
                         flip={null}
                         icon={
@@ -1921,7 +1922,6 @@ ShallowWrapper {
                           ]
                         }
                         listItem={false}
-                        mask={null}
                         name=""
                         pull={null}
                         pulse={false}
@@ -1945,6 +1945,7 @@ ShallowWrapper {
                       <FontAwesomeIcon$1
                         border={false}
                         className=""
+                        compose={null}
                         fixedWidth={true}
                         flip={null}
                         icon={
@@ -1954,7 +1955,6 @@ ShallowWrapper {
                           ]
                         }
                         listItem={false}
-                        mask={null}
                         name=""
                         pull={null}
                         pulse={false}
@@ -1978,6 +1978,7 @@ ShallowWrapper {
                       "children": <FontAwesomeIcon$1
                         border={false}
                         className=""
+                        compose={null}
                         fixedWidth={true}
                         flip={null}
                         icon={
@@ -1987,7 +1988,6 @@ ShallowWrapper {
                           ]
                         }
                         listItem={false}
-                        mask={null}
                         name=""
                         pull={null}
                         pulse={false}
@@ -2012,6 +2012,7 @@ ShallowWrapper {
                       "props": Object {
                         "border": false,
                         "className": "",
+                        "compose": null,
                         "fixedWidth": true,
                         "flip": null,
                         "icon": Array [
@@ -2019,7 +2020,6 @@ ShallowWrapper {
                           "github",
                         ],
                         "listItem": false,
-                        "mask": null,
                         "name": "",
                         "pull": null,
                         "pulse": false,
@@ -2043,6 +2043,7 @@ ShallowWrapper {
                       "children": <FontAwesomeIcon$1
                         border={false}
                         className=""
+                        compose={null}
                         fixedWidth={true}
                         flip={null}
                         icon={
@@ -2052,7 +2053,6 @@ ShallowWrapper {
                           ]
                         }
                         listItem={false}
-                        mask={null}
                         name=""
                         pull={null}
                         pulse={false}
@@ -2077,6 +2077,7 @@ ShallowWrapper {
                       "props": Object {
                         "border": false,
                         "className": "",
+                        "compose": null,
                         "fixedWidth": true,
                         "flip": null,
                         "icon": Array [
@@ -2084,7 +2085,6 @@ ShallowWrapper {
                           "linkedin",
                         ],
                         "listItem": false,
-                        "mask": null,
                         "name": "",
                         "pull": null,
                         "pulse": false,
@@ -2108,6 +2108,7 @@ ShallowWrapper {
                       "children": <FontAwesomeIcon$1
                         border={false}
                         className=""
+                        compose={null}
                         fixedWidth={true}
                         flip={null}
                         icon={
@@ -2117,7 +2118,6 @@ ShallowWrapper {
                           ]
                         }
                         listItem={false}
-                        mask={null}
                         name=""
                         pull={null}
                         pulse={false}
@@ -2142,6 +2142,7 @@ ShallowWrapper {
                       "props": Object {
                         "border": false,
                         "className": "",
+                        "compose": null,
                         "fixedWidth": true,
                         "flip": null,
                         "icon": Array [
@@ -2149,7 +2150,6 @@ ShallowWrapper {
                           "angellist",
                         ],
                         "listItem": false,
-                        "mask": null,
                         "name": "",
                         "pull": null,
                         "pulse": false,
@@ -2173,6 +2173,7 @@ ShallowWrapper {
                       "children": <FontAwesomeIcon$1
                         border={false}
                         className=""
+                        compose={null}
                         fixedWidth={true}
                         flip={null}
                         icon={
@@ -2182,7 +2183,6 @@ ShallowWrapper {
                           ]
                         }
                         listItem={false}
-                        mask={null}
                         name=""
                         pull={null}
                         pulse={false}
@@ -2207,6 +2207,7 @@ ShallowWrapper {
                       "props": Object {
                         "border": false,
                         "className": "",
+                        "compose": null,
                         "fixedWidth": true,
                         "flip": null,
                         "icon": Array [
@@ -2214,7 +2215,6 @@ ShallowWrapper {
                           "twitter",
                         ],
                         "listItem": false,
-                        "mask": null,
                         "name": "",
                         "pull": null,
                         "pulse": false,

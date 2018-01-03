@@ -156,11 +156,11 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={false}
                   flip={null}
                   icon="rocket"
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -358,11 +358,11 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={false}
                   flip={null}
                   icon="rocket"
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -499,11 +499,11 @@ ShallowWrapper {
                 <FontAwesomeIcon$1
                   border={false}
                   className=""
+                  compose={null}
                   fixedWidth={false}
                   flip={null}
                   icon="rocket"
                   listItem={false}
-                  mask={null}
                   name=""
                   pull={null}
                   pulse={false}
@@ -614,11 +614,11 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={false}
                     flip={null}
                     icon="rocket"
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -941,11 +941,11 @@ ShallowWrapper {
                     <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={false}
                       flip={null}
                       icon="rocket"
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -969,11 +969,11 @@ ShallowWrapper {
                     "props": Object {
                       "border": false,
                       "className": "",
+                      "compose": null,
                       "fixedWidth": false,
                       "flip": null,
                       "icon": "rocket",
                       "listItem": false,
-                      "mask": null,
                       "name": "",
                       "pull": null,
                       "pulse": false,
@@ -1146,11 +1146,11 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={false}
                     flip={null}
                     icon="rocket"
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -1348,11 +1348,11 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={false}
                     flip={null}
                     icon="rocket"
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -1489,11 +1489,11 @@ ShallowWrapper {
                   <FontAwesomeIcon$1
                     border={false}
                     className=""
+                    compose={null}
                     fixedWidth={false}
                     flip={null}
                     icon="rocket"
                     listItem={false}
-                    mask={null}
                     name=""
                     pull={null}
                     pulse={false}
@@ -1604,11 +1604,11 @@ ShallowWrapper {
                     <FontAwesomeIcon$1
                       border={false}
                       className=""
+                      compose={null}
                       fixedWidth={false}
                       flip={null}
                       icon="rocket"
                       listItem={false}
-                      mask={null}
                       name=""
                       pull={null}
                       pulse={false}
@@ -1931,11 +1931,11 @@ ShallowWrapper {
                       <FontAwesomeIcon$1
                         border={false}
                         className=""
+                        compose={null}
                         fixedWidth={false}
                         flip={null}
                         icon="rocket"
                         listItem={false}
-                        mask={null}
                         name=""
                         pull={null}
                         pulse={false}
@@ -1959,11 +1959,11 @@ ShallowWrapper {
                       "props": Object {
                         "border": false,
                         "className": "",
+                        "compose": null,
                         "fixedWidth": false,
                         "flip": null,
                         "icon": "rocket",
                         "listItem": false,
-                        "mask": null,
                         "name": "",
                         "pull": null,
                         "pulse": false,
