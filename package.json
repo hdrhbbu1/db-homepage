@@ -7,10 +7,10 @@
     "url": "https://github.com/dbrookes/db-homepage/issues"
   },
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.0",
+    "@fortawesome/fontawesome": "=1.0.1",
     "@fortawesome/fontawesome-free-brands": "^5.0.2",
     "@fortawesome/fontawesome-free-solid": "^5.0.2",
-    "@fortawesome/react-fontawesome": "^0.0.17",
+    "@fortawesome/react-fontawesome": "=0.0.12",
     "formsy-react": "^1.1.2",
     "gatsby": "^1.9.149",
     "gatsby-image": "^1.0.31",
