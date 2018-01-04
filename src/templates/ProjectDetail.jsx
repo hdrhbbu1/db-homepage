@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Grid, Row, Col } from "react-flexbox-grid"
 import Img from "gatsby-image"
 
 import PageMeta from "../components/PageMeta"
@@ -9,7 +10,7 @@ const ProjectDetailTemplate = ({ data }) => {
   const post = data.project
 
   return (
-    <section>
+    <Grid fluid>
       <PageMeta page={post.frontmatter} />
 
       <SectionHeader
@@ -18,44 +19,40 @@ const ProjectDetailTemplate = ({ data }) => {
         taglineCopy={post.frontmatter.type || `Web development project.`}
       />
 
-      <div style={{ width: `70%`, float: `left` }}>
-        <div style={{ padding: `5px`, border: `2px solid #f8f8f8` }}>
-          <Img sizes={post.frontmatter.full.childImageSharp.sizes} />
-        </div>
-      </div>
-      <div style={{ width: `25%`, float: `right` }}>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-
-        <div>
+      <Row>
+        <Col xs={12} md={12} lg={9}>
+          <div style={{ padding: `5px`, border: `2px solid #f8f8f8` }}>
+            <Img sizes={post.frontmatter.full.childImageSharp.sizes} />
+          </div>
+        </Col>
+        <Col xs={12} md={12} lg={3}>
           <h3>Technology</h3>
           <ul>
             { post.frontmatter.technology.map(tech => (
               <li key={tech}>{tech}</li>
-              )) }
+            ))}
           </ul>
-        </div>
 
-        <div style={{ marginTop: `30px` }}>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <ul>
             {post.frontmatter.agency &&
-            <li><strong>Agency:</strong> {post.frontmatter.agency}</li>
-              }
+              <li><strong>Agency:</strong> {post.frontmatter.agency}</li>
+            }
             {post.frontmatter.client &&
-            <li><strong>Client:</strong> {post.frontmatter.client}</li>
-              }
+              <li><strong>Client:</strong> {post.frontmatter.client}</li>
+            }
             { post.frontmatter.link &&
-            <li>
-              <strong>Link: </strong>
-              <a href={post.frontmatter.link} target="_blank" rel="noopener noreferrer">
-                {post.frontmatter.link}
-              </a>
-            </li>
-              }
+              <li>
+                <strong>Link: </strong>
+                <a href={post.frontmatter.link} target="_blank" rel="noopener noreferrer">
+                  {post.frontmatter.link}
+                </a>
+              </li>
+            }
           </ul>
-        </div>
-
-      </div>
-    </section>
+        </Col>
+      </Row>
+    </Grid>
   )
 }
 
