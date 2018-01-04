@@ -8,7 +8,7 @@ import TestimonialCard from "../../components/TestimonialCard"
 import ClientCard from "../../components/ClientCard/index"
 import BioCard from "../../components/BioCard/index"
 
-// TODO: Replace with dynamic import, or use SVG asset support via GraphQL
+// TODO: Replace with dynamic import, or use SVG asset support via GraphQL when available
 import CadburyLogo from "../../components/svg/clients/cadbury-logo.svg"
 import CarneGieHallLogo from "../../components/svg/clients/carnegie-hall-logo.svg"
 import DeloitteLogo from "../../components/svg/clients/deloitte-logo.svg"

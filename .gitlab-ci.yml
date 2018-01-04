@@ -25,11 +25,19 @@ deploy-stage:
       --guess-mime-type
       --no-mime-magic
       --no-preserve
+      --add-header='Cache-Control: max-age=0, public, max-age=0, must-revalidate'
       --cf-invalidate"
     - "s3cmd modify s3://staging.davidbrookes.co.uk
       --recursive
       --add-header='content-type':'image/svg+xml'
-      --exclude '' --include '.svg'"
+      --exclude ''
+      --include '.svg'"
+     - "s3cmd modify s3://staging.davidbrookes.co.uk
+      --recursive
+      --add-header='cache-control:max-age=31536000'
+      --exclude ''
+      --include 'static/*'"
+
   environment:
     name: Staging
     url: https://staging.davidbrookes.co.uk
