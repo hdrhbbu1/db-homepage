@@ -35,4 +35,4 @@ allClients:
 
 With 10 years commercial web development experience I focus on building high performance business-driven websites and progressive web applications that handle product sales, bookings and payments on any web capable device.
 
-I'm avaialable for both freelance and contract roles on site in central London or remotely. Setting up an on-line business or need to improve an existing presence? Or have a client who needs a complex project built and looking to hire a developer you can rely on?
+I'm available for both freelance and contract roles on site in central London or remotely. Setting up an on-line business or need to improve an existing presence? Or have a client who needs a complex project built and looking to hire a developer you can rely on?
