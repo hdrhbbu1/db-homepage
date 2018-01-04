@@ -27,13 +27,8 @@ const PageMeta = ({ page }) => {
   ]
 
   const script = [{
-    innerHTML: `
-        var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-        if (isIE11) {
-          var script = document.createElement('script');
-          script.src = 'https://cdn.polyfill.io/v2/polyfill.min.js?features=es6&flags=gated';
-          document.head.appendChild(script.outerHTML);
-        }`,
+    type: `text/javascript`,
+    src: `https://cdn.polyfill.io/v2/polyfill.min.js`,
   },
   {
     type: `application/ld+json`,

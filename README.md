@@ -10,6 +10,21 @@ Gatsby pre-renders and builds the site as static HTML files, which are deployed 
 
 Dynamic functionality such as forms are built with AWS Lambda functions exposed though AWS API Gateway - JAMstack.
 
+## Features
+
+* Mobile first flexbox UI
+* Offline support
+* WebP images for supported devices
+* SVG traced image placeholders for enhanced perceived loading
+
+## Browser Support
+
+* IE11
+* Edge 14+
+* Chrome
+* Safari
+* Firefox
+
 ## Local Development
 
 `yarn install`
@@ -26,7 +41,7 @@ To build a static optimised version of the site for production `yarn build`.
 
 ## User Interface
 
-The UI makes use Flexbox for layout and custom components are styled with [CSS Modules](https://github.com/css-modules/css-modules).
+The UI makes use React Flexbox grid for layout and custom components are styled with [CSS Modules](https://github.com/css-modules/css-modules).
 
 React Burger Menu provides offcanvas support for small device navigation and Formsy React handles complex form validation patterns.
 
