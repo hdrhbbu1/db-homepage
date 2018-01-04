@@ -32,7 +32,7 @@ const PageMeta = ({ page }) => {
         if (isIE11) {
           var script = document.createElement('script');
           script.src = 'https://cdn.polyfill.io/v2/polyfill.min.js?features=es6&flags=gated';
-          document.body.appendChild(script.outerHTML);
+          document.head.appendChild(script.outerHTML);
         }`,
   },
   {
