@@ -29,10 +29,10 @@ deploy-stage:
       --cf-invalidate"
     - "s3cmd modify s3://staging.davidbrookes.co.uk
       --recursive
-      --add-header='content-type':'image/svg+xml'
+      --add-header='Content-Type':'image/svg+xml'
       --exclude ''
       --include '.svg'"
-     - "s3cmd modify s3://staging.davidbrookes.co.uk
+    - "s3cmd modify s3://staging.davidbrookes.co.uk
       --recursive
       --add-header='cache-control:max-age=31536000'
       --exclude ''
