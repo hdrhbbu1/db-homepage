@@ -22,7 +22,7 @@ const ProjectsPage = ({ data }) => {
 
       <Row>
         {allProjects.map((project, index) => (
-          <ProjectCard project={project} index={index} key={project.title} />
+          <ProjectCard project={project} index={index} key={project.node.frontmatter.title} />
         ))}
       </Row>
     </Grid>

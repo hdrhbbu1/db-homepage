@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import "typeface-open-sans"
 import "typeface-montserrat"
 import "typeface-merriweather"
 import FontAwesome from "@fortawesome/fontawesome"
