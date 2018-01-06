@@ -25,7 +25,7 @@ deploy-stage:
       --guess-mime-type
       --no-mime-magic
       --no-preserve
-      --add-header='Cache-Control: max-age=0, public, must-revalidate'
+      --add-header='Cache-Control: no-cache, no-store, must-revalidate'
       --exclude 'static/*'
       --cf-invalidate"
     - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
@@ -34,7 +34,7 @@ deploy-stage:
       --guess-mime-type
       --no-mime-magic
       --no-preserve
-      --add-header='Cache-Control: max-age=604800'
+      --add-header='Cache-Control: public, max-age=604800'
       --exclude ''
       --include 'static/*'
       --cf-invalidate"
