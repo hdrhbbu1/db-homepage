@@ -28,7 +28,7 @@ deploy-stage:
       --add-header='Cache-Control: max-age=0, public, max-age=0, must-revalidate'
       --exclude 'static/*'
       --cf-invalidate"
-    - "s3cmd modify s3://staging.davidbrookes.co.uk
+    - "s3cmd sync s3://staging.davidbrookes.co.uk
       --acl-public
       --delete-removed
       --guess-mime-type
