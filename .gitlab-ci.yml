@@ -25,7 +25,7 @@ deploy-stage:
       --guess-mime-type
       --no-mime-magic
       --no-preserve
-      --add-header='Cache-Control: no-cache, no-store, must-revalidate'
+      --add-header='Cache-Control: no-cache, must-revalidate'
       --exclude 'static/*'
       --cf-invalidate"
     - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
