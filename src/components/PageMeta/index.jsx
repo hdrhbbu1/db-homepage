@@ -32,8 +32,9 @@ const PageMeta = ({ page }) => {
       var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
       if (isIE11) {
         var script = document.createElement('script');
+        script.async = false;
         script.src = 'https://cdn.polyfill.io/v2/polyfill.min.js?features=es6&flags=gated';
-        document.write(script.outerHTML);
+        document.head.appendChild(script);
       }`,
   },
   {
