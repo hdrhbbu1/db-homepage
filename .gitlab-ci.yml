@@ -27,6 +27,7 @@ deploy-stage:
       --no-preserve
       --add-header='Cache-Control: public, max-age=0, must-revalidate'
       --exclude 'static/*'
+      --exclude 'favicons/*'
       --cf-invalidate"
     - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
       --acl-public
@@ -37,12 +38,18 @@ deploy-stage:
       --add-header='Cache-Control: public, max-age=604800'
       --exclude ''
       --include 'static/*'
+      --include 'favicons/*'
       --cf-invalidate"
     - "s3cmd modify s3://staging.davidbrookes.co.uk
       --recursive
       --add-header='Content-Type':'image/svg+xml'
       --exclude ''
       --include '.svg'"
+    - "s3cmd modify s3://staging.davidbrookes.co.uk
+      --recursive
+      --add-header='Content-Type':'image/webp'
+      --exclude ''
+      --include '.webp'"
 
   environment:
     name: Staging
