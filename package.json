@@ -32,7 +32,6 @@
     "react-flexbox-grid": "^2.0.0",
     "typeface-merriweather": "^0.0.45",
     "typeface-montserrat": "^0.0.45",
-    "typeface-open-sans": "^0.0.45"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
