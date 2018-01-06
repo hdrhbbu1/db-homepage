@@ -27,10 +27,8 @@ const PageMeta = ({ page }) => {
   ]
 
   const script = [{
-    type: `text/javascript`,
     innerHTML: `
-      var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-      if (isIE11) {
+      if (!window.fetch) {
         var script = document.createElement('script');
         script.async = false;
         script.src = 'https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,fetch&flags=gated';
@@ -40,17 +38,17 @@ const PageMeta = ({ page }) => {
   {
     type: `application/ld+json`,
     innerHTML: `{
-          "@context": "http://schema.org",
-          "@type": "Organization",
-          "url": "${siteUrl}",
-          "logo": "${siteUrl}/static/favicons/apple-touch-icon-180x180.png"
-        },
-        {
-          "@context" : "http://schema.org",
-          "@type" : "WebSite",
-          "name" : "${process.env.SITE_TITLE}",
-          "url" : "${siteUrl}",
-        }`,
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "${siteUrl}",
+        "logo": "${siteUrl}/static/favicons/apple-touch-icon-180x180.png"
+      },
+      {
+        "@context" : "http://schema.org",
+        "@type" : "WebSite",
+        "name" : "${process.env.SITE_TITLE}",
+        "url" : "${siteUrl}",
+      }`,
   },
   {
     type: `application/ld+json`,
