@@ -58,6 +58,7 @@ class Header extends React.Component {
           <Button
             className={styles.toggle}
             onClick={this.props.navToggle}
+            aria-label={this.props.isOpen ? `Close Navigation` : `Open Navigation`}
           >
             <Icon icon={this.props.isOpen ? `times` : `bars`} size="2x" fixedWidth />
           </Button>

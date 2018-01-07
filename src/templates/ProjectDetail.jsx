@@ -26,7 +26,7 @@ const ProjectDetailTemplate = ({ data }) => {
           </div>
         </Col>
         <Col xs={12} md={12} lg={3}>
-          <h3>Technology</h3>
+          <h2>Technology</h2>
           <ul>
             { post.frontmatter.technology.map(tech => (
               <li key={tech}>{tech}</li>

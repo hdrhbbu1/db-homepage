@@ -69,6 +69,7 @@ ShallowWrapper {
             className="social"
           >
             <a
+              aria-label="David Brookes on GitHub"
               href="https://github.com/dbrookes"
               rel="noopener noreferrer"
               style={
@@ -102,6 +103,7 @@ ShallowWrapper {
               />
             </a>
             <a
+              aria-label="David Brookes on LinkedIn"
               href="https://linkedin.com/in/dbrookes"
               rel="noopener noreferrer"
               style={
@@ -135,6 +137,7 @@ ShallowWrapper {
               />
             </a>
             <a
+              aria-label="David Brookes on AngelList"
               href="https://angel.co/dbrookes"
               rel="noopener noreferrer"
               style={
@@ -168,6 +171,7 @@ ShallowWrapper {
               />
             </a>
             <a
+              aria-label="David Brookes on Twitter"
               href="https://twitter.com/_dbrookes"
               rel="noopener noreferrer"
               style={
@@ -281,6 +285,7 @@ ShallowWrapper {
               className="social"
             >
               <a
+                aria-label="David Brookes on GitHub"
                 href="https://github.com/dbrookes"
                 rel="noopener noreferrer"
                 style={
@@ -314,6 +319,7 @@ ShallowWrapper {
                 />
               </a>
               <a
+                aria-label="David Brookes on LinkedIn"
                 href="https://linkedin.com/in/dbrookes"
                 rel="noopener noreferrer"
                 style={
@@ -347,6 +353,7 @@ ShallowWrapper {
                 />
               </a>
               <a
+                aria-label="David Brookes on AngelList"
                 href="https://angel.co/dbrookes"
                 rel="noopener noreferrer"
                 style={
@@ -380,6 +387,7 @@ ShallowWrapper {
                 />
               </a>
               <a
+                aria-label="David Brookes on Twitter"
                 href="https://twitter.com/_dbrookes"
                 rel="noopener noreferrer"
                 style={
@@ -487,6 +495,7 @@ ShallowWrapper {
                 className="social"
               >
                 <a
+                  aria-label="David Brookes on GitHub"
                   href="https://github.com/dbrookes"
                   rel="noopener noreferrer"
                   style={
@@ -520,6 +529,7 @@ ShallowWrapper {
                   />
                 </a>
                 <a
+                  aria-label="David Brookes on LinkedIn"
                   href="https://linkedin.com/in/dbrookes"
                   rel="noopener noreferrer"
                   style={
@@ -553,6 +563,7 @@ ShallowWrapper {
                   />
                 </a>
                 <a
+                  aria-label="David Brookes on AngelList"
                   href="https://angel.co/dbrookes"
                   rel="noopener noreferrer"
                   style={
@@ -586,6 +597,7 @@ ShallowWrapper {
                   />
                 </a>
                 <a
+                  aria-label="David Brookes on Twitter"
                   href="https://twitter.com/_dbrookes"
                   rel="noopener noreferrer"
                   style={
@@ -688,6 +700,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <a
+                    aria-label="David Brookes on GitHub"
                     href="https://github.com/dbrookes"
                     rel="noopener noreferrer"
                     style={
@@ -721,6 +734,7 @@ ShallowWrapper {
                     />
                   </a>,
                   <a
+                    aria-label="David Brookes on LinkedIn"
                     href="https://linkedin.com/in/dbrookes"
                     rel="noopener noreferrer"
                     style={
@@ -754,6 +768,7 @@ ShallowWrapper {
                     />
                   </a>,
                   <a
+                    aria-label="David Brookes on AngelList"
                     href="https://angel.co/dbrookes"
                     rel="noopener noreferrer"
                     style={
@@ -787,6 +802,7 @@ ShallowWrapper {
                     />
                   </a>,
                   <a
+                    aria-label="David Brookes on Twitter"
                     href="https://twitter.com/_dbrookes"
                     rel="noopener noreferrer"
                     style={
@@ -829,6 +845,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "aria-label": "David Brookes on GitHub",
                     "children": <FontAwesomeIcon$1
                       border={false}
                       className=""
@@ -894,6 +911,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "aria-label": "David Brookes on LinkedIn",
                     "children": <FontAwesomeIcon$1
                       border={false}
                       className=""
@@ -959,6 +977,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "aria-label": "David Brookes on AngelList",
                     "children": <FontAwesomeIcon$1
                       border={false}
                       className=""
@@ -1024,6 +1043,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "aria-label": "David Brookes on Twitter",
                     "children": <FontAwesomeIcon$1
                       border={false}
                       className=""
@@ -1215,6 +1235,7 @@ ShallowWrapper {
               className="social"
             >
               <a
+                aria-label="David Brookes on GitHub"
                 href="https://github.com/dbrookes"
                 rel="noopener noreferrer"
                 style={
@@ -1248,6 +1269,7 @@ ShallowWrapper {
                 />
               </a>
               <a
+                aria-label="David Brookes on LinkedIn"
                 href="https://linkedin.com/in/dbrookes"
                 rel="noopener noreferrer"
                 style={
@@ -1281,6 +1303,7 @@ ShallowWrapper {
                 />
               </a>
               <a
+                aria-label="David Brookes on AngelList"
                 href="https://angel.co/dbrookes"
                 rel="noopener noreferrer"
                 style={
@@ -1314,6 +1337,7 @@ ShallowWrapper {
                 />
               </a>
               <a
+                aria-label="David Brookes on Twitter"
                 href="https://twitter.com/_dbrookes"
                 rel="noopener noreferrer"
                 style={
@@ -1427,6 +1451,7 @@ ShallowWrapper {
                 className="social"
               >
                 <a
+                  aria-label="David Brookes on GitHub"
                   href="https://github.com/dbrookes"
                   rel="noopener noreferrer"
                   style={
@@ -1460,6 +1485,7 @@ ShallowWrapper {
                   />
                 </a>
                 <a
+                  aria-label="David Brookes on LinkedIn"
                   href="https://linkedin.com/in/dbrookes"
                   rel="noopener noreferrer"
                   style={
@@ -1493,6 +1519,7 @@ ShallowWrapper {
                   />
                 </a>
                 <a
+                  aria-label="David Brookes on AngelList"
                   href="https://angel.co/dbrookes"
                   rel="noopener noreferrer"
                   style={
@@ -1526,6 +1553,7 @@ ShallowWrapper {
                   />
                 </a>
                 <a
+                  aria-label="David Brookes on Twitter"
                   href="https://twitter.com/_dbrookes"
                   rel="noopener noreferrer"
                   style={
@@ -1633,6 +1661,7 @@ ShallowWrapper {
                   className="social"
                 >
                   <a
+                    aria-label="David Brookes on GitHub"
                     href="https://github.com/dbrookes"
                     rel="noopener noreferrer"
                     style={
@@ -1666,6 +1695,7 @@ ShallowWrapper {
                     />
                   </a>
                   <a
+                    aria-label="David Brookes on LinkedIn"
                     href="https://linkedin.com/in/dbrookes"
                     rel="noopener noreferrer"
                     style={
@@ -1699,6 +1729,7 @@ ShallowWrapper {
                     />
                   </a>
                   <a
+                    aria-label="David Brookes on AngelList"
                     href="https://angel.co/dbrookes"
                     rel="noopener noreferrer"
                     style={
@@ -1732,6 +1763,7 @@ ShallowWrapper {
                     />
                   </a>
                   <a
+                    aria-label="David Brookes on Twitter"
                     href="https://twitter.com/_dbrookes"
                     rel="noopener noreferrer"
                     style={
@@ -1834,6 +1866,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <a
+                      aria-label="David Brookes on GitHub"
                       href="https://github.com/dbrookes"
                       rel="noopener noreferrer"
                       style={
@@ -1867,6 +1900,7 @@ ShallowWrapper {
                       />
                     </a>,
                     <a
+                      aria-label="David Brookes on LinkedIn"
                       href="https://linkedin.com/in/dbrookes"
                       rel="noopener noreferrer"
                       style={
@@ -1900,6 +1934,7 @@ ShallowWrapper {
                       />
                     </a>,
                     <a
+                      aria-label="David Brookes on AngelList"
                       href="https://angel.co/dbrookes"
                       rel="noopener noreferrer"
                       style={
@@ -1933,6 +1968,7 @@ ShallowWrapper {
                       />
                     </a>,
                     <a
+                      aria-label="David Brookes on Twitter"
                       href="https://twitter.com/_dbrookes"
                       rel="noopener noreferrer"
                       style={
@@ -1975,6 +2011,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "aria-label": "David Brookes on GitHub",
                       "children": <FontAwesomeIcon$1
                         border={false}
                         className=""
@@ -2040,6 +2077,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "aria-label": "David Brookes on LinkedIn",
                       "children": <FontAwesomeIcon$1
                         border={false}
                         className=""
@@ -2105,6 +2143,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "aria-label": "David Brookes on AngelList",
                       "children": <FontAwesomeIcon$1
                         border={false}
                         className=""
@@ -2170,6 +2209,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
+                      "aria-label": "David Brookes on Twitter",
                       "children": <FontAwesomeIcon$1
                         border={false}
                         className=""

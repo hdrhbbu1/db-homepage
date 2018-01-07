@@ -14,16 +14,40 @@ const BioCard = ({ avatar, col1, col2 }) => (
           <Img resolutions={avatar} alt="David Brookes" />
         </div>
         <p className={styles.social}>
-          <a style={{ color: `#000` }} href="https://github.com/dbrookes" target="_blank" rel="noopener noreferrer">
+          <a
+            style={{ color: `#000` }}
+            href="https://github.com/dbrookes"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="David Brookes on GitHub"
+          >
             <Icon icon={[`fab`, `github`]} size="lg" fixedWidth />
           </a>
-          <a style={{ color: `#000` }} href="https://linkedin.com/in/dbrookes" target="_blank" rel="noopener noreferrer">
+          <a
+            style={{ color: `#000` }}
+            href="https://linkedin.com/in/dbrookes"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="David Brookes on LinkedIn"
+          >
             <Icon icon={[`fab`, `linkedin`]} size="lg" fixedWidth />
           </a>
-          <a style={{ color: `#000` }} href="https://angel.co/dbrookes" target="_blank" rel="noopener noreferrer">
+          <a
+            style={{ color: `#000` }}
+            href="https://angel.co/dbrookes"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="David Brookes on AngelList"
+          >
             <Icon icon={[`fab`, `angellist`]} size="lg" fixedWidth />
           </a>
-          <a style={{ color: `#000` }} href="https://twitter.com/_dbrookes" target="_blank" rel="noopener noreferrer">
+          <a
+            style={{ color: `#000` }}
+            href="https://twitter.com/_dbrookes"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="David Brookes on Twitter"
+          >
             <Icon icon={[`fab`, `twitter`]} size="lg" fixedWidth />
           </a>
         </p>

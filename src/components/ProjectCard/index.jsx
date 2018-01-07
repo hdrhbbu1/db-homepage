@@ -8,15 +8,16 @@ import ButtonTo from "../ButtonTo"
 
 import styles from "./index.module.css"
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ project, headingLevel, index }) => {
   const projectData = project.node.frontmatter
+  const Heading = `h${headingLevel}`
 
   return (
     <Col xs={12} md={6} lg={4} className={index === 2 ? `${styles.root} ${styles.third}` : styles.root}>
       <Link to={projectData.path}>
         <Img sizes={projectData.thumb.childImageSharp.sizes} />
       </Link>
-      <h3><Link to={projectData.path}>{projectData.title}</Link></h3>
+      <Heading><Link to={projectData.path}>{projectData.title}</Link></Heading>
       <p>{projectData.excerpt}</p>
       <ButtonTo to={projectData.path}>Project Details</ButtonTo>
     </Col>
@@ -25,10 +26,12 @@ const ProjectCard = ({ project, index }) => {
 
 ProjectCard.propTypes = {
   project: PropTypes.object.isRequired,
+  headingLevel: PropTypes.oneOf([2, 3, 4, 5, 6]),
   index: PropTypes.number,
 }
 
 ProjectCard.defaultProps = {
+  headingLevel: 2,
   index: 0,
 }
 

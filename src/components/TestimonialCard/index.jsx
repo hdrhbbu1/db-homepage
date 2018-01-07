@@ -6,30 +6,48 @@ import Icon from "@fortawesome/react-fontawesome"
 import styles from "./index.module.css"
 
 const TestimonialCard = ({ post }) => {
-  const testimonialData = post.node.frontmatter
+  const testimonial = post.node.frontmatter
   return (
     <div className={styles.testimonial}>
       <blockquote>
-        <Img resolutions={testimonialData.thumb.childImageSharp.resolutions} />
-        {testimonialData.linkedIn &&
-          <a style={{ color: `#2b2b2d` }} href={testimonialData.linkedIn} target="_blank" rel="noopener noreferrer">
+        <Img resolutions={testimonial.thumb.childImageSharp.resolutions} />
+        {testimonial.linkedIn &&
+          <a
+            style={{ color: `#2b2b2d` }}
+            href={testimonial.linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${testimonial.title} on LinkedIn`}
+          >
             <Icon icon={[`fab`, `linkedin`]} fixedWidth />
           </a>
         }
-        {testimonialData.twitter &&
-          <a style={{ color: `#2b2b2d` }} href={testimonialData.twitter} target="_blank" rel="noopener noreferrer">
+        {testimonial.twitter &&
+          <a
+            style={{ color: `#2b2b2d` }}
+            href={testimonial.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${testimonial.title} on Twitter`}
+          >
             <Icon icon={[`fab`, `twitter`]} fixedWidth />
           </a>
         }
-        {testimonialData.angellist &&
-          <a style={{ color: `#2b2b2d` }} href={testimonialData.angellist} target="_blank" rel="noopener noreferrer">
+        {testimonial.angellist &&
+          <a
+            style={{ color: `#2b2b2d` }}
+            href={testimonial.angellist}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${testimonial.title} on AngelList`}
+          >
             <Icon icon={[`fab`, `angellist`]} fixedWidth />
           </a>
         }
 
         <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
         <cite>
-          {testimonialData.title} - {testimonialData.jobTitle}
+          {testimonial.title} - {testimonial.jobTitle}
         </cite>
       </blockquote>
     </div>
