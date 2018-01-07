@@ -7,6 +7,8 @@ const PageMeta = ({ page }) => {
   const siteUrl = process.env.SITE_URL
   const currentUrl = siteUrl + page.path
 
+  const htmlAttr = { lang: `en` }
+
   const meta = [
     { name: `description`, content: page.metaDescription },
     { name: `twitter:title`, content: title },
@@ -20,6 +22,7 @@ const PageMeta = ({ page }) => {
   ]
 
   const link = [
+    { rel: `shortcut icon`, type: `image/png`, href: `/favicons/favicon.png` },
     { rel: `canonical`, href: currentUrl },
     { rel: `dns-prefetch`, href: process.env.API_URL },
     { rel: `author`, href: process.env.GPLUS },
@@ -68,6 +71,7 @@ const PageMeta = ({ page }) => {
 
   return (
     <Helmet
+      htmlAttributes={htmlAttr}
       title={title}
       meta={meta}
       link={link}
