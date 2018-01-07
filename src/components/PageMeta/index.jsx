@@ -5,7 +5,6 @@ import Helmet from "react-helmet"
 const PageMeta = ({ page }) => {
   const title = `${page.metaTitle} - ${process.env.SITE_TITLE}`
   const siteUrl = process.env.SITE_URL
-  const apiUrl = process.env.API_URL
   const currentUrl = siteUrl + page.path
 
   const meta = [
@@ -22,22 +21,23 @@ const PageMeta = ({ page }) => {
 
   const link = [
     { rel: `canonical`, href: currentUrl },
-    { rel: `dns-prefetch`, href: apiUrl },
+    { rel: `dns-prefetch`, href: process.env.API_URL },
     { rel: `author`, href: process.env.GPLUS },
   ]
 
-  const script = [{
-    innerHTML: `
+  const script = [
+    {
+      innerHTML: `
       if (!window.fetch) {
         var script = document.createElement('script');
         script.async = false;
         script.src = 'https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,fetch&flags=gated';
         document.head.appendChild(script);
       }`,
-  },
-  {
-    type: `application/ld+json`,
-    innerHTML: `{
+    },
+    {
+      type: `application/ld+json`,
+      innerHTML: `{
         "@context": "http://schema.org",
         "@type": "Organization",
         "url": "${siteUrl}",
@@ -49,10 +49,10 @@ const PageMeta = ({ page }) => {
         "name" : "${process.env.SITE_TITLE}",
         "url" : "${siteUrl}",
       }`,
-  },
-  {
-    type: `application/ld+json`,
-    innerHTML: `{
+    },
+    {
+      type: `application/ld+json`,
+      innerHTML: `{
       "@context": "http://schema.org",
       "@type": "Person",
       "name": "David Brookes",
@@ -62,9 +62,8 @@ const PageMeta = ({ page }) => {
         "https://github.com/dbrookes",
         "https://twitter.com/_dbrookes",
         "http://dribbble.com/dbrookes"
-      ]
-    }`,
-  },
+      ]}`,
+    },
   ]
 
   return (

@@ -74,7 +74,6 @@ class ContactForm extends React.Component {
                 message="Oops"
                 description="Please ensure all required fields below are completed and try again."
                 type="error"
-                style={{ width: `100%` }}
               />
             }
 
@@ -83,7 +82,6 @@ class ContactForm extends React.Component {
                 message="Success"
                 description="Your message was successfully sent, I'll get back to you as soon as possible."
                 type="success"
-                style={{ width: `100%` }}
               />
             }
           </Col>
@@ -108,6 +106,8 @@ class ContactForm extends React.Component {
                       validationError="Please provide your name."
                       required
                     />
+                  </Col>
+                  <Col xs={12} md={6}>
                     <Input
                       name="email"
                       title="Your Email"
@@ -121,6 +121,8 @@ class ContactForm extends React.Component {
                       name="company"
                       title="Company"
                     />
+                  </Col>
+                  <Col xs={12} md={6}>
                     <Select
                       name="type"
                       title="Enquiry Type"

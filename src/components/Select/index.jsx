@@ -24,6 +24,7 @@ class Select extends React.Component {
           <select
             className={styles.select}
             name={this.props.name}
+            id={this.props.name}
             onChange={this.changeValue}
             value={this.props.getValue()}
           >
