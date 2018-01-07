@@ -3,9 +3,7 @@ import PropTypes from "prop-types"
 
 import "typeface-montserrat"
 import "typeface-merriweather"
-import FontAwesome from "@fortawesome/fontawesome"
-import Icons from '@fortawesome/fontawesome-free-solid'
-import Brands from '@fortawesome/fontawesome-free-brands'
+import "../components/Icons"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -13,8 +11,6 @@ import Sidebar from "../components/Sidebar"
 
 import "../css/global.css"
 import styles from "./index.module.css"
-
-FontAwesome.library.add(Icons, Brands)
 
 class Template extends React.Component {
   constructor(props) {

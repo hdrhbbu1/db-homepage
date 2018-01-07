@@ -47,7 +47,7 @@ const Homepage = ({ data }) => {
 
       <Row center="xs" end="md">
         <Col xs={12}>
-          <ButtonTo style={{ display: `inline-flex`, alignItems: `end` }} to="/projects/">More Projects</ButtonTo>
+          <ButtonTo to="/projects/">More Projects</ButtonTo>
         </Col>
       </Row>
 
@@ -58,7 +58,7 @@ const Homepage = ({ data }) => {
       />
 
       <Row>
-        <Col xs={12} md={6}>
+        <Col xs={12} lg={6}>
           <Row>
             <Col xs={12} md={6}>
               <h3>Key Services & Skills</h3>
@@ -82,7 +82,7 @@ const Homepage = ({ data }) => {
           </Row>
         </Col>
 
-        <Col xs={12} md={6}>
+        <Col xs={12} lg={6}>
           <h3>Web Development</h3>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <ButtonTo to="/services/">More service details</ButtonTo> <ButtonTo to="/contact/">Get in touch</ButtonTo>

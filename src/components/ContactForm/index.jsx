@@ -146,7 +146,7 @@ class ContactForm extends React.Component {
                 />
 
                 <Button type="submit" disabled={!this.state.canSubmit}>
-                  <Icon icon="rocket" /> Submit
+                  Submit
                 </Button>
               </Formsy>
             </Col>

@@ -1,12 +1,18 @@
 .button {
-  border: 1px solid black;
-  border-radius: 4px;
-  margin: 1.875rem auto;
+  color: #fff;
   padding: 10px;
-  font-size: 0.6875rem;
-  color: #000;
+  border-radius: 0;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  text-align: center;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
+  font-weight: 600;
+  background: #4a90e2;
+  border-color: #4a90e2;
+  -webkit-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  transition: 0.1s linear;
+  padding-top: 0.46428571em;
+  padding-bottom: 0.46428571em;
+  line-height: 1.85714286em;
+  touch-action: manipulation;
+  border: 1px solid #4a90e2
 }
