@@ -36,10 +36,10 @@ deploy-stage:
       --no-mime-magic
       --no-preserve
       --add-header='Cache-Control: public, max-age=604800'
-      --exclude '.svg'
-      --exclude '.webp'
       --include 'static/*'
       --include 'favicons/*'
+      --exclude 'static/*.svg'
+      --exclude 'static/*.webp'
       --cf-invalidate"
     - "s3cmd sync public s3://staging.davidbrookes.co.uk
       --acl-public
@@ -48,6 +48,7 @@ deploy-stage:
       --no-preserve
       --add-header='Cache-Control: public, max-age=604800'
       --add-header='Content-Type':'image/svg+xml'
+      --exclude ''
       --include '.svg'
       --cf-invalidate"
     - "s3cmd sync public s3://staging.davidbrookes.co.uk
@@ -57,6 +58,7 @@ deploy-stage:
       --no-preserve
       --add-header='Cache-Control: public, max-age=604800'
       --add-header='Content-Type':'image/webp'
+      --exclude ''
       --include '.webp'
       --cf-invalidate"
 
