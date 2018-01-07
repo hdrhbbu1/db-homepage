@@ -85,6 +85,11 @@ ShallowWrapper {
                     validations="minLength:2"
                     value={undefined}
                   />
+                </Col>
+                <Col
+                  md={6}
+                  xs={12}
+                >
                   <Formsy(Input)
                     innerRef={[Function]}
                     name="email"
@@ -110,6 +115,11 @@ ShallowWrapper {
                     validations={null}
                     value={undefined}
                   />
+                </Col>
+                <Col
+                  md={6}
+                  xs={12}
+                >
                   <Formsy(Select)
                     innerRef={[Function]}
                     name="type"
@@ -153,24 +163,7 @@ ShallowWrapper {
                 disabled={false}
                 type="submit"
               >
-                <FontAwesomeIcon$1
-                  border={false}
-                  className=""
-                  compose={null}
-                  fixedWidth={false}
-                  flip={null}
-                  icon="rocket"
-                  listItem={false}
-                  name=""
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  symbol={false}
-                  transform={null}
-                />
-                 Submit
+                Submit
               </Button>
             </Formsy>
           </Col>
@@ -287,6 +280,11 @@ ShallowWrapper {
                     validations="minLength:2"
                     value={undefined}
                   />
+                </Col>
+                <Col
+                  md={6}
+                  xs={12}
+                >
                   <Formsy(Input)
                     innerRef={[Function]}
                     name="email"
@@ -312,6 +310,11 @@ ShallowWrapper {
                     validations={null}
                     value={undefined}
                   />
+                </Col>
+                <Col
+                  md={6}
+                  xs={12}
+                >
                   <Formsy(Select)
                     innerRef={[Function]}
                     name="type"
@@ -355,24 +358,7 @@ ShallowWrapper {
                 disabled={false}
                 type="submit"
               >
-                <FontAwesomeIcon$1
-                  border={false}
-                  className=""
-                  compose={null}
-                  fixedWidth={false}
-                  flip={null}
-                  icon="rocket"
-                  listItem={false}
-                  name=""
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  symbol={false}
-                  transform={null}
-                />
-                 Submit
+                Submit
               </Button>
             </Formsy>
           </Col>,
@@ -428,6 +414,11 @@ ShallowWrapper {
                     validations="minLength:2"
                     value={undefined}
                   />
+                </Col>
+                <Col
+                  md={6}
+                  xs={12}
+                >
                   <Formsy(Input)
                     innerRef={[Function]}
                     name="email"
@@ -453,6 +444,11 @@ ShallowWrapper {
                     validations={null}
                     value={undefined}
                   />
+                </Col>
+                <Col
+                  md={6}
+                  xs={12}
+                >
                   <Formsy(Select)
                     innerRef={[Function]}
                     name="type"
@@ -496,24 +492,7 @@ ShallowWrapper {
                 disabled={false}
                 type="submit"
               >
-                <FontAwesomeIcon$1
-                  border={false}
-                  className=""
-                  compose={null}
-                  fixedWidth={false}
-                  flip={null}
-                  icon="rocket"
-                  listItem={false}
-                  name=""
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  symbol={false}
-                  transform={null}
-                />
-                 Submit
+                Submit
               </Button>
             </Formsy>,
             "lg": 6,
@@ -543,6 +522,11 @@ ShallowWrapper {
                       validations="minLength:2"
                       value={undefined}
                     />
+                  </Col>
+                  <Col
+                    md={6}
+                    xs={12}
+                  >
                     <Formsy(Input)
                       innerRef={[Function]}
                       name="email"
@@ -568,6 +552,11 @@ ShallowWrapper {
                       validations={null}
                       value={undefined}
                     />
+                  </Col>
+                  <Col
+                    md={6}
+                    xs={12}
+                  >
                     <Formsy(Select)
                       innerRef={[Function]}
                       name="type"
@@ -611,24 +600,7 @@ ShallowWrapper {
                   disabled={false}
                   type="submit"
                 >
-                  <FontAwesomeIcon$1
-                    border={false}
-                    className=""
-                    compose={null}
-                    fixedWidth={false}
-                    flip={null}
-                    icon="rocket"
-                    listItem={false}
-                    name=""
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    symbol={false}
-                    transform={null}
-                  />
-                   Submit
+                  Submit
                 </Button>,
               ],
               "className": "form",
@@ -682,6 +654,11 @@ ShallowWrapper {
                         validations="minLength:2"
                         value={undefined}
                       />
+                    </Col>,
+                    <Col
+                      md={6}
+                      xs={12}
+                    >
                       <Formsy(Input)
                         innerRef={[Function]}
                         name="email"
@@ -707,6 +684,11 @@ ShallowWrapper {
                         validations={null}
                         value={undefined}
                       />
+                    </Col>,
+                    <Col
+                      md={6}
+                      xs={12}
+                    >
                       <Formsy(Select)
                         innerRef={[Function]}
                         name="type"
@@ -743,70 +725,38 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "children": Array [
-                        <Formsy(Input)
-                          innerRef={[Function]}
-                          name="name"
-                          required={true}
-                          title="Your Name"
-                          validationError="Please provide your name."
-                          validationErrors={Object {}}
-                          validations="minLength:2"
-                          value={undefined}
-                        />,
-                        <Formsy(Input)
-                          innerRef={[Function]}
-                          name="email"
-                          required={true}
-                          title="Your Email"
-                          validationError="Please provide a valid email address."
-                          validationErrors={Object {}}
-                          validations="isEmail"
-                          value={undefined}
-                        />,
-                      ],
+                      "children": <Formsy(Input)
+                        innerRef={[Function]}
+                        name="name"
+                        required={true}
+                        title="Your Name"
+                        validationError="Please provide your name."
+                        validationErrors={Object {}}
+                        validations="minLength:2"
+                        value={undefined}
+                      />,
                       "md": 6,
                       "xs": 12,
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "innerRef": [Function],
-                          "name": "name",
-                          "required": true,
-                          "title": "Your Name",
-                          "validationError": "Please provide your name.",
-                          "validationErrors": Object {},
-                          "validations": "minLength:2",
-                          "value": undefined,
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "innerRef": [Function],
+                        "name": "name",
+                        "required": true,
+                        "title": "Your Name",
+                        "validationError": "Please provide your name.",
+                        "validationErrors": Object {},
+                        "validations": "minLength:2",
+                        "value": undefined,
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "innerRef": [Function],
-                          "name": "email",
-                          "required": true,
-                          "title": "Your Email",
-                          "validationError": "Please provide a valid email address.",
-                          "validationErrors": Object {},
-                          "validations": "isEmail",
-                          "value": undefined,
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                    ],
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
                     "type": [Function],
                   },
                   Object {
@@ -814,75 +764,89 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "children": Array [
-                        <Formsy(Input)
-                          innerRef={[Function]}
-                          name="company"
-                          required={false}
-                          title="Company"
-                          validationError=""
-                          validationErrors={Object {}}
-                          validations={null}
-                          value={undefined}
-                        />,
-                        <Formsy(Select)
-                          innerRef={[Function]}
-                          name="type"
-                          options={
-                            Array [
-                              Object {
-                                "title": "Freelance",
-                                "value": "freelance",
-                              },
-                              Object {
-                                "title": "Contact Opportunity",
-                                "value": "contract",
-                              },
-                              Object {
-                                "title": "Other",
-                                "value": "other",
-                              },
-                            ]
-                          }
-                          required={false}
-                          title="Enquiry Type"
-                          validationError="Please select an enquiry type."
-                          validationErrors={Object {}}
-                          validations={null}
-                          value="freelance"
-                        />,
-                      ],
+                      "children": <Formsy(Input)
+                        innerRef={[Function]}
+                        name="email"
+                        required={true}
+                        title="Your Email"
+                        validationError="Please provide a valid email address."
+                        validationErrors={Object {}}
+                        validations="isEmail"
+                        value={undefined}
+                      />,
                       "md": 6,
                       "xs": 12,
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "innerRef": [Function],
-                          "name": "company",
-                          "required": false,
-                          "title": "Company",
-                          "validationError": "",
-                          "validationErrors": Object {},
-                          "validations": null,
-                          "value": undefined,
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "innerRef": [Function],
+                        "name": "email",
+                        "required": true,
+                        "title": "Your Email",
+                        "validationError": "Please provide a valid email address.",
+                        "validationErrors": Object {},
+                        "validations": "isEmail",
+                        "value": undefined,
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "innerRef": [Function],
-                          "name": "type",
-                          "options": Array [
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": <Formsy(Input)
+                        innerRef={[Function]}
+                        name="company"
+                        required={false}
+                        title="Company"
+                        validationError=""
+                        validationErrors={Object {}}
+                        validations={null}
+                        value={undefined}
+                      />,
+                      "md": 6,
+                      "xs": 12,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "innerRef": [Function],
+                        "name": "company",
+                        "required": false,
+                        "title": "Company",
+                        "validationError": "",
+                        "validationErrors": Object {},
+                        "validations": null,
+                        "value": undefined,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": <Formsy(Select)
+                        innerRef={[Function]}
+                        name="type"
+                        options={
+                          Array [
                             Object {
                               "title": "Freelance",
                               "value": "freelance",
@@ -895,19 +859,51 @@ ShallowWrapper {
                               "title": "Other",
                               "value": "other",
                             },
-                          ],
-                          "required": false,
-                          "title": "Enquiry Type",
-                          "validationError": "Please select an enquiry type.",
-                          "validationErrors": Object {},
-                          "validations": null,
-                          "value": "freelance",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
+                          ]
+                        }
+                        required={false}
+                        title="Enquiry Type"
+                        validationError="Please select an enquiry type."
+                        validationErrors={Object {}}
+                        validations={null}
+                        value="freelance"
+                      />,
+                      "md": 6,
+                      "xs": 12,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "innerRef": [Function],
+                        "name": "type",
+                        "options": Array [
+                          Object {
+                            "title": "Freelance",
+                            "value": "freelance",
+                          },
+                          Object {
+                            "title": "Contact Opportunity",
+                            "value": "contract",
+                          },
+                          Object {
+                            "title": "Other",
+                            "value": "other",
+                          },
+                        ],
+                        "required": false,
+                        "title": "Enquiry Type",
+                        "validationError": "Please select an enquiry type.",
+                        "validationErrors": Object {},
+                        "validations": null,
+                        "value": "freelance",
                       },
-                    ],
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
                     "type": [Function],
                   },
                 ],
@@ -937,58 +933,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": Array [
-                    <FontAwesomeIcon$1
-                      border={false}
-                      className=""
-                      compose={null}
-                      fixedWidth={false}
-                      flip={null}
-                      icon="rocket"
-                      listItem={false}
-                      name=""
-                      pull={null}
-                      pulse={false}
-                      rotation={null}
-                      size={null}
-                      spin={false}
-                      symbol={false}
-                      transform={null}
-                    />,
-                    " Submit",
-                  ],
+                  "children": "Submit",
                   "disabled": false,
                   "type": "submit",
                 },
                 "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "border": false,
-                      "className": "",
-                      "compose": null,
-                      "fixedWidth": false,
-                      "flip": null,
-                      "icon": "rocket",
-                      "listItem": false,
-                      "name": "",
-                      "pull": null,
-                      "pulse": false,
-                      "rotation": null,
-                      "size": null,
-                      "spin": false,
-                      "symbol": false,
-                      "transform": null,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  " Submit",
-                ],
+                "rendered": "Submit",
                 "type": [Function],
               },
             ],
@@ -1075,6 +1025,11 @@ ShallowWrapper {
                       validations="minLength:2"
                       value={undefined}
                     />
+                  </Col>
+                  <Col
+                    md={6}
+                    xs={12}
+                  >
                     <Formsy(Input)
                       innerRef={[Function]}
                       name="email"
@@ -1100,6 +1055,11 @@ ShallowWrapper {
                       validations={null}
                       value={undefined}
                     />
+                  </Col>
+                  <Col
+                    md={6}
+                    xs={12}
+                  >
                     <Formsy(Select)
                       innerRef={[Function]}
                       name="type"
@@ -1143,24 +1103,7 @@ ShallowWrapper {
                   disabled={false}
                   type="submit"
                 >
-                  <FontAwesomeIcon$1
-                    border={false}
-                    className=""
-                    compose={null}
-                    fixedWidth={false}
-                    flip={null}
-                    icon="rocket"
-                    listItem={false}
-                    name=""
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    symbol={false}
-                    transform={null}
-                  />
-                   Submit
+                  Submit
                 </Button>
               </Formsy>
             </Col>
@@ -1277,6 +1220,11 @@ ShallowWrapper {
                       validations="minLength:2"
                       value={undefined}
                     />
+                  </Col>
+                  <Col
+                    md={6}
+                    xs={12}
+                  >
                     <Formsy(Input)
                       innerRef={[Function]}
                       name="email"
@@ -1302,6 +1250,11 @@ ShallowWrapper {
                       validations={null}
                       value={undefined}
                     />
+                  </Col>
+                  <Col
+                    md={6}
+                    xs={12}
+                  >
                     <Formsy(Select)
                       innerRef={[Function]}
                       name="type"
@@ -1345,24 +1298,7 @@ ShallowWrapper {
                   disabled={false}
                   type="submit"
                 >
-                  <FontAwesomeIcon$1
-                    border={false}
-                    className=""
-                    compose={null}
-                    fixedWidth={false}
-                    flip={null}
-                    icon="rocket"
-                    listItem={false}
-                    name=""
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    symbol={false}
-                    transform={null}
-                  />
-                   Submit
+                  Submit
                 </Button>
               </Formsy>
             </Col>,
@@ -1418,6 +1354,11 @@ ShallowWrapper {
                       validations="minLength:2"
                       value={undefined}
                     />
+                  </Col>
+                  <Col
+                    md={6}
+                    xs={12}
+                  >
                     <Formsy(Input)
                       innerRef={[Function]}
                       name="email"
@@ -1443,6 +1384,11 @@ ShallowWrapper {
                       validations={null}
                       value={undefined}
                     />
+                  </Col>
+                  <Col
+                    md={6}
+                    xs={12}
+                  >
                     <Formsy(Select)
                       innerRef={[Function]}
                       name="type"
@@ -1486,24 +1432,7 @@ ShallowWrapper {
                   disabled={false}
                   type="submit"
                 >
-                  <FontAwesomeIcon$1
-                    border={false}
-                    className=""
-                    compose={null}
-                    fixedWidth={false}
-                    flip={null}
-                    icon="rocket"
-                    listItem={false}
-                    name=""
-                    pull={null}
-                    pulse={false}
-                    rotation={null}
-                    size={null}
-                    spin={false}
-                    symbol={false}
-                    transform={null}
-                  />
-                   Submit
+                  Submit
                 </Button>
               </Formsy>,
               "lg": 6,
@@ -1533,6 +1462,11 @@ ShallowWrapper {
                         validations="minLength:2"
                         value={undefined}
                       />
+                    </Col>
+                    <Col
+                      md={6}
+                      xs={12}
+                    >
                       <Formsy(Input)
                         innerRef={[Function]}
                         name="email"
@@ -1558,6 +1492,11 @@ ShallowWrapper {
                         validations={null}
                         value={undefined}
                       />
+                    </Col>
+                    <Col
+                      md={6}
+                      xs={12}
+                    >
                       <Formsy(Select)
                         innerRef={[Function]}
                         name="type"
@@ -1601,24 +1540,7 @@ ShallowWrapper {
                     disabled={false}
                     type="submit"
                   >
-                    <FontAwesomeIcon$1
-                      border={false}
-                      className=""
-                      compose={null}
-                      fixedWidth={false}
-                      flip={null}
-                      icon="rocket"
-                      listItem={false}
-                      name=""
-                      pull={null}
-                      pulse={false}
-                      rotation={null}
-                      size={null}
-                      spin={false}
-                      symbol={false}
-                      transform={null}
-                    />
-                     Submit
+                    Submit
                   </Button>,
                 ],
                 "className": "form",
@@ -1672,6 +1594,11 @@ ShallowWrapper {
                           validations="minLength:2"
                           value={undefined}
                         />
+                      </Col>,
+                      <Col
+                        md={6}
+                        xs={12}
+                      >
                         <Formsy(Input)
                           innerRef={[Function]}
                           name="email"
@@ -1697,6 +1624,11 @@ ShallowWrapper {
                           validations={null}
                           value={undefined}
                         />
+                      </Col>,
+                      <Col
+                        md={6}
+                        xs={12}
+                      >
                         <Formsy(Select)
                           innerRef={[Function]}
                           name="type"
@@ -1733,70 +1665,38 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "children": Array [
-                          <Formsy(Input)
-                            innerRef={[Function]}
-                            name="name"
-                            required={true}
-                            title="Your Name"
-                            validationError="Please provide your name."
-                            validationErrors={Object {}}
-                            validations="minLength:2"
-                            value={undefined}
-                          />,
-                          <Formsy(Input)
-                            innerRef={[Function]}
-                            name="email"
-                            required={true}
-                            title="Your Email"
-                            validationError="Please provide a valid email address."
-                            validationErrors={Object {}}
-                            validations="isEmail"
-                            value={undefined}
-                          />,
-                        ],
+                        "children": <Formsy(Input)
+                          innerRef={[Function]}
+                          name="name"
+                          required={true}
+                          title="Your Name"
+                          validationError="Please provide your name."
+                          validationErrors={Object {}}
+                          validations="minLength:2"
+                          value={undefined}
+                        />,
                         "md": 6,
                         "xs": 12,
                       },
                       "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "innerRef": [Function],
-                            "name": "name",
-                            "required": true,
-                            "title": "Your Name",
-                            "validationError": "Please provide your name.",
-                            "validationErrors": Object {},
-                            "validations": "minLength:2",
-                            "value": undefined,
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "innerRef": [Function],
+                          "name": "name",
+                          "required": true,
+                          "title": "Your Name",
+                          "validationError": "Please provide your name.",
+                          "validationErrors": Object {},
+                          "validations": "minLength:2",
+                          "value": undefined,
                         },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "innerRef": [Function],
-                            "name": "email",
-                            "required": true,
-                            "title": "Your Email",
-                            "validationError": "Please provide a valid email address.",
-                            "validationErrors": Object {},
-                            "validations": "isEmail",
-                            "value": undefined,
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                      ],
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
                       "type": [Function],
                     },
                     Object {
@@ -1804,75 +1704,89 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "children": Array [
-                          <Formsy(Input)
-                            innerRef={[Function]}
-                            name="company"
-                            required={false}
-                            title="Company"
-                            validationError=""
-                            validationErrors={Object {}}
-                            validations={null}
-                            value={undefined}
-                          />,
-                          <Formsy(Select)
-                            innerRef={[Function]}
-                            name="type"
-                            options={
-                              Array [
-                                Object {
-                                  "title": "Freelance",
-                                  "value": "freelance",
-                                },
-                                Object {
-                                  "title": "Contact Opportunity",
-                                  "value": "contract",
-                                },
-                                Object {
-                                  "title": "Other",
-                                  "value": "other",
-                                },
-                              ]
-                            }
-                            required={false}
-                            title="Enquiry Type"
-                            validationError="Please select an enquiry type."
-                            validationErrors={Object {}}
-                            validations={null}
-                            value="freelance"
-                          />,
-                        ],
+                        "children": <Formsy(Input)
+                          innerRef={[Function]}
+                          name="email"
+                          required={true}
+                          title="Your Email"
+                          validationError="Please provide a valid email address."
+                          validationErrors={Object {}}
+                          validations="isEmail"
+                          value={undefined}
+                        />,
                         "md": 6,
                         "xs": 12,
                       },
                       "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "innerRef": [Function],
-                            "name": "company",
-                            "required": false,
-                            "title": "Company",
-                            "validationError": "",
-                            "validationErrors": Object {},
-                            "validations": null,
-                            "value": undefined,
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "innerRef": [Function],
+                          "name": "email",
+                          "required": true,
+                          "title": "Your Email",
+                          "validationError": "Please provide a valid email address.",
+                          "validationErrors": Object {},
+                          "validations": "isEmail",
+                          "value": undefined,
                         },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "innerRef": [Function],
-                            "name": "type",
-                            "options": Array [
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": <Formsy(Input)
+                          innerRef={[Function]}
+                          name="company"
+                          required={false}
+                          title="Company"
+                          validationError=""
+                          validationErrors={Object {}}
+                          validations={null}
+                          value={undefined}
+                        />,
+                        "md": 6,
+                        "xs": 12,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "innerRef": [Function],
+                          "name": "company",
+                          "required": false,
+                          "title": "Company",
+                          "validationError": "",
+                          "validationErrors": Object {},
+                          "validations": null,
+                          "value": undefined,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": <Formsy(Select)
+                          innerRef={[Function]}
+                          name="type"
+                          options={
+                            Array [
                               Object {
                                 "title": "Freelance",
                                 "value": "freelance",
@@ -1885,19 +1799,51 @@ ShallowWrapper {
                                 "title": "Other",
                                 "value": "other",
                               },
-                            ],
-                            "required": false,
-                            "title": "Enquiry Type",
-                            "validationError": "Please select an enquiry type.",
-                            "validationErrors": Object {},
-                            "validations": null,
-                            "value": "freelance",
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
+                            ]
+                          }
+                          required={false}
+                          title="Enquiry Type"
+                          validationError="Please select an enquiry type."
+                          validationErrors={Object {}}
+                          validations={null}
+                          value="freelance"
+                        />,
+                        "md": 6,
+                        "xs": 12,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "innerRef": [Function],
+                          "name": "type",
+                          "options": Array [
+                            Object {
+                              "title": "Freelance",
+                              "value": "freelance",
+                            },
+                            Object {
+                              "title": "Contact Opportunity",
+                              "value": "contract",
+                            },
+                            Object {
+                              "title": "Other",
+                              "value": "other",
+                            },
+                          ],
+                          "required": false,
+                          "title": "Enquiry Type",
+                          "validationError": "Please select an enquiry type.",
+                          "validationErrors": Object {},
+                          "validations": null,
+                          "value": "freelance",
                         },
-                      ],
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
                       "type": [Function],
                     },
                   ],
@@ -1927,58 +1873,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "children": Array [
-                      <FontAwesomeIcon$1
-                        border={false}
-                        className=""
-                        compose={null}
-                        fixedWidth={false}
-                        flip={null}
-                        icon="rocket"
-                        listItem={false}
-                        name=""
-                        pull={null}
-                        pulse={false}
-                        rotation={null}
-                        size={null}
-                        spin={false}
-                        symbol={false}
-                        transform={null}
-                      />,
-                      " Submit",
-                    ],
+                    "children": "Submit",
                     "disabled": false,
                     "type": "submit",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "border": false,
-                        "className": "",
-                        "compose": null,
-                        "fixedWidth": false,
-                        "flip": null,
-                        "icon": "rocket",
-                        "listItem": false,
-                        "name": "",
-                        "pull": null,
-                        "pulse": false,
-                        "rotation": null,
-                        "size": null,
-                        "spin": false,
-                        "symbol": false,
-                        "transform": null,
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
-                    " Submit",
-                  ],
+                  "rendered": "Submit",
                   "type": [Function],
                 },
               ],
