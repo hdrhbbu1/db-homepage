@@ -3,7 +3,7 @@ title: Packers Everywhere
 metaTitle: Packers Everywhere Project
 metaDescription: The official home of Packers fans everywhere to find cool Packers events and connect with other fans to root for the Green and Gold.
 
-path: "/projects/packers-everywhere/"
+path: /projects/packers-everywhere/
 date: 2013-01-01
 
 featured: false
@@ -13,8 +13,8 @@ excerpt: The official home of Packers fans everywhere to find cool Packers event
 agency: Blue State Digital
 link: http://www.packerseverywhere.com/
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS

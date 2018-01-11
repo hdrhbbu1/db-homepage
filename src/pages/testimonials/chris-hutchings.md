@@ -1,14 +1,14 @@
 ---
-title: "Chris Hutchings"
+title: Chris Hutchings
 type: testimonial
 
 featured: false
 draft: false
 
-jobTitle: "Head of SEO, Compare the Market"
-thumb: "chris-hutchings.jpg"
-linkedIn: "https://uk.linkedin.com/in/chrisjhutchings/"
-twitter:
+jobTitle: Head of SEO, Compare the Market
+thumb: chris-hutchings.jpg
+linkedIn: https://uk.linkedin.com/in/chrisjhutchings/
+twitter: https://twitter.com/chrisjhutchings
 
 ---
 

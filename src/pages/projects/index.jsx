@@ -1,43 +1,43 @@
 import React from "react"
-import get from "lodash/get"
-import { Row, Col } from 'antd'
+import PropTypes from "prop-types"
+import { Grid, Row } from "react-flexbox-grid"
 
 import PageMeta from "../../components/PageMeta"
-import SectionHeader from '../../components/SectionHeader'
-import ProjectCard from '../../components/ProjectCard'
+import SectionHeader from "../../components/SectionHeader"
+import ProjectCard from "../../components/ProjectCard"
 
-class ProjectsPage extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const allProjects = get(this, `props.data.allMarkdownRemark.edges`)
+const ProjectsPage = ({ data }) => {
+  const post = data.page
+  const allProjects = data.allProjects.edges
 
-    return (
-      <section>
-        <PageMeta page={post.frontmatter} />
+  return (
+    <Grid fluid>
+      <PageMeta page={post.frontmatter} />
 
-        <SectionHeader
-          headingCopy={post.frontmatter.title}
-          type="h1"
-          taglineCopy={post.frontmatter.tagline}
-        />
+      <SectionHeader
+        headingCopy={post.frontmatter.title}
+        type="h1"
+        taglineCopy={post.frontmatter.tagline}
+      />
 
-        <Row gutter={30} type="flex">
-          {allProjects.map(project => (
-            <Col key={project.node.id} xs={24} sm={12} md={8}>
-              <ProjectCard project={project} />
-            </Col>
-          ))}
-        </Row>
-      </section>
-    )
-  }
+      <Row>
+        {allProjects.map((project, index) => (
+          <ProjectCard project={project} index={index} key={project.node.frontmatter.title} />
+        ))}
+      </Row>
+    </Grid>
+  )
 }
 
 export default ProjectsPage
 
+ProjectsPage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
 export const pageQuery = graphql`
 query ProjectsPage($path: String!) {
-  markdownRemark(frontmatter: { path: { eq: $path } }) {
+  page: markdownRemark(frontmatter: { path: { eq: $path } }) {
     id
     html
     frontmatter {
@@ -49,7 +49,7 @@ query ProjectsPage($path: String!) {
     }
   }
 
-  allMarkdownRemark (
+  allProjects: allMarkdownRemark (
     sort: { fields: [frontmatter___date], order: DESC }
     limit: 24,
     filter: {
@@ -71,13 +71,8 @@ query ProjectsPage($path: String!) {
           title
           thumb {
             childImageSharp {
-              responsiveResolution {
-                base64
-                aspectRatio
-                width
-                height
-                src
-                srcSet
+              sizes(maxWidth: 500, maxHeight: 360, quality: 80) {
+                ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
             }
           }

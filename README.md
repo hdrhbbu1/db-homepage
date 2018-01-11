@@ -6,31 +6,58 @@
 
 This site is built with Gatsby, a static PWA (Progressive Web App) generator. Gatsby exposes a data source (MarkDown in this case) and allows it to be queried with GraphQL.
 
-Any dynamic areas such as forms are then built with AWS Lambda functions.
+Gatsby pre-renders and builds the site as static HTML files, which are deployed to S3 and distributed via CloudFront.
+
+Dynamic functionality such as forms are built with AWS Lambda functions exposed though AWS API Gateway - JAMstack.
+
+## Features
+
+* Mobile first flexbox UI
+* Offline support
+* WebP images for supported devices
+* SVG traced image placeholders for enhanced perceived loading
+
+## Browser Support
+
+* IE11
+* Edge 14+
+* Chrome
+* Safari
+* Firefox
 
 ## Local Development
 
 `yarn install`
 
-`gatsby serve`
+`yarn develop`
 
-The site is available at: `http://localhost:8000`
+The site is available at: `http://localhost:8080`
 
-GraphiQL is available at: `http://localhost:8000/___graphql/`
+GraphiQL is available at: `http://localhost:8080/___graphql/`
 
-Any changes made locally will be hot reloaded to the browser.
+Changes made locally to React components and styles are hot reloaded to the browser.
+
+To build a static optimised version of the site for production `yarn build`.
+
+## User Interface
+
+The UI makes use React Flexbox grid for layout and custom components are styled with [CSS Modules](https://github.com/css-modules/css-modules).
+
+React Burger Menu provides offcanvas support for small device navigation and Formsy React handles complex form validation patterns.
 
 ## Linting
 
-Both ESlint and Stylelint are available, in order form them to work they need to be installed globally on your machine. 
-It's recommended that you use the features of your IDE to lint as you go.
+Both ESlint and Stylelint are available, it's recommended that you use the features of your IDE to lint as you go and follow the `eslint-config-airbnb` rule set.
 
-To run the linter manually:
+To run the linters on the command line:
 
-`yarn run lint`  
-`yarn run lint:js`  
-`yarn run lint:css`  
-`yarn run lint:fix`  
+`yarn lint`
+
+`yarn lint:js`
+
+`yarn lint:css`
+
+`yarn lint:fix`
 
 ## Testing
 
@@ -44,21 +71,16 @@ Code coverage can be checked with:
 
 ## Continuous Deployment
 
-Continuous deployment is provided by GitLab running a lightweight Alpine Linux Node.JS Docker container to lint, test, build and deploy the static site to an Amazon S3 bucket.
+Continuous deployment is provided by GitLab running an AWS Node.JS Docker image to lint, test, build and deploy the static site to an Amazon S3 bucket, see `.gitlab-ci.yml`.
 
-As a backup, it's also possible to build and deploy the project to S3 from AWS CodePipeline.
+It's also possible to build and deploy the project to S3 from AWS CodePipeline, see `buildspec.yml`.
+
+Pushing code on the develop branch will run the GitLab CI pipeline and if successful, code will be deployed to the staging bucket. 
+
+After deployment, modified files are invalidated on CloudFront and the correct headers are set. 
+
+The most recent copy of the site is then pushed to each CloudFront edge location for optimal performance around the world.
 
 ## Contact Form
 
-- Lambda function
-- API gateway
-
-## Deployments
-
-Pushing code on the develop branch will cause the GitLab CI pipeline to run and if successful, code will be deployed on the staging bucket. After deployment, changed Cloudfront files are invalidated so the most recent copy of the site is pushed to each CDN edge location for optimial performance.
-
-`https://staging.davidbrookes.co.uk`
-
-## To Do
-
-- Offline support, enable Service Worker with correct Cloudfront cache configuration
+The contact form runs a Node Lambda function which fetches a HTML email template from the S3 bucket, populates it with the post data from AWS API Gateway and sends the email notification via Amazon SES.

@@ -1,0 +1,18 @@
+.button {
+  color: #fff;
+  padding: 10px;
+  border-radius: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #4a90e2;
+  border-color: #4a90e2;
+  -webkit-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  transition: 0.1s linear;
+  padding-top: 0.46428571em;
+  padding-bottom: 0.46428571em;
+  line-height: 1.85714286em;
+  touch-action: manipulation;
+  border: 1px solid #4a90e2
+}

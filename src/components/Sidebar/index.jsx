@@ -1,31 +1,33 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react"
+import PropTypes from "prop-types"
+import Link from "gatsby-link"
+import { slide as Menu } from 'react-burger-menu'
 
-import { Layout } from 'antd'
 import styles from "./index.module.css"
 
-const { Sider } = Layout
+const Sidebar = ({ isOpen, navToggle }) => (
+  <Menu
+    pageWrapId="content"
+    className={styles.sideBar}
+    isOpen={isOpen}
+    right
+    customBurgerIcon={false}
+    customCrossIcon={false}
+  >
+    <nav className={styles.menu}>
+      <ul>
+        <li><Link activeClassName="active" onClick={navToggle} to="/about/">About</Link></li>
+        <li><Link activeClassName="active" onClick={navToggle} to="/projects/">Projects</Link></li>
+        <li><Link activeClassName="active" onClick={navToggle} to="/services/">Services</Link></li>
+        <li><Link activeClassName="active" onClick={navToggle} to="/contact/">Contact</Link></li>
+      </ul>
+    </nav>
+  </Menu>
+)
 
-class Sidebar extends React.Component {
-  render() {
-    return (
-      <Sider
-        collapsedWidth="0"
-        trigger={null}
-        collapsed={this.props.collapsed}
-        className={styles.sideBar}
-      >
-        <nav className={styles.menu}>
-          <ul>
-            <li><Link activeClassName="active" onClick={this.props.navToggle} to="/about/">About</Link></li>
-            <li><Link activeClassName="active" onClick={this.props.navToggle} to="/projects/">Projects</Link></li>
-            <li><Link activeClassName="active" onClick={this.props.navToggle} to="/services/">Services</Link></li>
-            <li><Link activeClassName="active" onClick={this.props.navToggle} to="/contact/">Contact</Link></li>
-          </ul>
-        </nav>
-      </Sider>
-    )
-  }
+Sidebar.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  navToggle: PropTypes.func.isRequired,
 }
 
 export default Sidebar

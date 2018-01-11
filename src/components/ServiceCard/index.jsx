@@ -1,20 +1,23 @@
-import React from 'react'
-import { Card, Icon } from 'antd'
+import React from "react"
+import PropTypes from "prop-types"
+import Icon from "@fortawesome/react-fontawesome"
 
-import styles from './index.module.css'
+import styles from "./index.module.css"
 
-class ServiceCard extends React.Component {
-  render() {
-    const serviceData = this.props.post.node
+const ServiceCard = ({ post }) => {
+  const serviceData = post.node
 
-    return (
-      <Card noHovering className={styles.service}>
-        <Icon type={serviceData.frontmatter.icon} />
-        <h2>{serviceData.frontmatter.title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: serviceData.html }} />
-      </Card>
-    )
-  }
+  return (
+    <div className={styles.service}>
+      <Icon icon={serviceData.frontmatter.icon} fixedWidth />
+      <h2>{serviceData.frontmatter.title}</h2>
+      <div dangerouslySetInnerHTML={{ __html: serviceData.html }} />
+    </div>
+  )
+}
+
+ServiceCard.propTypes = {
+  post: PropTypes.object.isRequired,
 }
 
 export default ServiceCard

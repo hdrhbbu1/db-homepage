@@ -3,7 +3,7 @@ title: People for Bikes
 metaTitle: People for Bikes Project
 metaDescription: The leading movement to improve bicycling in the U.S by collaborating with millions of individual riders, businesses and elected officials.
 
-path: "/projects/people-for-bikes/"
+path: /projects/people-for-bikes/
 date: 2013-10-02
 
 featured: false
@@ -15,8 +15,8 @@ agency: Blue State Digital
 
 link: http://www.peopleforbikes.org
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS

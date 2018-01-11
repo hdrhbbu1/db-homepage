@@ -1,74 +1,64 @@
 import React from "react"
-import { Row, Col, Form, Card, Icon, Input, Button, Alert } from 'antd'
+import { Grid, Row, Col } from "react-flexbox-grid"
+import Formsy from "formsy-react"
+import Icon from "@fortawesome/react-fontawesome"
+
+import Input from "../Input"
+import Textarea from "../Textarea"
+import Select from "../Select"
+import Button from "../Button"
+
+import styles from "./index.module.css"
+
+import Alert from "../Alert"
 import SectionHeader from "../SectionHeader"
 
-const FormItem = Form.Item
-const { TextArea } = Input
-
 class ContactForm extends React.Component {
-  static handleTrack() {
-    window.dataLayer.push({
-      event: `contactForm`,
-    })
-  }
-
-  static handleErrors(fieldsError) {
-    return Object.keys(fieldsError).some(field => fieldsError[field])
-  }
-
   constructor() {
     super()
-    this.handleSubmit = this.handleSubmit.bind(this)
 
-    this.state = { sending: false }
+    this.disableButton = this.disableButton.bind(this)
+    this.enableButton = this.enableButton.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleInvalid = this.handleInvalid.bind(this)
+    this.state = { canSubmit: true, success: false }
   }
 
-  handleSubmit(e) {
-    e.preventDefault()
+  disableButton() {
+    this.setState({ canSubmit: false })
+  }
 
-    this.props.form.validateFields((err, fieldsValue) => {
-      if (err) {
-        return
-      }
+  enableButton() {
+    this.setState({ canSubmit: true })
+  }
 
-      this.setState({ sending: true })
+  handleInvalid() {
+    this.setState({ invalid: true, canSubmit: false })
+  }
 
-      const values = {
-        ...fieldsValue,
-      }
+  handleSubmit(model) {
+    this.setState({
+      invalid: false,
+    })
 
-      const xmlhttp = new XMLHttpRequest()
-
-      xmlhttp.onreadystatechange = () => {
-        if (xmlhttp.readyState === 4) {
-          if (xmlhttp.status === 200) {
-            this.setState({
-              success: true,
-              sending: false,
-            })
-            this.handleTrack()
-          } else {
-            this.setState({
-              success: false,
-              sending: false,
-            })
-          }
-        }
-      }
-
-      xmlhttp.open(`POST`, process.env.API_URL, true)
-      xmlhttp.setRequestHeader(`Content-Type`, `application/x-www-form-urlencoded`)
-      xmlhttp.send(JSON.stringify(values))
+    fetch(`${process.env.API_URL}/contact`, {
+      method: `post`,
+      body: JSON.stringify(model),
+    }).then(() => {
+      this.setState({
+        success: true,
+      }, () => {
+        window.dataLayer = window.dataLayer || []
+        window.dataLayer.push({
+          event: `contactForm`,
+        })
+      })
     })
   }
 
   render() {
-    const { getFieldDecorator, getFieldsError } = this.props.form
-    const isDisabled = ContactForm.handleErrors(getFieldsError()) || this.state.sending
-
     return (
-      <Card style={{ width: `100%` }}>
-
+      <Grid fluid>
         <SectionHeader
           smallHeader
           smallLead
@@ -77,95 +67,95 @@ class ContactForm extends React.Component {
           taglineCopy="Please ensure to include as much information about the project as possible as well as any budgets and timelines."
         />
 
-        <Row gutter={30} type="flex" style={{ marginBottom: `20px` }}>
-          <Col xs={24} sm={12} md={{ span: 20, offset: 2 }}>
-            {ContactForm.handleErrors(getFieldsError()) > 0 &&
+        <Row>
+          <Col xs={12} md={12} lg={6} lgOffset={3}>
+            {this.state.invalid &&
               <Alert
                 message="Oops"
                 description="Please ensure all required fields below are completed and try again."
                 type="error"
-                showIcon
-                style={{ width: `100%` }}
               />
             }
 
-            {this.state.success > 0 &&
+            {this.state.success &&
               <Alert
                 message="Success"
                 description="Your message was successfully sent, I'll get back to you as soon as possible."
                 type="success"
-                showIcon
-                style={{ width: `100%` }}
               />
             }
           </Col>
         </Row>
 
-        <Form onSubmit={this.handleSubmit}>
-
-          <Row gutter={30} type="flex">
-            <Col xs={24} sm={12} md={{ span: 10, offset: 2 }}>
-              <FormItem label="Name" style={{ width: `100%` }}>
-                {getFieldDecorator(`name`, {
-                  rules: [{ required: true, whitespace: true, message: `Please provide your name` }],
-                })(
-                  <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} />
-                )}
-              </FormItem>
-            </Col>
-            <Col xs={24} sm={12} md={{ span: 10 }}>
-              <FormItem label="Email" type="email" style={{ width: `100%` }}>
-                {getFieldDecorator(`email`, {
-                  validateTrigger: `onBlur`,
-                  rules: [{ required: true, whitespace: true, type: `email`, message: `Please provide your email address.` }],
-                })(
-                  <Input type="email" prefix={<Icon type="mail" style={{ fontSize: 13 }} />} />
-                )}
-              </FormItem>
-            </Col>
-          </Row>
-
-          <Row gutter={30} type="flex">
-            <Col xs={24} sm={12} md={{ span: 10, offset: 2 }}>
-              <FormItem label="Company" style={{ width: `100%` }}>
-                {getFieldDecorator(`company`, {
-                  rules: [{ required: false, whitespace: false, message: `Please provide your company.` }],
-                })(
-                  <Input prefix={<Icon type="home" style={{ fontSize: 13 }} />} />
-                )}
-              </FormItem>
-            </Col>
-          </Row>
-
+        {!this.state.success &&
           <Row>
-            <Col xs={24} sm={12} md={{ span: 20, offset: 2 }}>
-              <FormItem label="Message" style={{ width: `100%` }}>
-                {getFieldDecorator(`message`, {
-                  rules: [{ required: true, whitespace: true, message: `Please enter a message.` }],
-                })(
-                  <TextArea placeholder="Hi David, " autosize={{ minRows: 8 }} />
-                )}
-              </FormItem>
-            </Col>
-          </Row>
-
-          <Row type="flex">
-            <Col xs={24} sm={12} md={{ span: 20, offset: 2 }}>
-              <Button
-                style={{ marginLeft: `auto` }}
-                icon={this.state.sending ? `loading` : `rocket`}
-                type="primary"
-                htmlType="submit"
-                disabled={isDisabled}
+            <Col xs={12} md={12} lg={6} lgOffset={3}>
+              <Formsy
+                onValidSubmit={this.handleSubmit}
+                onInvalidSubmit={this.handleInvalid}
+                onValid={this.enableButton}
+                className={styles.form}
               >
-                {this.state.sending ? `Just a moment...` : `Send Message`}
-              </Button>
+
+                <Row>
+                  <Col xs={12} md={6}>
+                    <Input
+                      name="name"
+                      title="Your Name"
+                      validations="minLength:2"
+                      validationError="Please provide your name."
+                      required
+                    />
+                  </Col>
+                  <Col xs={12} md={6}>
+                    <Input
+                      name="email"
+                      title="Your Email"
+                      validations="isEmail"
+                      validationError="Please provide a valid email address."
+                      required
+                    />
+                  </Col>
+                  <Col xs={12} md={6}>
+                    <Input
+                      name="company"
+                      title="Company"
+                    />
+                  </Col>
+                  <Col xs={12} md={6}>
+                    <Select
+                      name="type"
+                      title="Enquiry Type"
+                      validationError="Please select an enquiry type."
+                      options={[
+                        { title: `Freelance`, value: `freelance` },
+                        { title: `Contact Opportunity`, value: `contract` },
+                        { title: `Other`, value: `other` },
+                      ]}
+                      value="freelance"
+                    />
+                  </Col>
+                </Row>
+                <Textarea
+                  name="message"
+                  title="Message"
+                  rows={10}
+                  validations="minLength: 10"
+                  validationError="Please enter a message of at least 10 characters."
+                  required
+                />
+
+                <Button type="submit" disabled={!this.state.canSubmit}>
+                  Submit
+                </Button>
+              </Formsy>
             </Col>
           </Row>
-        </Form>
-      </Card>
+        }
+
+      </Grid>
     )
   }
 }
 
-export default Form.create()(ContactForm)
+export default ContactForm

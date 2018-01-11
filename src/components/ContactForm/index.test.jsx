@@ -4,22 +4,20 @@ import ContactForm from "./"
 
 describe(`ContactForm`, () => {
   let props
-  let mountedSectionHeader
-  const lockScreen = () => {
-    if (!mountedSectionHeader) {
-      mountedSectionHeader = shallow(
-        <ContactForm {...props} />
-      )
+  let mountedComponent
+  const wrapper = () => {
+    if (!mountedComponent) {
+      mountedComponent = shallow(<ContactForm {...props} />)
     }
-    return mountedSectionHeader
+    return mountedComponent
   }
 
   beforeEach(() => {
     props = {}
-    mountedSectionHeader = undefined
+    mountedComponent = undefined
   })
 
-  it(`always renders a Button component`, () => {
-    expect(lockScreen().find(ContactForm).length).toBe(0)
+  it(`renders a ContactForm`, () => {
+    expect(wrapper()).toMatchSnapshot()
   })
 })

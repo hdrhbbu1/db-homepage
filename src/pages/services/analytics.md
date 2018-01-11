@@ -1,7 +1,7 @@
 ---
 title: "Analytics"
 type: service
-icon: "line-chart"
+icon: "chart-bar"
 
 order: 06
 draft: false

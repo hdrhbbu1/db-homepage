@@ -1,15 +1,19 @@
 .avatar {
-  min-width: 90px;
-  min-height: 90px;
-  margin-right: 30px;
-  margin-bottom: 30px;
+  width: 100px;
+  height: 90px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
-.avatar span {
+.avatar span,
+.avatar img {
   border-radius: 50%;
-  border: 1px solid #555;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 3px;
+  border: 2px solid #f8f8f8;
 }
 
-.avatar span span {
-  padding: 2px;
+.social {
+  text-align: center;
 }

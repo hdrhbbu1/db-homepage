@@ -1,0 +1,90 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: arctica/aws-node:latest
+  script:
+    - npm install
+#    - npm run lint
+    - npm run test:js:coverage
+    - npm run build
+  artifacts:
+    paths:
+    - public/
+    expire_in: 1 day
+
+deploy-stage:
+  stage: deploy
+  image: arctica/aws-node:latest
+  script:
+    - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
+      --acl-public
+      --delete-removed
+      --guess-mime-type
+      --no-mime-magic
+      --no-preserve
+      --add-header='Cache-Control: public, max-age=0, must-revalidate'
+      --exclude 'static/*'
+      --exclude 'favicons/*'
+      --cf-invalidate"
+    - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
+      --acl-public
+      --delete-removed
+      --guess-mime-type
+      --no-mime-magic
+      --no-preserve
+      --add-header='Cache-Control: public, max-age=604800'
+      --include 'static/*'
+      --include 'favicons/*'
+      --exclude 'static/*.svg'
+      --exclude 'static/*.webp'
+      --cf-invalidate"
+    - "s3cmd sync public s3://staging.davidbrookes.co.uk
+      --acl-public
+      --delete-removed
+      --no-mime-magic
+      --no-preserve
+      --add-header='Cache-Control: public, max-age=604800'
+      --add-header='Content-Type':'image/svg+xml'
+      --exclude ''
+      --include '.svg'
+      --cf-invalidate"
+    - "s3cmd sync public s3://staging.davidbrookes.co.uk
+      --acl-public
+      --delete-removed
+      --no-mime-magic
+      --no-preserve
+      --add-header='Cache-Control: public, max-age=604800'
+      --add-header='Content-Type':'image/webp'
+      --exclude ''
+      --include '.webp'
+      --cf-invalidate"
+
+  environment:
+    name: Staging
+    url: https://staging.davidbrookes.co.uk
+  only:
+  - develop
+
+deploy-prod:
+  stage: deploy
+  image: arctica/aws-node:latest
+  script:
+    - "s3cmd sync public/ s3://davidbrookes.co.uk
+      --acl-public
+      --delete-removed
+      --guess-mime-type
+      --no-mime-magic
+      --no-preserve
+      --cf-invalidate"
+    - "s3cmd modify s3://davidbrookes.co.uk
+      --recursive
+      --add-header='content-type':'image/svg+xml'
+      --exclude '' --include '.svg'"
+  environment:
+    name: Production
+    url: https://davidbrookes.co.uk
+  only:
+  - master

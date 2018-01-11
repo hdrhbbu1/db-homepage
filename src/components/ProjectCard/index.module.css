@@ -1,36 +1,36 @@
-.customCard {
-  padding: 0 20px 20px;
+.root {
+  margin-bottom: 40px;
 }
 
-.customCard p {
-  color: #999;
-  margin: 10px 0;
-}
-
-.customCard h2 {
+.root h3 {
   font-size: 15px;
   text-align: left;
   margin-top: 0;
 }
 
-.item {
-  margin-bottom: 40px;
-  border-radius: 8px;
-  border: 0;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+.root h3 a {
+  color: #000;
+  margin: 10px 0;
 }
 
-.item img,
-.item span {
-  border-radius: 8px 8px 0 0;
+.root p {
+  color: #999;
+  margin: 0 0 10px;
+  text-align: justify;
+  padding: 5px 10px;
 }
 
-.item.third {
+.root img {
+  padding: 5px;
+  border: 2px solid #f8f8f8;
+}
+
+.root.third {
   display: none;
 }
 
 @media screen and (min-width: 992px) {
-  .item.third {
+  .root.third {
     display: block;
   }
 }

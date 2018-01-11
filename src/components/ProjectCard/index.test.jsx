@@ -7,16 +7,14 @@ describe(`ProjectCard`, () => {
   let mountedSectionHeader
   const lockScreen = () => {
     if (!mountedSectionHeader) {
-      mountedSectionHeader = shallow(
-        <ProjectCard {...props} />
-      )
+      mountedSectionHeader = shallow(<ProjectCard {...props} />)
     }
     return mountedSectionHeader
   }
 
   beforeEach(() => {
     props = {
-      post: {
+      project: {
         node: {
           id: `/Users/dbrookes/Sites/db-homepage-test/src/pages/projects/blinknow-foundation/index.md absPath of file >>> MarkdownRemark`,
           frontmatter: {
@@ -52,4 +50,3 @@ describe(`ProjectCard`, () => {
     expect(lockScreen().find(`span`).length)
   })
 })
-

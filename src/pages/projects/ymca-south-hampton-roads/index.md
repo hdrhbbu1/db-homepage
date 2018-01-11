@@ -3,7 +3,7 @@ title: YMCA South Hampton Roads
 metaTitle: YMCA South Hampton Roads Project
 metaDescription: The YMCA, a pioneering force in the United States for 160 years for youth development, healthy living and social responsibility.
 
-path: "/projects/ymca-south-hampton-roads/"
+path: /projects/ymca-south-hampton-roads/
 date: 2013-01-01
 
 featured: false
@@ -15,8 +15,8 @@ agency: Blue State Digital
 
 link: http://www.ymcashr.org
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS

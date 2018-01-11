@@ -23,12 +23,12 @@
     "graphql": false
   },
   "settings": {
-    "import/core-modules": ["react", "antd", "react-helmet"]
+    "import/core-modules": ["react", "react-helmet"]
   },
   "rules": {
-    "no-console": "off",
-    "valid-jsdoc": "off",
-    "require-jsdoc": "off",
+    "react/no-danger": "off",
+    "react/forbid-prop-types": "off",
+    "jsx-a11y/anchor-is-valid": "off",
     "import/extensions": "off",
     "quotes": [
       "error",
@@ -62,12 +62,6 @@
         "imports": "always-multiline",
         "exports": "always-multiline",
         "functions": "ignore"
-      }
-    ],
-    "react/prop-types": [
-      "off",
-      {
-        "ignore": ["children"]
       }
     ]
   }

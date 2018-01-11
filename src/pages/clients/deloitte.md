@@ -1,10 +1,10 @@
 ---
-title: "Deloitte"
+title: Deloitte
 type: clients
 
 featured: true
 draft: false
 
-logo: "deloitte-logo"
+logo: deloitte-logo
 
 ---

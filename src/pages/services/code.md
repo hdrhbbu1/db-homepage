@@ -1,7 +1,7 @@
 ---
 title: "Code"
 type: service
-icon: "code-o"
+icon: "code"
 
 order: 01
 draft: false

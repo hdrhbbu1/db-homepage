@@ -1,7 +1,7 @@
 ---
 title: "Content Management Systems"
 type: service
-icon: "file-text"
+icon: "file-alt"
 
 order: 03
 draft: false

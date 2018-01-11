@@ -1,8 +1,8 @@
 ---
-title: "Contact"
-path: "/contact/"
+title: Contact
+path: /contact/
 
-metaTitle: 'Contact and Estimate Request - Freelance Web Developer London'
+metaTitle: Contact and Estimate Request - Freelance Web Developer London
 metaDescription: Get in touch for a freelance web development estimate or enquire about contract availability.
 
 tagline: Interested in working with me? Let's talk.

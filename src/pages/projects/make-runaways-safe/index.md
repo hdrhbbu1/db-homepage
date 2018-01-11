@@ -3,7 +3,7 @@ title: Make Runaways Safe Map
 metaTitle: Make Runaways Safe Map Project
 metaDescription: A new campaign to make sure that every child who runs away from home is protected through a national safety net of support.
 
-path: "/projects/make-runaways-safe/"
+path: /projects/make-runaways-safe/
 date: 2011-01-02
 
 featured: false
@@ -12,12 +12,12 @@ draft: false
 excerpt: A new campaign to make sure that every child who runs away from home is protected through a national safety net of support.
 
 agency: Blue State Digital
-client: "The Children's Society"
+client: The Children's Society
 
 link:
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS

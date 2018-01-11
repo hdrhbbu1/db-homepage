@@ -1,20 +1,20 @@
 ---
 title: Bremont Chronometers
-metaTitle: "Bremont Chronometers Project"
-metaDescription: "Bremont Watch Company is an award-winning, luxury aviation themed British watchmaker based in Henley-on-Thames, England."
-path: "/projects/bremont/"
+metaTitle: Bremont Chronometers Project
+metaDescription: Bremont Watch Company is an award-winning, luxury aviation themed British watchmaker based in Henley-on-Thames, England.
+path: /projects/bremont/
 date: 2012-01-01
 
 featured: false
 draft: false
 
-excerpt: "Bremont Watch Company is an award-winning, luxury aviation themed British watchmaker based in Henley-on-Thames, England."
-client: "Bremont"
-agency: "Thought by Design"
+excerpt: Bremont Watch Company is an award-winning, luxury aviation themed British watchmaker based in Henley-on-Thames, England.
+client: Bremont
+agency: Thought by Design
 link:
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS

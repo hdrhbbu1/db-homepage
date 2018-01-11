@@ -1,0 +1,8 @@
+.alert {
+  color: black;
+  border: 1px solid grey;
+}
+
+.alert.error {
+  background: red;
+}

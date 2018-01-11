@@ -2,7 +2,7 @@
 title: Ford Social e-Card
 metaTitle: Ford Social e-Card Project
 metaDescription: Ford Social brings you all the latest news, stories and updates about Ford's award-winning cars and commercial vehicles.
-path: "/projects/ford-social/"
+path: /projects/ford-social/
 date: 2013-11-01
 
 featured: false
@@ -15,8 +15,8 @@ client: Ford
 
 link:
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - HTML5

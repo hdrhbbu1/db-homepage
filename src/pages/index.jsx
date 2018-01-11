@@ -1,134 +1,131 @@
 import React from "react"
-import Link from "gatsby-link"
-import get from "lodash/get"
-import { Row, Col } from 'antd'
+import PropTypes from "prop-types"
+import { Grid, Row, Col } from "react-flexbox-grid"
+import Icon from "@fortawesome/react-fontawesome"
 
 import PageMeta from "../components/PageMeta"
-import Intro from '../components/Intro'
-import SectionHeader from '../components/SectionHeader'
-import ProjectCard from '../components/ProjectCard'
-import ClientCard from '../components/ClientCard/index'
-import TestimonialCard from '../components/TestimonialCard'
+import Intro from "../components/Intro"
+import SectionHeader from "../components/SectionHeader"
+import ProjectCard from "../components/ProjectCard"
+import ButtonTo from "../components/ButtonTo"
+import ClientCard from "../components/ClientCard/index"
+import TestimonialCard from "../components/TestimonialCard"
+import CadburyLogo from "../components/svg/clients/cadbury-logo.svg"
+import DeloitteLogo from "../components/svg/clients/deloitte-logo.svg"
+import HMGovernmentLogo from "../components/svg/clients/hm-government-logo.svg"
+import FordLogo from "../components/svg/clients/ford-logo.svg"
 
-class Homepage extends React.Component {
-  render() {
-    const post = this.props.data.page
+const Homepage = ({ data }) => {
+  const post = data.page
+  const featuredProjects = data.featuredProjects.edges
+  const featuredTestimonials = data.featuredTestimonials.edges
 
-    const featuredProjects = get(this, `props.data.featuredProjects.edges`)
-    const featuredTestimonials = get(this, `props.data.featuredTestimonials.edges`)
-    const featuredClients = get(this, `props.data.featuredClients.edges`)
+  const clientsList = post.frontmatter.allClients
+  const clients = [
+    { title: clientsList[0], logo: CadburyLogo },
+    { title: clientsList[1], logo: DeloitteLogo },
+    { title: clientsList[2], logo: HMGovernmentLogo },
+    { title: clientsList[3], logo: FordLogo },
+  ]
 
-    return (
-      <section>
-        <PageMeta page={post.frontmatter} />
-        <Intro title={post.frontmatter.title} intro={post.frontmatter.intro} />
+  return (
+    <Grid fluid>
+      <PageMeta page={post.frontmatter} />
+      <Intro title={post.frontmatter.title} intro={post.frontmatter.intro} />
 
-        <Row gutter={30}>
-          <Col xs={24}>
-            <SectionHeader
-              headingCopy="Featured Projects"
-              type="h2"
-              taglineCopy="Selected website and application builds."
-            />
-          </Col>
-        </Row>
+      <SectionHeader
+        headingCopy="Featured Projects"
+        type="h2"
+        taglineCopy="Selected website and application builds."
+      />
 
-        <Row gutter={30} type="flex">
-          {featuredProjects.map((project, index) => (
-            <Col key={project.node.id} xs={24} sm={12} md={8} lg={8} xl={8}>
-              <ProjectCard project={project} index={index} />
-            </Col>
+      <Row>
+        {featuredProjects.map((project, index) => (
+          <ProjectCard project={project} headingLevel={3} index={index} key={project.node.frontmatter.title} />
           ))}
-        </Row>
+      </Row>
 
-        <Link to="/projects/">More Projects</Link>
+      <Row center="xs" end="md">
+        <Col xs={12}>
+          <ButtonTo to="/projects/">More Projects</ButtonTo>
+        </Col>
+      </Row>
 
-        <div>
-          <Row gutter={30}>
-            <Col xs={24}>
-              <SectionHeader
-                headingCopy="Services"
-                type="h2"
-                taglineCopy="Companies hire me to build cutting-edge web experiences for big-name clients."
-              />
+      <SectionHeader
+        headingCopy="Services"
+        type="h2"
+        taglineCopy="Companies hire me to build cutting-edge web experiences for big-name clients."
+      />
+
+      <Row>
+        <Col xs={12} lg={6}>
+          <Row>
+            <Col xs={12} md={6}>
+              <h3>Key Services & Skills</h3>
+              <ul>
+                {post.frontmatter.servicesPrimary.map(skill => (
+                  <li key={skill}>
+                    <Icon icon="check-square" /> {skill}
+                  </li>
+                ))}
+              </ul>
+            </Col>
+            <Col xs={12} md={6}>
+              <ul>
+                {post.frontmatter.servicesSecondary.map(skill => (
+                  <li key={skill}>
+                    <Icon icon="check-square" /> {skill}
+                  </li>
+                ))}
+              </ul>
             </Col>
           </Row>
+        </Col>
 
-          <Row gutter={30}>
-            <Col xs={24} sm={12}>
-              <Row gutter={30}>
-                <Col xs={24} sm={12}>
-                  <h3>Key Services & Skills</h3>
-                  <ul>
-                    {post.frontmatter.servicesPrimary.map((skill, index) => (
-                      <li key={index}>
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </Col>
+        <Col xs={12} lg={6}>
+          <h3>Web Development</h3>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <ButtonTo to="/services/">More service details</ButtonTo> <ButtonTo to="/contact/">Get in touch</ButtonTo>
+        </Col>
+      </Row>
 
-                <Col xs={24} sm={12}>
-                  <ul>
-                    {post.frontmatter.servicesSecondary.map((skill, index) => (
-                      <li key={index}>
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </Col>
-              </Row>
-            </Col>
+      <SectionHeader
+        headingCopy="Testimonials"
+        type="h2"
+        taglineCopy="What clients say."
+      />
 
-            <Col xs={24} sm={12}>
-              <h3>Web Development</h3>
-              <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            </Col>
-          </Row>
-        </div>
-
-        <Row gutter={30}>
-          <Col xs={24}>
-            <SectionHeader
-              headingCopy="Testimonials"
-              type="h2"
-              taglineCopy="What clients say."
-            />
+      <Row>
+        {featuredTestimonials.map((testimonial, index) => (
+          <Col xs={12} md={6} lg={4} key={testimonial.node.id}>
+            <TestimonialCard post={testimonial} index={index} />
           </Col>
-        </Row>
+        ))}
+      </Row>
 
-        <Row gutter={30} type="flex">
-          {featuredTestimonials.map((testimonial, index) => (
-            <Col key={testimonial.node.id} xs={24} sm={12} md={8}>
-              <TestimonialCard post={testimonial} index={index} />
-            </Col>
-          ))}
-        </Row>
+      <SectionHeader
+        headingCopy="Clients"
+        type="h2"
+        taglineCopy="Brands and organisations I've produced work for."
+      />
 
-        <Row gutter={30}>
-          <Col xs={24}>
-            <SectionHeader
-              headingCopy="Clients"
-              type="h2"
-              taglineCopy="Brands and organisations I've produced work for."
-            />
+      <Row>
+        {clients.map(client => (
+          <Col xs={12} md={6} lg={3} key={client.title}>
+            <ClientCard client={client} />
           </Col>
-        </Row>
+        ))}
+      </Row>
 
-        <Row gutter={30} type="flex">
-          {featuredClients.map(client => (
-            <Col key={client.node.id} xs={24} sm={12} md={6}>
-              <ClientCard client={client.node.frontmatter} />
-            </Col>
-          ))}
-        </Row>
-
-      </section>
-    )
-  }
+    </Grid>
+  )
 }
 
 export default Homepage
+
+Homepage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
 
 export const pageQuery = graphql`
   query Homepage($path: String!) {
@@ -144,6 +141,7 @@ export const pageQuery = graphql`
         intro
         servicesPrimary
         servicesSecondary
+        allClients
       }
     }
 
@@ -158,13 +156,8 @@ export const pageQuery = graphql`
             excerpt
             thumb {
               childImageSharp {
-                responsiveResolution {
-                  base64
-                  aspectRatio
-                  width
-                  height
-                  src
-                  srcSet
+                sizes(maxWidth: 500, maxHeight: 360, quality: 80) {
+                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
               }
             }
@@ -183,18 +176,14 @@ export const pageQuery = graphql`
             jobTitle
             thumb {
               childImageSharp {
-                responsiveResolution {
-                  base64
-                  aspectRatio
-                  width
-                  height
-                  src
-                  srcSet
+                resolutions(width: 90, height: 90, quality: 80) {
+                  ...GatsbyImageSharpResolutions_withWebp_tracedSVG
                 }
               }
             }
             linkedIn
             twitter
+            angellist
           }
         }
       }

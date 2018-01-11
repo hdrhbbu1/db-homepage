@@ -1,9 +1,9 @@
 ---
-title: "Cadbury Wishes"
-metaTitle: "Cadbury Wishes Project"
-metaDescription: "Cadbury and Make-A-Wish Foundation teamed up to help make hundreds of wishes come true for children with life-threatening illnesses."
+title: Cadbury Wishes
+metaTitle: Cadbury Wishes Project
+metaDescription: Cadbury and Make-A-Wish Foundation teamed up to help make hundreds of wishes come true for children with life-threatening illnesses.
 
-path: "/projects/cadbury-wishes/"
+path: /projects/cadbury-wishes/
 date: 2011-12-01
 
 featured: false
@@ -13,8 +13,8 @@ excerpt: Cadbury and Make-A-Wish Foundation teamed up to help make hundreds of w
 agency: Blue State Digital
 client: Cadbury
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - HTML5

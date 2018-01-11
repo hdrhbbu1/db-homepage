@@ -1,40 +1,42 @@
 import React from "react"
-import get from "lodash/get"
-import { Row, Col } from 'antd'
+import PropTypes from "prop-types"
+import { Grid, Row, Col } from "react-flexbox-grid"
 
 import PageMeta from "../../components/PageMeta"
 import SectionHeader from "../../components/SectionHeader"
 import ServiceCard from "../../components/ServiceCard"
 
-class Services extends React.Component {
-  render() {
-    const post = this.props.data.page
-    const allServices = get(this, `props.data.allServices.edges`)
+const Services = ({ data }) => {
+  const post = data.page
+  const allServices = data.allServices.edges
 
-    return (
-      <section>
-        <PageMeta page={post.frontmatter} />
+  return (
+    <Grid fluid>
+      <PageMeta page={post.frontmatter} />
 
-        <SectionHeader
-          headingCopy={post.frontmatter.title}
-          type="h1"
-          taglineCopy={post.frontmatter.tagline}
-        />
+      <SectionHeader
+        headingCopy={post.frontmatter.title}
+        type="h1"
+        taglineCopy={post.frontmatter.tagline}
+      />
 
-        <Row gutter={30} type="flex">
-          {allServices.map(service => (
-            <Col key={service.node.id} xs={24} md={12} lg={8}>
-              <ServiceCard post={service} />
-            </Col>
-          ))}
-        </Row>
+      <Row>
+        {allServices.map(service => (
+          <Col xs={12} md={6} lg={6} xl={4} key={service.node.id}>
+            <ServiceCard post={service} />
+          </Col>
+        ))}
+      </Row>
 
-      </section>
-    )
-  }
+    </Grid>
+  )
 }
 
 export default Services
+
+Services.propTypes = {
+  data: PropTypes.object.isRequired,
+}
 
 export const pageQuery = graphql`
   query ServicesPage($path: String!) {

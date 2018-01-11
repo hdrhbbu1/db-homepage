@@ -3,7 +3,7 @@ title: Live Art Development Agency
 metaTitle: Live Art Development Agency Project
 metaDescription: Providing advice for live artists and producing events and publications to enhance the understanding of and access to Live Art.
 
-path: "/projects/live-art-development-agency/"
+path: /projects/live-art-development-agency/
 date: 2013-11-01
 
 featured: false
@@ -15,8 +15,8 @@ agency: Red Leader
 client: LADA
 link: http://www.thisisliveart.co.uk
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - ExpressionEngine CMS

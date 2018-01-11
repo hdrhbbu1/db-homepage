@@ -3,7 +3,7 @@ title: Queen Elizabeth Jubilee Trust
 metaTitle: Queen Elizabeth Jubilee Trust Project
 metaProject: Supporting projects that enrich the lives of citizens across the Commonwealth to provide a lasting legacy for Her Majesty The Queen.
 
-path: "/projects/queen-elizabeth-jubilee-trust/"
+path: /projects/queen-elizabeth-jubilee-trust/
 date: 2011-01-02
 
 featured: false
@@ -16,8 +16,8 @@ client: QEDJT
 
 link:
 
-thumb: "thumb.jpg"
-full: "full.jpg"
+thumb: thumb.jpg
+full: full.jpg
 
 technology:
   - HTML5

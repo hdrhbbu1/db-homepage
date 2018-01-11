@@ -1,25 +1,61 @@
-import React from 'react'
-import { Card } from 'antd'
-import ResponsiveImage from "../ResponsiveImage"
+import React from "react"
+import PropTypes from "prop-types"
+import Img from "gatsby-image"
+import Icon from "@fortawesome/react-fontawesome"
 
-import styles from './index.module.css'
+import styles from "./index.module.css"
 
-class TestimonialCard extends React.Component {
-  render() {
-    const testimonialData = this.props.post.node.frontmatter
+const TestimonialCard = ({ post }) => {
+  const testimonial = post.node.frontmatter
+  return (
+    <div className={styles.testimonial}>
+      <blockquote>
+        <Img resolutions={testimonial.thumb.childImageSharp.resolutions} />
+        {testimonial.linkedIn &&
+          <a
+            style={{ color: `#2b2b2d` }}
+            href={testimonial.linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${testimonial.title} on LinkedIn`}
+          >
+            <Icon icon={[`fab`, `linkedin`]} fixedWidth />
+          </a>
+        }
+        {testimonial.twitter &&
+          <a
+            style={{ color: `#2b2b2d` }}
+            href={testimonial.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${testimonial.title} on Twitter`}
+          >
+            <Icon icon={[`fab`, `twitter`]} fixedWidth />
+          </a>
+        }
+        {testimonial.angellist &&
+          <a
+            style={{ color: `#2b2b2d` }}
+            href={testimonial.angellist}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${testimonial.title} on AngelList`}
+          >
+            <Icon icon={[`fab`, `angellist`]} fixedWidth />
+          </a>
+        }
 
-    return (
-      <Card noHovering className={styles.testimonial}>
-        <blockquote>
-          <ResponsiveImage image={testimonialData.thumb} maxwidth={`90px`} title={testimonialData.title} />
-          <div dangerouslySetInnerHTML={{ __html: this.props.post.node.html }} />
-          <cite>
-            <a target="_blank" rel="noreferrer noopener" href={testimonialData.linkedIn}>{testimonialData.title}</a> ~ {testimonialData.jobTitle}
-          </cite>
-        </blockquote>
-      </Card>
-    )
-  }
+        <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
+        <cite>
+          {testimonial.title} - {testimonial.jobTitle}
+        </cite>
+      </blockquote>
+    </div>
+  )
+}
+
+TestimonialCard.propTypes = {
+  post: PropTypes.object.isRequired,
 }
 
 export default TestimonialCard

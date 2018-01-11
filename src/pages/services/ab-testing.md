@@ -1,7 +1,7 @@
 ---
 title: "A/B Testing"
 type: service
-icon: "usergroup-add"
+icon: "code-branch"
 
 order: 08
 draft: false
