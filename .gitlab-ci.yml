@@ -8,7 +8,7 @@ build:
   script:
     - npm install
 #    - npm run lint
-#    - npm run test:js:coverage
+    - npm run test:js:coverage
     - npm run build
   artifacts:
     paths:
@@ -19,8 +19,35 @@ deploy-stage:
   stage: deploy
   image: arctica/aws-node:latest
   script:
-    - npm install netlify-cli -g
-    - netlify deploy -p public -s $NETLIFY_SITE -e staging -t $NETLIFY_TOKEN
+    - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
+      --acl-public
+      --delete-removed
+      --guess-mime-type
+      --no-mime-magic
+      --no-preserve
+      --add-header='Cache-Control: public, max-age=0, must-revalidate'
+      --exclude 'static/*'
+      --exclude 'favicons/*'
+      --cf-invalidate"
+    - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
+      --acl-public
+      --delete-removed
+      --guess-mime-type
+      --no-mime-magic
+      --no-preserve
+      --add-header='Cache-Control: public, max-age=604800'
+      --include 'static/*'
+      --include 'favicons/*'
+      --cf-invalidate"
+    - "s3cmd sync public s3://staging.davidbrookes.co.uk
+      --acl-public
+      --delete-removed
+      --no-mime-magic
+      --no-preserve
+      --add-header='Content-Type': 'image/svg+xml'
+      --exclude ''
+      --include '.svg'
+      --cf-invalidate"
 
   environment:
     name: Staging
@@ -32,8 +59,17 @@ deploy-prod:
   stage: deploy
   image: arctica/aws-node:latest
   script:
-    - npm install netlify-cli -g
-    - netlify deploy -p public -s $NETLIFY_SITE -e production -t $NETLIFY_TOKEN
+    - "s3cmd sync public/ s3://davidbrookes.co.uk
+      --acl-public
+      --delete-removed
+      --guess-mime-type
+      --no-mime-magic
+      --no-preserve
+      --cf-invalidate"
+    - "s3cmd modify s3://davidbrookes.co.uk
+      --recursive
+      --add-header='content-type':'image/svg+xml'
+      --exclude '' --include '.svg'"
   environment:
     name: Production
     url: https://davidbrookes.co.uk
