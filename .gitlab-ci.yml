@@ -6,7 +6,6 @@ build:
   stage: build
   image: arctica/aws-node:latest
   script:
-    - npm install netlify-cli -g
     - npm install
 #    - npm run lint
 #    - npm run test:js:coverage
@@ -20,6 +19,7 @@ deploy-stage:
   stage: deploy
   image: arctica/aws-node:latest
   script:
+    - npm install netlify-cli -g
     - netlify deploy public -s $NETLIFY_SITE -e staging -t $NETLIFY_TOKEN
 
   environment:
