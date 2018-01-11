@@ -20,7 +20,7 @@ deploy-stage:
   image: arctica/aws-node:latest
   script:
     - npm install netlify-cli -g
-    - netlify deploy public -s $NETLIFY_SITE -e staging -t $NETLIFY_TOKEN
+    - netlify deploy -p public -s $NETLIFY_SITE -e staging -t $NETLIFY_TOKEN
 
   environment:
     name: Staging
