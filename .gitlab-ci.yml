@@ -20,7 +20,7 @@ deploy-stage:
   image: arctica/aws-node:latest
   script:
     - npm install netlify-cli -g
-    - netlify deploy -p public -s $NETLIFY_SITE -e staging -t $NETLIFY_TOKEN
+    - netlify deploy -p public -s $NETLIFY_SITE -e branch-deploy -t $NETLIFY_TOKEN
 
   environment:
     name: Staging
@@ -32,17 +32,8 @@ deploy-prod:
   stage: deploy
   image: arctica/aws-node:latest
   script:
-    - "s3cmd sync public/ s3://davidbrookes.co.uk
-      --acl-public
-      --delete-removed
-      --guess-mime-type
-      --no-mime-magic
-      --no-preserve
-      --cf-invalidate"
-    - "s3cmd modify s3://davidbrookes.co.uk
-      --recursive
-      --add-header='content-type':'image/svg+xml'
-      --exclude '' --include '.svg'"
+    - npm install netlify-cli -g
+    - netlify deploy -p public -s $NETLIFY_SITE -e production -t $NETLIFY_TOKEN
   environment:
     name: Production
     url: https://davidbrookes.co.uk
