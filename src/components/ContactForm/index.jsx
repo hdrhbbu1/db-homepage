@@ -1,7 +1,6 @@
 import React from "react"
 import { Grid, Row, Col } from "react-flexbox-grid"
 import Formsy from "formsy-react"
-import Icon from "@fortawesome/react-fontawesome"
 
 import Input from "../Input"
 import Textarea from "../Textarea"
@@ -89,7 +88,7 @@ class ContactForm extends React.Component {
 
         {!this.state.success &&
           <Row>
-            <Col xs={12} md={12} lg={6} lgOffset={3}>
+            <Col xs={12} md={12} lg={8} xl={6} lgOffset={2} xlOffset={3}>
               <Formsy
                 onValidSubmit={this.handleSubmit}
                 onInvalidSubmit={this.handleInvalid}

@@ -37,9 +37,9 @@ ShallowWrapper {
     "props": Object {
       "children": <Row>
         <Col
-          lg={2}
-          lgOffset={1}
           md={12}
+          xl={2}
+          xlOffset={1}
           xs={12}
         >
           <div
@@ -207,8 +207,8 @@ ShallowWrapper {
           </p>
         </Col>
         <Col
-          lg={3}
           md={6}
+          xl={3}
           xs={12}
         >
           <div
@@ -225,8 +225,8 @@ ShallowWrapper {
           />
         </Col>
         <Col
-          lg={3}
           md={6}
+          xl={3}
           xs={12}
         >
           <div
@@ -253,9 +253,9 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Col
-            lg={2}
-            lgOffset={1}
             md={12}
+            xl={2}
+            xlOffset={1}
             xs={12}
           >
             <div
@@ -423,8 +423,8 @@ ShallowWrapper {
             </p>
           </Col>,
           <Col
-            lg={3}
             md={6}
+            xl={3}
             xs={12}
           >
             <div
@@ -441,8 +441,8 @@ ShallowWrapper {
             />
           </Col>,
           <Col
-            lg={3}
             md={6}
+            xl={3}
             xs={12}
           >
             <div
@@ -632,9 +632,9 @@ ShallowWrapper {
                 </a>
               </p>,
             ],
-            "lg": 2,
-            "lgOffset": 1,
             "md": 12,
+            "xl": 2,
+            "xlOffset": 1,
             "xs": 12,
           },
           "ref": null,
@@ -1127,8 +1127,8 @@ ShallowWrapper {
                 }
               }
             />,
-            "lg": 3,
             "md": 6,
+            "xl": 3,
             "xs": 12,
           },
           "ref": null,
@@ -1167,8 +1167,8 @@ ShallowWrapper {
                 }
               }
             />,
-            "lg": 3,
             "md": 6,
+            "xl": 3,
             "xs": 12,
           },
           "ref": null,
@@ -1203,9 +1203,9 @@ ShallowWrapper {
       "props": Object {
         "children": <Row>
           <Col
-            lg={2}
-            lgOffset={1}
             md={12}
+            xl={2}
+            xlOffset={1}
             xs={12}
           >
             <div
@@ -1373,8 +1373,8 @@ ShallowWrapper {
             </p>
           </Col>
           <Col
-            lg={3}
             md={6}
+            xl={3}
             xs={12}
           >
             <div
@@ -1391,8 +1391,8 @@ ShallowWrapper {
             />
           </Col>
           <Col
-            lg={3}
             md={6}
+            xl={3}
             xs={12}
           >
             <div
@@ -1419,9 +1419,9 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Col
-              lg={2}
-              lgOffset={1}
               md={12}
+              xl={2}
+              xlOffset={1}
               xs={12}
             >
               <div
@@ -1589,8 +1589,8 @@ ShallowWrapper {
               </p>
             </Col>,
             <Col
-              lg={3}
               md={6}
+              xl={3}
               xs={12}
             >
               <div
@@ -1607,8 +1607,8 @@ ShallowWrapper {
               />
             </Col>,
             <Col
-              lg={3}
               md={6}
+              xl={3}
               xs={12}
             >
               <div
@@ -1798,9 +1798,9 @@ ShallowWrapper {
                   </a>
                 </p>,
               ],
-              "lg": 2,
-              "lgOffset": 1,
               "md": 12,
+              "xl": 2,
+              "xlOffset": 1,
               "xs": 12,
             },
             "ref": null,
@@ -2293,8 +2293,8 @@ ShallowWrapper {
                   }
                 }
               />,
-              "lg": 3,
               "md": 6,
+              "xl": 3,
               "xs": 12,
             },
             "ref": null,
@@ -2333,8 +2333,8 @@ ShallowWrapper {
                   }
                 }
               />,
-              "lg": 3,
               "md": 6,
+              "xl": 3,
               "xs": 12,
             },
             "ref": null,

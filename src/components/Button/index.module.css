@@ -1,6 +1,6 @@
 .button {
   color: #fff;
-  padding: 10px;
+  padding: 0.625rem; /* 10/16 */
   border-radius: 0;
   letter-spacing: 0.5px;
   text-transform: uppercase;

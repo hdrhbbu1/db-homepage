@@ -6,7 +6,7 @@ import styles from "./index.module.css"
 const SectionHeader = ({
   type, headingCopy, taglineCopy, smallHeader, smallLead,
 }) => (
-  <div>
+  <div className={styles.root}>
     { type === `h1` && <h1>{ headingCopy }</h1> }
     { type === `h2` && <h2 className={smallHeader ? styles.smallHeader : null}>{ headingCopy }</h2> }
     <hr className={styles.divider} />

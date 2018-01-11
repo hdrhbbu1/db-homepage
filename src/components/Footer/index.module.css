@@ -1,6 +1,4 @@
 .footer {
-  display: flex;
-  clear: both;
   padding: 20px 80px 20px 80px;
 }
 
@@ -10,5 +8,5 @@
 }
 
 .copy {
-  margin-left: auto;
+  text-align: right;
 }

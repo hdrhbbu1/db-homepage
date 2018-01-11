@@ -1,6 +1,6 @@
-h1,
-h2,
-h3 {
+.root h1,
+.root h2,
+.root h3 {
   text-align: center;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
@@ -9,8 +9,8 @@ h3 {
   font-weight: 600;
 }
 
-h1,
-h2 {
+.root h1,
+.root h2 {
   font-size: 1.875rem;
   line-height: 2.1875rem;
   margin-bottom: 0;
@@ -19,18 +19,18 @@ h2 {
   text-shadow: 0 2px 3px #fff;
 }
 
-h3 {
+.root h3 {
   text-align: left;
   font-size: 1.1875rem;
 }
 
-h2 {
+.root h2 {
   margin-top: 100px;
 }
 
 @media (min-width: 48.75rem) {
-  h1,
-  h2 {
+  .root h1,
+  .root h2 {
     font-size: 3.125rem;
     line-height: 3.4375rem;
   }
@@ -45,7 +45,7 @@ h2 {
   transition: font-size 0.5s ease;
 }
 
-.smallLead {
+.root .smallLead {
   margin: 0.625rem 0 3.4375rem;
   color: #555;
   font: 0.75rem 'merriweather', Georgia, "Times New Roman", Times, serif;
@@ -54,7 +54,7 @@ h2 {
   transition: font-size 0.5s ease;
 }
 
-.smallHeader {
+.root .smallHeader {
   font-size: 1.875rem;
   line-height: 2.1875rem;
 }

@@ -9,7 +9,7 @@ import styles from "./index.module.css"
 const BioCard = ({ avatar, col1, col2 }) => (
   <Grid fluid>
     <Row>
-      <Col xs={12} md={12} lg={2} lgOffset={1}>
+      <Col xs={12} md={12} xl={2} xlOffset={1}>
         <div className={styles.avatar}>
           <Img resolutions={avatar} alt="David Brookes" />
         </div>
@@ -52,10 +52,10 @@ const BioCard = ({ avatar, col1, col2 }) => (
           </a>
         </p>
       </Col>
-      <Col xs={12} md={6} lg={3}>
+      <Col xs={12} md={6} xl={3}>
         <div style={{ textAlign: `justify` }} dangerouslySetInnerHTML={{ __html: col1 }} />
       </Col>
-      <Col xs={12} md={6} lg={3}>
+      <Col xs={12} md={6} xl={3}>
         <div style={{ textAlign: `justify` }} dangerouslySetInnerHTML={{ __html: col2 }} />
       </Col>
     </Row>
