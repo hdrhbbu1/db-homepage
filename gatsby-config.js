@@ -4,6 +4,7 @@ module.exports = {
     siteUrl: `https://davidbrookes.co.uk`,
   },
   plugins: [
+    `gatsby-plugin-react-next`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

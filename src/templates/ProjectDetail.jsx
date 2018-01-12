@@ -21,12 +21,12 @@ const ProjectDetailTemplate = ({ data }) => {
       />
 
       <Row>
-        <Col xs={12} md={12} lg={9}>
-          <div style={{ padding: `5px`, border: `2px solid #f8f8f8` }}>
+        <Col xs={12} xl={9}>
+          <div style={{ padding: `5px`, border: `2px solid #f8f8f8`, marginBottom: `20px` }}>
             <Img sizes={post.frontmatter.full.childImageSharp.sizes} />
           </div>
         </Col>
-        <Col xs={12} md={12} lg={3}>
+        <Col xs={12} xl={3}>
           <ProjectDetails project={post.frontmatter} description={post.html} />
         </Col>
       </Row>

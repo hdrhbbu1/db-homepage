@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Grid, Row, Col } from "react-flexbox-grid"
 
 import styles from "./index.module.css"
 
@@ -7,16 +8,20 @@ const ProjectDetails = ({ project, description }) => {
   const year = new Date(project.date).getFullYear()
 
   return (
-    <div className={styles.root}>
-
-      <div dangerouslySetInnerHTML={{ __html: description }} />
-
-      <h2>Technology</h2>
-      <ul>
-        {project.technology.map(tech => (
-          <li key={tech}>{tech}</li>
-        ))}
-      </ul>
+    <Grid fluid className={styles.root}>
+      <Row>
+        <Col xs={12} md={8} xl={12}>
+          <div dangerouslySetInnerHTML={{ __html: description }} />
+        </Col>
+        <Col xs={12} md={4} xl={12}>
+          <h2>Technology</h2>
+          <ul>
+            {project.technology.map(tech => (
+              <li key={tech}>{tech}</li>
+              ))}
+          </ul>
+        </Col>
+      </Row>
 
       <dl className={styles.meta}>
         {project.agency &&
@@ -44,7 +49,7 @@ const ProjectDetails = ({ project, description }) => {
           </span>
         }
       </dl>
-    </div>
+    </Grid>
   )
 }
 

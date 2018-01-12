@@ -56,9 +56,9 @@ const About = ({ data }) => {
       />
 
       <Row>
-        {allTestimonials.map((testimonial, index) => (
+        {allTestimonials.map(testimonial => (
           <Col xs={12} md={6} lg={4} key={testimonial.node.id}>
-            <TestimonialCard post={testimonial} index={index} />
+            <TestimonialCard post={testimonial} />
           </Col>
         ))}
       </Row>
