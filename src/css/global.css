@@ -21,19 +21,19 @@ body {
 }
 
 p {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20/16 */
 }
 
 a {
   text-decoration: none;
-  color: #639;
+  color: #4a90e2;
   position: relative;
 }
 
 a:hover {
-  color: #639;
+  color: #4a90e2;
 }
 
 a:active {
-  top: 0.0625rem;
+  top: 0.0625rem; /* 1/16 */
 }

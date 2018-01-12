@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Grid, Row, Col } from "react-flexbox-grid"
-import Icon from "@fortawesome/react-fontawesome"
 
 import PageMeta from "../components/PageMeta"
 import Intro from "../components/Intro"
@@ -10,6 +9,7 @@ import ProjectCard from "../components/ProjectCard"
 import ButtonTo from "../components/ButtonTo"
 import ClientCard from "../components/ClientCard/index"
 import TestimonialCard from "../components/TestimonialCard"
+import SkillsList from "../components/SkillsList"
 import CadburyLogo from "../components/svg/clients/cadbury-logo.svg"
 import DeloitteLogo from "../components/svg/clients/deloitte-logo.svg"
 import HMGovernmentLogo from "../components/svg/clients/hm-government-logo.svg"
@@ -64,32 +64,20 @@ const Homepage = ({ data }) => {
 
       <Row>
         <Col xs={12} lg={6}>
-          <Row>
-            <Col xs={12} md={6}>
-              <h3>Key Services & Skills</h3>
-              <ul>
-                {post.frontmatter.servicesPrimary.map(skill => (
-                  <li key={skill}>
-                    <Icon icon="check-square" /> {skill}
-                  </li>
-                ))}
-              </ul>
-            </Col>
-            <Col xs={12} md={6}>
-              <ul>
-                {post.frontmatter.servicesSecondary.map(skill => (
-                  <li key={skill}>
-                    <Icon icon="check-square" /> {skill}
-                  </li>
-                ))}
-              </ul>
-            </Col>
-          </Row>
+          <SkillsList
+            servicesPrimary={post.frontmatter.servicesPrimary}
+            servicesSecondary={post.frontmatter.servicesSecondary}
+          />
         </Col>
 
         <Col xs={12} lg={6}>
           <h3>Web Development</h3>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </Col>
+      </Row>
+
+      <Row center="xs" end="md">
+        <Col>
           <ButtonTo to="/services/">More service details</ButtonTo> <ButtonTo to="/contact/">Get in touch</ButtonTo>
         </Col>
       </Row>

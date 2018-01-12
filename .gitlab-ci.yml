@@ -23,7 +23,7 @@ deploy-stage:
       --region eu-west-2
       --acl 'public-read'
       --delete
-      --cache-control 'public, max-age=0, must-revalidate'
+      --cache-control 'public,max-age=0,must-revalidate'
       --exclude 'static/*'
       --exclude 'favicons/*'"
     - "aws s3 sync public/ s3://staging.davidbrookes.co.uk
@@ -49,7 +49,7 @@ deploy-prod:
       --region eu-west-2
       --acl 'public-read'
       --delete
-      --cache-control 'public, max-age=0, must-revalidate'
+      --cache-control 'public,max-age=0,must-revalidate'
       --exclude 'static/*'
       --exclude 'favicons/*'"
     - "aws s3 sync public/ s3://davidbrookes.co.uk

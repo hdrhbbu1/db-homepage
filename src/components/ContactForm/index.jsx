@@ -16,18 +16,13 @@ class ContactForm extends React.Component {
   constructor() {
     super()
 
-    this.disableButton = this.disableButton.bind(this)
-    this.enableButton = this.enableButton.bind(this)
+    this.handleEnable = this.handleEnable.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleInvalid = this.handleInvalid.bind(this)
     this.state = { canSubmit: true, success: false }
   }
 
-  disableButton() {
-    this.setState({ canSubmit: false })
-  }
-
-  enableButton() {
+  handleEnable() {
     this.setState({ canSubmit: true })
   }
 
@@ -92,7 +87,7 @@ class ContactForm extends React.Component {
               <Formsy
                 onValidSubmit={this.handleSubmit}
                 onInvalidSubmit={this.handleInvalid}
-                onValid={this.enableButton}
+                onValid={this.handleEnable}
                 className={styles.form}
               >
 
@@ -145,7 +140,7 @@ class ContactForm extends React.Component {
                 />
 
                 <Button type="submit" disabled={!this.state.canSubmit}>
-                  Submit
+                  Send Message
                 </Button>
               </Formsy>
             </Col>

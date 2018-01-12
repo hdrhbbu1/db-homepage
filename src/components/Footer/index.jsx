@@ -10,10 +10,8 @@ const Footer = () => {
     <footer className={styles.footer}>
       <Grid fluid>
         <Row>
-          <Col xs={12} xl={6}>
+          <Col xs={12}>
             <p>Made in London with React, GraphQL and AWS Serverless.</p>
-          </Col>
-          <Col xs={12} xl={6}>
             <p className={styles.copy}>
               {`Copyright © 2005 - ${currentYear} `}
               <Link to="/"><strong>David Brookes</strong></Link>
