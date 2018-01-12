@@ -7,7 +7,7 @@ build:
   image: arctica/aws-node:latest
   script:
     - npm install
-#    - npm run lint
+    - npm run lint
     - npm run test:js:coverage
     - npm run build
   artifacts:
@@ -45,17 +45,21 @@ deploy-prod:
   stage: deploy
   image: arctica/aws-node:latest
   script:
-    - "s3cmd sync public/ s3://davidbrookes.co.uk
-      --acl-public
-      --delete-removed
-      --guess-mime-type
-      --no-mime-magic
-      --no-preserve
-      --cf-invalidate"
-    - "s3cmd modify s3://davidbrookes.co.uk
-      --recursive
-      --add-header='content-type':'image/svg+xml'
-      --exclude '' --include '.svg'"
+    - "aws s3 sync public/ s3://davidbrookes.co.uk
+      --region eu-west-2
+      --acl 'public-read'
+      --delete
+      --cache-control 'public, max-age=0, must-revalidate'
+      --exclude 'static/*'
+      --exclude 'favicons/*'"
+    - "aws s3 sync public/ s3://davidbrookes.co.uk
+      --region eu-west-2
+      --acl 'public-read'
+      --delete
+      --cache-control 'public, max-age=604800'     
+      --exclude '*'
+      --include 'static/*'
+      --include 'favicons/*'"
   environment:
     name: Production
     url: https://davidbrookes.co.uk

@@ -41,8 +41,13 @@ const Homepage = ({ data }) => {
 
       <Row>
         {featuredProjects.map((project, index) => (
-          <ProjectCard project={project} headingLevel={3} index={index} key={project.node.frontmatter.title} />
-          ))}
+          <ProjectCard
+            project={project}
+            headingLevel={3}
+            index={index}
+            key={project.node.frontmatter.title}
+          />
+        ))}
       </Row>
 
       <Row center="xs" end="md">
