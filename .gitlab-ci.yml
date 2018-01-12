@@ -19,33 +19,19 @@ deploy-stage:
   stage: deploy
   image: arctica/aws-node:latest
   script:
-    - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
-      --acl-public
-      --delete-removed
-      --guess-mime-type
-      --no-mime-magic
-      --no-preserve
-      --add-header='Cache-Control: public, max-age=0, must-revalidate'
+    - "s3 sync public/ s3://staging.davidbrookes.co.uk
+      --acl 'public-read'
+      --delete
+      --cache-control 'public, max-age=0, must-revalidate'
       --exclude 'static/*'
       --exclude 'favicons/*'"
-    - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
-      --acl-public
-      --delete-removed
-      --guess-mime-type
-      --no-mime-magic
-      --no-preserve
-      --add-header='Cache-Control: public, max-age=604800'
+    - "s3 sync public/ s3://staging.davidbrookes.co.uk
+      --acl 'public-read'
+      --delete
+      --cache-control 'public, max-age=604800'     
+      --excude '*'
       --include 'static/*'
       --include 'favicons/*'"
-    - "s3cmd sync public/ s3://staging.davidbrookes.co.uk
-      --acl-public
-      --delete-removed
-      --no-mime-magic
-      --no-preserve
-      --add-header='Content-Type': 'image/svg+xml'
-      --exclude ''
-      --include '.svg'
-      --cf-invalidate"
 
   environment:
     name: Staging
