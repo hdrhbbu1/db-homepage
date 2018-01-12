@@ -1,23 +1,23 @@
 .root {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem; /* 40/16 */
 }
 
+.root h2,
 .root h3 {
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15/16 */
   text-align: left;
-  margin-top: 0;
+  margin: 15px 0 5px 15px;
+  text-transform: uppercase;
 }
 
-.root h3 a {
+.root a {
   color: #000;
-  margin: 10px 0;
 }
 
 .root p {
-  color: #999;
   margin: 0 0 10px;
   text-align: justify;
-  padding: 5px 10px;
+  padding: 5px 15px;
 }
 
 .root img {

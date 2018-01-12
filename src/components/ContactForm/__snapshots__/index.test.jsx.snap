@@ -35,9 +35,11 @@ ShallowWrapper {
         </Row>,
         <Row>
           <Col
-            lg={6}
-            lgOffset={3}
+            lg={8}
+            lgOffset={2}
             md={12}
+            xl={6}
+            xlOffset={3}
             xs={12}
           >
             <Formsy
@@ -163,7 +165,7 @@ ShallowWrapper {
                 disabled={false}
                 type="submit"
               >
-                Submit
+                Send Message
               </Button>
             </Formsy>
           </Col>
@@ -230,9 +232,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <Col
-            lg={6}
-            lgOffset={3}
+            lg={8}
+            lgOffset={2}
             md={12}
+            xl={6}
+            xlOffset={3}
             xs={12}
           >
             <Formsy
@@ -358,7 +362,7 @@ ShallowWrapper {
                 disabled={false}
                 type="submit"
               >
-                Submit
+                Send Message
               </Button>
             </Formsy>
           </Col>,
@@ -492,12 +496,14 @@ ShallowWrapper {
                 disabled={false}
                 type="submit"
               >
-                Submit
+                Send Message
               </Button>
             </Formsy>,
-            "lg": 6,
-            "lgOffset": 3,
+            "lg": 8,
+            "lgOffset": 2,
             "md": 12,
+            "xl": 6,
+            "xlOffset": 3,
             "xs": 12,
           },
           "ref": null,
@@ -600,7 +606,7 @@ ShallowWrapper {
                   disabled={false}
                   type="submit"
                 >
-                  Submit
+                  Send Message
                 </Button>,
               ],
               "className": "form",
@@ -933,12 +939,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": "Submit",
+                  "children": "Send Message",
                   "disabled": false,
                   "type": "submit",
                 },
                 "ref": null,
-                "rendered": "Submit",
+                "rendered": "Send Message",
                 "type": [Function],
               },
             ],
@@ -975,9 +981,11 @@ ShallowWrapper {
           </Row>,
           <Row>
             <Col
-              lg={6}
-              lgOffset={3}
+              lg={8}
+              lgOffset={2}
               md={12}
+              xl={6}
+              xlOffset={3}
               xs={12}
             >
               <Formsy
@@ -1103,7 +1111,7 @@ ShallowWrapper {
                   disabled={false}
                   type="submit"
                 >
-                  Submit
+                  Send Message
                 </Button>
               </Formsy>
             </Col>
@@ -1170,9 +1178,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <Col
-              lg={6}
-              lgOffset={3}
+              lg={8}
+              lgOffset={2}
               md={12}
+              xl={6}
+              xlOffset={3}
               xs={12}
             >
               <Formsy
@@ -1298,7 +1308,7 @@ ShallowWrapper {
                   disabled={false}
                   type="submit"
                 >
-                  Submit
+                  Send Message
                 </Button>
               </Formsy>
             </Col>,
@@ -1432,12 +1442,14 @@ ShallowWrapper {
                   disabled={false}
                   type="submit"
                 >
-                  Submit
+                  Send Message
                 </Button>
               </Formsy>,
-              "lg": 6,
-              "lgOffset": 3,
+              "lg": 8,
+              "lgOffset": 2,
               "md": 12,
+              "xl": 6,
+              "xlOffset": 3,
               "xs": 12,
             },
             "ref": null,
@@ -1540,7 +1552,7 @@ ShallowWrapper {
                     disabled={false}
                     type="submit"
                   >
-                    Submit
+                    Send Message
                   </Button>,
                 ],
                 "className": "form",
@@ -1873,12 +1885,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "children": "Submit",
+                    "children": "Send Message",
                     "disabled": false,
                     "type": "submit",
                   },
                   "ref": null,
-                  "rendered": "Submit",
+                  "rendered": "Send Message",
                   "type": [Function],
                 },
               ],
@@ -1893,9 +1905,9 @@ ShallowWrapper {
     },
   ],
   Symbol(enzyme.__options__): Object {
-    "adapter": ReactFifteenAdapter {
+    "adapter": ReactSixteenAdapter {
       "options": Object {
-        "supportPrevContextArgumentOfComponentDidUpdate": true,
+        "enableComponentDidUpdateOnSetState": true,
       },
     },
   },

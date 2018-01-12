@@ -5,10 +5,10 @@ import Icon from "@fortawesome/react-fontawesome"
 
 import styles from "./index.module.css"
 
-const TestimonialCard = ({ post }) => {
+const TestimonialCard = ({ post, index }) => {
   const testimonial = post.node.frontmatter
   return (
-    <div className={styles.testimonial}>
+    <div className={index === 2 ? `${styles.root} ${styles.third}` : styles.root}>
       <blockquote>
         <Img resolutions={testimonial.thumb.childImageSharp.resolutions} />
         {testimonial.linkedIn &&
@@ -56,6 +56,11 @@ const TestimonialCard = ({ post }) => {
 
 TestimonialCard.propTypes = {
   post: PropTypes.object.isRequired,
+  index: PropTypes.number,
+}
+
+TestimonialCard.defaultProps = {
+  index: 0,
 }
 
 export default TestimonialCard

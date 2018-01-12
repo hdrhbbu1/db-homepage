@@ -4,6 +4,7 @@ module.exports = {
     siteUrl: `https://davidbrookes.co.uk`,
   },
   plugins: [
+    `gatsby-plugin-react-next`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -94,7 +95,7 @@ module.exports = {
               siteUrl
             }
           }
-          allSitePage(filter: {path: {regex: "/^((?!404).)*$/"}}) {
+          allSitePage(filter: {path: {regex: "/^((?!404|offline-plugin-app-shell-fallback).)*$/"}}) {
             edges {
               node {
                 path

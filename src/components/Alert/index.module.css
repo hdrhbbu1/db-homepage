@@ -1,8 +1,13 @@
-.alert {
+.root {
   color: black;
-  border: 1px solid grey;
+  padding: 10px 20px;
+  margin-bottom: 1.25rem; /* 20/16 */
 }
 
-.alert.error {
-  background: red;
+.root.error {
+  background: #ffc6c3;
+}
+
+.root.success {
+  background: #b9ffcc;
 }

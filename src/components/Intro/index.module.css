@@ -1,8 +1,8 @@
 .intro {
-  border-left: 3px solid rebeccapurple;
-  padding-left: 1.8rem;
-  margin: 0 0 80px;
-  line-height: 35px;
+  border-left: 0.1875rem solid black; /* 3/16 */
+  padding-left: 1.875rem; /* 30/16 */
+  margin: 0 0 5rem; /* 80/16 */
+  line-height: 2.1875rem; /* 35/16 */
 }
 
 .intro h1 {

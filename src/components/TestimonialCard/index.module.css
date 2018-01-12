@@ -1,10 +1,10 @@
-.testimonial {
+.root {
   margin-bottom: 40px;
   box-shadow: none;
 }
 
-.testimonial span,
-.testimonial img {
+.root span,
+.root img {
   border-radius: 50%;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -12,33 +12,43 @@
   border: 2px solid #f8f8f8;
 }
 
-.testimonial h3 {
+.root h3 {
   font-size: 16px;
 }
 
-.testimonial blockquote {
+.root blockquote {
   font-style: italic;
   text-align: center;
 }
 
-.testimonial blockquote > span {
+.root blockquote > span {
   padding: 1px;
   border: 2px solid #e5e5e5;
   margin-bottom: 10px;
 }
 
-.testimonial cite {
+.root cite {
   font-weight: bold;
   color: #555;
   font-style: normal;
 }
 
-.testimonial p {
+.root p {
   font-size: 14px;
   margin-top: 20px;
 }
 
-.testimonial p::before,
-.testimonial p::after {
+.root p::before,
+.root p::after {
   content: '"';
+}
+
+.root.third {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .root.third {
+    display: block;
+  }
 }

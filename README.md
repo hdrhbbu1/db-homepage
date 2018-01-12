@@ -75,9 +75,7 @@ Continuous deployment is provided by GitLab running an AWS Node.JS Docker image 
 
 It's also possible to build and deploy the project to S3 from AWS CodePipeline, see `buildspec.yml`.
 
-Pushing code on the develop branch will run the GitLab CI pipeline and if successful, code will be deployed to the staging bucket. 
-
-After deployment, modified files are invalidated on CloudFront and the correct headers are set. 
+Pushing code on the develop branch will run the GitLab CI pipeline and if successful, code will be deployed to the staging bucket with the correct cache headers.
 
 The most recent copy of the site is then pushed to each CloudFront edge location for optimal performance around the world.
 

@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 
 import PageMeta from "../components/PageMeta"
 import SectionHeader from "../components/SectionHeader"
+import ProjectDetails from "../components/ProjectDetails"
 
 const ProjectDetailTemplate = ({ data }) => {
   const post = data.project
@@ -20,36 +21,13 @@ const ProjectDetailTemplate = ({ data }) => {
       />
 
       <Row>
-        <Col xs={12} md={12} lg={9}>
-          <div style={{ padding: `5px`, border: `2px solid #f8f8f8` }}>
+        <Col xs={12} xl={9}>
+          <div style={{ padding: `5px`, border: `2px solid #f8f8f8`, marginBottom: `20px` }}>
             <Img sizes={post.frontmatter.full.childImageSharp.sizes} />
           </div>
         </Col>
-        <Col xs={12} md={12} lg={3}>
-          <h2>Technology</h2>
-          <ul>
-            { post.frontmatter.technology.map(tech => (
-              <li key={tech}>{tech}</li>
-            ))}
-          </ul>
-
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <ul>
-            {post.frontmatter.agency &&
-              <li><strong>Agency:</strong> {post.frontmatter.agency}</li>
-            }
-            {post.frontmatter.client &&
-              <li><strong>Client:</strong> {post.frontmatter.client}</li>
-            }
-            { post.frontmatter.link &&
-              <li>
-                <strong>Link: </strong>
-                <a href={post.frontmatter.link} target="_blank" rel="noopener noreferrer">
-                  {post.frontmatter.link}
-                </a>
-              </li>
-            }
-          </ul>
+        <Col xs={12} xl={3}>
+          <ProjectDetails project={post.frontmatter} description={post.html} />
         </Col>
       </Row>
     </Grid>
@@ -74,6 +52,7 @@ export const pageQuery = graphql`
         metaDescription
         excerpt
         technology
+        date
         type
         agency
         client

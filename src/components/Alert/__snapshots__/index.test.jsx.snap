@@ -22,31 +22,32 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <FontAwesomeIcon$1
-          border={false}
-          className=""
-          compose={null}
-          fixedWidth={true}
-          flip={null}
-          icon="exclamation-circle"
-          listItem={false}
-          name=""
-          pull={null}
-          pulse={false}
-          rotation={null}
-          size="2x"
-          spin={false}
-          symbol={false}
-          transform={null}
-        />,
         <h3>
+          <FontAwesomeIcon$1
+            border={false}
+            className=""
+            compose={null}
+            fixedWidth={true}
+            flip={null}
+            icon="exclamation-circle"
+            listItem={false}
+            name=""
+            pull={null}
+            pulse={false}
+            rotation={null}
+            size={null}
+            spin={false}
+            symbol={false}
+            transform={null}
+          />
+           
           Alert error title
         </h3>,
         <p>
           This is the alert body text
         </p>,
       ],
-      "className": "alert error",
+      "className": "root error",
       "role": "alert",
     },
     "ref": null,
@@ -54,37 +55,60 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "border": false,
-          "className": "",
-          "compose": null,
-          "fixedWidth": true,
-          "flip": null,
-          "icon": "exclamation-circle",
-          "listItem": false,
-          "name": "",
-          "pull": null,
-          "pulse": false,
-          "rotation": null,
-          "size": "2x",
-          "spin": false,
-          "symbol": false,
-          "transform": null,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Alert error title",
+          "children": Array [
+            <FontAwesomeIcon$1
+              border={false}
+              className=""
+              compose={null}
+              fixedWidth={true}
+              flip={null}
+              icon="exclamation-circle"
+              listItem={false}
+              name=""
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              transform={null}
+            />,
+            " ",
+            "Alert error title",
+          ],
         },
         "ref": null,
-        "rendered": "Alert error title",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "border": false,
+              "className": "",
+              "compose": null,
+              "fixedWidth": true,
+              "flip": null,
+              "icon": "exclamation-circle",
+              "listItem": false,
+              "name": "",
+              "pull": null,
+              "pulse": false,
+              "rotation": null,
+              "size": null,
+              "spin": false,
+              "symbol": false,
+              "transform": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " ",
+          "Alert error title",
+        ],
         "type": "h3",
       },
       Object {
@@ -108,31 +132,32 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <FontAwesomeIcon$1
-            border={false}
-            className=""
-            compose={null}
-            fixedWidth={true}
-            flip={null}
-            icon="exclamation-circle"
-            listItem={false}
-            name=""
-            pull={null}
-            pulse={false}
-            rotation={null}
-            size="2x"
-            spin={false}
-            symbol={false}
-            transform={null}
-          />,
           <h3>
+            <FontAwesomeIcon$1
+              border={false}
+              className=""
+              compose={null}
+              fixedWidth={true}
+              flip={null}
+              icon="exclamation-circle"
+              listItem={false}
+              name=""
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              transform={null}
+            />
+             
             Alert error title
           </h3>,
           <p>
             This is the alert body text
           </p>,
         ],
-        "className": "alert error",
+        "className": "root error",
         "role": "alert",
       },
       "ref": null,
@@ -140,37 +165,60 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "border": false,
-            "className": "",
-            "compose": null,
-            "fixedWidth": true,
-            "flip": null,
-            "icon": "exclamation-circle",
-            "listItem": false,
-            "name": "",
-            "pull": null,
-            "pulse": false,
-            "rotation": null,
-            "size": "2x",
-            "spin": false,
-            "symbol": false,
-            "transform": null,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Alert error title",
+            "children": Array [
+              <FontAwesomeIcon$1
+                border={false}
+                className=""
+                compose={null}
+                fixedWidth={true}
+                flip={null}
+                icon="exclamation-circle"
+                listItem={false}
+                name=""
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                transform={null}
+              />,
+              " ",
+              "Alert error title",
+            ],
           },
           "ref": null,
-          "rendered": "Alert error title",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "border": false,
+                "className": "",
+                "compose": null,
+                "fixedWidth": true,
+                "flip": null,
+                "icon": "exclamation-circle",
+                "listItem": false,
+                "name": "",
+                "pull": null,
+                "pulse": false,
+                "rotation": null,
+                "size": null,
+                "spin": false,
+                "symbol": false,
+                "transform": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " ",
+            "Alert error title",
+          ],
           "type": "h3",
         },
         Object {
@@ -189,9 +237,9 @@ ShallowWrapper {
     },
   ],
   Symbol(enzyme.__options__): Object {
-    "adapter": ReactFifteenAdapter {
+    "adapter": ReactSixteenAdapter {
       "options": Object {
-        "supportPrevContextArgumentOfComponentDidUpdate": true,
+        "enableComponentDidUpdateOnSetState": true,
       },
     },
   },

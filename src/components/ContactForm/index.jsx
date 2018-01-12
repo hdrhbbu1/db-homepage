@@ -1,7 +1,6 @@
 import React from "react"
 import { Grid, Row, Col } from "react-flexbox-grid"
 import Formsy from "formsy-react"
-import Icon from "@fortawesome/react-fontawesome"
 
 import Input from "../Input"
 import Textarea from "../Textarea"
@@ -17,18 +16,13 @@ class ContactForm extends React.Component {
   constructor() {
     super()
 
-    this.disableButton = this.disableButton.bind(this)
-    this.enableButton = this.enableButton.bind(this)
+    this.handleEnable = this.handleEnable.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleInvalid = this.handleInvalid.bind(this)
     this.state = { canSubmit: true, success: false }
   }
 
-  disableButton() {
-    this.setState({ canSubmit: false })
-  }
-
-  enableButton() {
+  handleEnable() {
     this.setState({ canSubmit: true })
   }
 
@@ -89,11 +83,11 @@ class ContactForm extends React.Component {
 
         {!this.state.success &&
           <Row>
-            <Col xs={12} md={12} lg={6} lgOffset={3}>
+            <Col xs={12} md={12} lg={8} xl={6} lgOffset={2} xlOffset={3}>
               <Formsy
                 onValidSubmit={this.handleSubmit}
                 onInvalidSubmit={this.handleInvalid}
-                onValid={this.enableButton}
+                onValid={this.handleEnable}
                 className={styles.form}
               >
 
@@ -146,7 +140,7 @@ class ContactForm extends React.Component {
                 />
 
                 <Button type="submit" disabled={!this.state.canSubmit}>
-                  Submit
+                  Send Message
                 </Button>
               </Formsy>
             </Col>
