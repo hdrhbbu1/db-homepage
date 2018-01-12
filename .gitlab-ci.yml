@@ -31,7 +31,7 @@ deploy-stage:
       --acl 'public-read'
       --delete
       --cache-control 'public, max-age=604800'     
-      --excude '*'
+      --exclude '*'
       --include 'static/*'
       --include 'favicons/*'"
 
